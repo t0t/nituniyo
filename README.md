@@ -1,4 +1,4 @@
-# [t0theme Starter Theme](http://roots.io/)
+# [t0theme](http://t0theme.sergiofores.net/)
 
 [![Built with Grunt](https://cdn.gruntjs.com/builtwith.png)](http://gruntjs.com/)
 
@@ -41,5 +41,5 @@ Install the [Soil](https://github.com/roots/soil) plugin to enable additional fe
 
 ## Thanks
 
-* [Roots 101](http://roots.io/) — Roots
-* [Wakkos](http://coolvillage.com/) — Wakkos
+* [Roots](http://roots.io/) — Roots
+* [Wakkos](http://coolvillage.com/) — Wakkos CSS framework
