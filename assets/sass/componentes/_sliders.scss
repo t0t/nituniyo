@@ -1,0 +1,20 @@
+// slider
+.jcarousel {
+	position: relative;
+	overflow: hidden;
+	width: 100%;
+	border: $borde;
+	background-color: $color-base-lighter;
+
+	ul {
+		width: 20000em;
+    		position: relative;
+	}
+
+	li {
+		float: left;
+		width: 300px;
+		height: 100%;
+		padding: $paddingbase;
+	}
+}

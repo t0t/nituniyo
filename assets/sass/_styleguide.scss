@@ -1,0 +1,136 @@
+// Contact Form 7
+.wpcf7 {
+	float: left;
+}
+
+// GRID
+	
+	.row {
+		width: 100%;
+		@include margin-bottom($gutterwidth);
+		float: left;
+	}
+
+	.col__1 {
+		@include grid(1);
+		@include break(tablet, 12);
+	}
+	.col__2 {
+		@include grid(2);
+		@include break(tablet, 12);
+	}
+
+	.col__3 {
+		@include grid(3);
+		@include break(tablet, 12);
+	}
+
+	.col__4 {
+		@include grid(4);
+		@include break(tablet, 12);
+	}
+
+	.col__6 {
+		@include grid(6);
+		@include break(tablet, 12);
+	}
+
+	.col__9 {
+		@include grid(9);
+		@include break(tablet, 12);
+	}
+
+	.col__12 {
+		@include grid(12);
+		@include break(tablet, 12);
+	}
+
+	// El otro mixin es para galerias
+	.galeria__item {
+		@include galeria(6);
+		min-height: 185px;
+		@media (max-width: $bp3) {
+			@include galeria(2);
+		}
+	}
+
+// FORMAS
+	.shape-square {
+		@include square(200px);
+	}
+	
+
+// COLORES
+	.color-base {
+		background-color: $color-base;
+		&:before {
+			content: "#{$color-base}";
+			color: white;
+			display: block;
+		}
+	}
+
+	.color-base-invert 	{
+		background-color: $color-base-invert;
+		&::before {
+			content: "#{$color-base-invert}";
+			color: white;
+			display: block;
+		}
+	}
+
+	.color-base-light 	{ 
+		background-color: $color-base-light;
+		&::before {
+			content: "#{$color-base-light}";
+			color: white;
+			display: block;
+		}
+	}
+
+	.color-base-lighter { 
+		background-color: $color-base-lighter;
+		&::before {
+			content: "#{$color-base-lighter}";
+			color: white;
+			display: block;
+		}
+	}
+
+	.color-base-lighten { 
+		background-color: $color-base-lighten;
+		&::before {
+			content: "#{$color-base-lighten}";
+			color: white;
+			display: block;
+		}
+	}
+
+	.color-base-dark 	{ 
+		background-color: $color-base-dark;	
+		&::before {
+			content: "#{$color-base-dark}";
+			color: white;
+			display: block;
+		}
+	}
+
+	.color-base-darken { 
+		background-color: $color-base-darken;
+		&::before {
+			content: "#{$color-base-darken}";
+			color: white;
+			display: block;
+		}
+
+	}
+
+	.color-base-darker { 
+		background-color: $color-base-darker;
+		&::before {
+			content: "#{$color-base-darker}";
+			color: white;
+			display: block;
+		}
+
+	}

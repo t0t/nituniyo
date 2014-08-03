@@ -1,0 +1,222 @@
+/*------------------------------------*\
+    $BREAKPOINTS
+\*------------------------------------*/
+$bp1 : 1224px;
+$bp2 : 1024px;
+$bp3 : 715px;
+$bp4 : 640px;
+$bp5 : 320px;
+
+$break-wide: 1240px;
+$break-desktop: 990px;
+$break-tablet: 767px;
+$break-mobile: 480px;
+
+
+
+/*------------------------------------*\
+    $IMAGE-DIR
+\*------------------------------------*/
+$image-path: '../img' !default;
+// $fallback-extension: 'png' !default;
+// $retina-suffix: '@2x';
+
+/*------------------------------------*\
+    $LAYOUT
+\*------------------------------------*/
+$baselineheight  		:     2em;
+$line-height-computed	:	$baselineheight;
+$baseline :           	$baselineheight;
+$pagemaxwitdh :       	100%;
+$radius :             	5px;
+$hovertransition :    	.3s;
+$animationtime :      	.8s;
+
+// gutter
+$gutterwidth :       	3%;
+// $huecos : 6;
+$margin: $gutterwidth;
+
+// padding
+$paddingbase : 	20px;
+
+$link-vertical-padding:15px;
+$link-horizontal-padding:20px;
+
+// grid
+$grid-columns: 12;
+$unit: (100%  / $grid-columns);
+$gutter: 2% !default;
+$push: 0 !default;
+
+/*------------------------------------*\
+    $FONT-FACE
+\*------------------------------------*/
+// $basefont 					: "Lato", sans-serif;
+$basefont 					: "Helvetica", Arial, sans-serif;
+$altfont 					: "Amaranth", sans-serif;
+$codefont 					: "Courier New", monospace;
+$baseheadingfont 			: $altfont;
+$baseheadingfontweight 		: normal;
+$baseheadingfontcolor 		: inherit;
+
+$altlineheight : 1.35em;
+// $icons	: icomoon;
+
+
+/*------------------------------------*\
+    $TAMAÑOS
+\*------------------------------------*/
+$basefontsize 		: 13 !default;
+$baseletterspacing 	: 1px;
+
+
+/*------------------------------------*\
+    $COLORS
+\*------------------------------------*/
+/**
+ * Brand stuff
+ */
+$color-base      	: rgb(0,204,205); //marron
+$color-base-invert 	: invert($color-base); //invierte
+$color-base-light	: lighten($color-base, 3%);
+$color-base-lighten	: lighten($color-base, 5%);
+$color-base-lighter	: lighten($color-base, 10%);
+$color-base-dark	: darken($color-base, 10%);
+$color-base-darken	: darken($color-base, 40%);
+$color-base-darker	: darken($color-base, 80%);
+
+$color-dos      	: darken(rgb(41,0,164), 8%);
+$color-tres			: rgb(41,0,164);
+$color-cuatro     	: rgb(41,0,164); //ocre
+$color-cinco     	: red; //rojo menu
+$bordercolor    	: $color-base-invert;
+$compcolor      	: rgb(206,240,227);
+
+/**
+ * Escala de grises
+ */
+$black 				: rgb(0,0,0);
+$superdark  		: lighten($black, 10%);
+$darkergrey 		: lighten($black, 15%);
+$darkgrey 			: lighten($black, 25%);
+$grey 				: lighten($black, 50%);
+$lightgrey 			: lighten($black, 75%);
+$lightergrey 		: lighten($black, 90%);
+$white 				: rgb(255,255,255);
+
+// Web
+$background			: 	$white;
+$textcolor			: 	$grey;
+$textcolor-strong	:	$black;
+
+// Links  //////////////////////
+$linkcolor 		: darken($color-cuatro,50%);
+$linkcolorhover 	: lighten($linkcolor, 10%);
+$linkcolorvisited   : $linkcolor;
+$linkcolorfocus 	: $linkcolorvisited;
+
+$color-alert 		: rgb(252,228,207);
+$color-error 		: rgb(218,79,73);
+$color-info 		: rgb(165,221,223);
+$color-inverse 	: invert($color-base);
+$color-success 	: rgb(91,183,91);
+$color-warning 	: $color-error;
+
+// Texturas de popups
+$alertbordercolor	: darken($color-alert, 20%);
+$alertborderwidth 	: 1px;
+$alertborderstyle 	: solid;
+$alerttext		: darken($color-alert, 60%);
+
+// Error
+$alerterrorcolor 	: lighten($color-error, 30%);
+$alerterrorborder  	: lighten($color-error, 20%);
+$alerterrortext 	: $color-error;
+
+// Info
+$alertinfocolor 	: lighten($color-info, 10%);
+$alertinfoborder  	: darken($color-info, 10%);
+$alertinfotext 	: darken($color-info, 50%);
+
+// Inverso
+$alertinversecolor 	: $color-inverse;
+$alertinverseborder : $black;
+$alertinversetext 	: $white;
+
+// Success
+$alertsuccesscolor 	: lighten($color-success, 30%);
+$alertsuccessborder : lighten($color-success, 20%);
+$alertsuccesstext 	: darken($color-success, 20%);
+
+// Advertencia
+$alertwarningcolor 	: lighten($color-warning, 30%);
+$alertwarningborder : lighten($color-warning, 20%);
+$alertwarningtext 	: darken($color-warning, 20%);
+
+/* Colores sociales -> son los colores corporativos, pero cambiadlos
+ * si hace falta. (también podéis añadir más)  ///////////////////////
+ */
+$fb :rgb(59, 89, 182);
+$tw :rgb(64,153,255);
+$googleplus :rgb(221, 75, 57);
+$pinterest :rgb(203, 32, 39);
+$skype :rgb(18,165,244);
+$spotify :rgb(129,183,26);
+$instagram:#4E433C;
+$tumblr: #2B4964;
+$vimeo: #86B32D;
+$soundcloud: #f76600;
+$youtube: #FF3333;
+$linkedin: #4875B4;
+$flickr: #FE0883;
+$foursquare: #8FD400;
+
+// bars
+//$bar-height		: #{$basefontsize / 2}px;
+
+// badges
+$badgebackground    : $color-base;
+$badgecolor         : $textcolor;
+
+// botones
+$buttonbackground   : $color-base-light;
+$buttonbordercolor  : darken($buttonbackground, 10%);
+$buttonbottombordercolor : darken($buttonbordercolor, 10%);
+$buttoncolor        : $black;
+$buttonborderwidth  : 1px;
+$buttonborderstyle  : solid;
+
+// boxes (well)
+$wellbackground     : $lightergrey;
+$wellbordercolor    : darken($wellbackground, 10%);
+$wellborderwidth    : 0;
+$wellborderstyle    : solid;
+$wellshadow         : darken($wellbackground, 5%);
+$wellshadowblur     : 15px;
+
+// tablas
+$tablebackground    : transparent;
+$tablestripe        : lighten($color-base, 60%);
+$tablehover         : lighten($color-base, 50%);
+$tableborder        : lighten($color-base, 40%);
+$tableborderwidth   : 1px;
+$tableborderstyle   : solid;
+
+// formularios
+$inputbackground    : $white;
+$inputborder        : $lightgrey;
+$inputborderwidth   : 1px;
+$inputborderstyle   : solid;
+$inputhover         : lighten($black, 50%);
+$inputfocus         : $color-base, 40%;
+$placeholdercolor   : $lightergrey;
+
+
+// Navegación
+$navitembordercolor    : $bordercolor;
+$navitempadding        : $gutterwidth / 2;
+$navtabsbordercolor    : $bordercolor;
+
+// Borde
+$borde				: 1px solid $lightergrey;

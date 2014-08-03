@@ -1,0 +1,21 @@
+body {
+	font-family: $basefont;
+	line-height: $baselineheight;
+	color: $textcolor;
+	background-color: $background;
+}
+
+// Content wrapper
+.container {
+		@include max-width ($bp1);
+		@extend %clearfix;
+			@media (max-width: 1220px) { //padding horizontal en resoluciones decrecientes
+	  			// @include padding();
+	  			// padding-top: 75px;
+	  			// background-color: red;
+	  		}
+	}
+.wrap { }
+
+// Main content area
+.main { }
