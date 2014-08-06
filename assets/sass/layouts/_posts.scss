@@ -1,5 +1,12 @@
-.hentry header { }
-.hentry time { }
-.hentry .byline { }
-.hentry .entry-content { }
-.hentry footer { }
+.h-entry header { }
+.h-entry time { }
+.h-entry .byline { }
+.h-entry .entry-content { }
+.h-entry .entry-content { 
+	figure {
+		&.col__12 {
+			height: 350px;
+		}
+	}
+}
+.h-entry footer { }

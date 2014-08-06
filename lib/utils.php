@@ -19,6 +19,12 @@ add_filter('get_search_form', 'roots_get_search_form');
 /**
  * Custom functions
  */
+// max excerpt
+function new_excerpt_length($length) {
+	return 10;
+}
+add_filter('excerpt_length', 'new_excerpt_length');
+
 
 // quita admin bar
 add_filter('show_admin_bar', '__return_false');

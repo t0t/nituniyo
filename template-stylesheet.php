@@ -85,66 +85,6 @@ Template Name: Stylesheet
 
 
 <section class="row">
-
-	<h2>Galería de fotos</h2>
-
-	<div class="galeria">
-
-		<figure class="galeria__item">
-			<img src="<? bloginfo('template_directory'); ?>/assets/img/img.jpg" alt="">
-			<figcaption>Lorem ipsum dolor sit amet, consectetur adipisicing <a href="">elit</a>.</figcaption>
-		</figure>
-		<figure class="galeria__item">
-			<img src="<? bloginfo('template_directory'); ?>/assets/img/img.jpg" alt="">
-			<figcaption>Lorem ipsum dolor sit amet, consectetur adipisicit esse quod id aliquid ut saepe incidunt.</figcaption>
-		</figure>
-		<figure class="galeria__item">
-			<img src="<? bloginfo('template_directory'); ?>/assets/img/img.jpg" alt="">
-			<figcaption>osam, mollitia debitis quam quaerat, eveniet praesentium ratione quasi.</figcaption>
-		</figure>
-		<figure class="galeria__item">
-			<img src="<? bloginfo('template_directory'); ?>/assets/img/img.jpg" alt="">
-			<figcaption>Lorem ipsum dolor sit amet, consectetur  <a href="">elit</a>. Expedita, quam, dignis</figcaption>
-		</figure>
-		<figure class="galeria__item">
-			<img src="<? bloginfo('template_directory'); ?>/assets/img/img.jpg" alt="">
-			<figcaption>Lorem ipsum dolor sit amet, consectetur adipisicing <a href="">elit</a>. Dolo perferendis?</figcaption>
-		</figure>
-		<figure class="galeria__item">
-			<img src="<? bloginfo('template_directory'); ?>/assets/img/img.jpg" alt="">
-			<figcaption></figcaption>
-		</figure>
-		<figure class="galeria__item">
-			<img src="<? bloginfo('template_directory'); ?>/assets/img/img.jpg" alt="">
-			<figcaption>Lorem ipsutes dolor quas consequatur delectus.</figcaption>
-		</figure>
-		<figure class="galeria__item">
-			<img src="<? bloginfo('template_directory'); ?>/assets/img/img.jpg" alt="">
-			<figcaption>Lorem ipsum dolor sit amet, consectetur adipisicing <a href="">elit</a>. Corporis consequatur tenetur a,</figcaption>
-		</figure>
-		<figure class="galeria__item">
-			<img src="<? bloginfo('template_directory'); ?>/assets/img/img.jpg" alt="">
-			<figcaption>Lctetur adipisicing <a href="">elit</a>. Aut quos, tempora ea qui soluta!</figcaption>
-		</figure>
-		<figure class="galeria__item">
-			<img src="<? bloginfo('template_directory'); ?>/assets/img/img.jpg" alt="">
-			<figcaption>Lorem iautem rerum neque tenetur.</figcaption>
-		</figure>
-		<figure class="galeria__item">
-			<img src="<? bloginfo('template_directory'); ?>/assets/img/img.jpg" alt="">
-			<figcaption>Lorem ipsum dolor sit amet, consectetur adipisiciusto recusandae, laudantium qui!</figcaption>
-		</figure>
-		<figure class="galeria__item">
-			<img src="<? bloginfo('template_directory'); ?>/assets/img/img.jpg" alt="">
-			<figcaption>Loremnon consectetur deserunt!</figcaption>
-		</figure>
-	</div>
-	<a href="" class="btn btn--info"><i class="icon-arrow-left"></i></a>
-	<a href="" class="btn btn--info"><i class="icon-arrow-right"></i></a>
-</section>
-
-
-<section class="row">
 <h2>Blog</h2>
 	<div class="col__9">
 		<article>

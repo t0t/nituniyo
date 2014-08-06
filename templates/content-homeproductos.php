@@ -23,12 +23,12 @@
 				<img src="<?php echo get_template_directory_uri(); ?>/assets/img/logo.svg" alt="Nanos i Gegants" class="logo-img">
 				<?}?>
 
-						<h3>
-								<a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>">
-								<? the_title(); ?>
-								</a>
-						</h3>
-						<p><?php //the_excerpt(); ?></p>
+					<h3>
+						<a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>">
+								<? the_title(); ?></a>
+					</h3>
+					<p><?php //the_excerpt(); ?></p>
+					
 				</li>
 				
 				<?php endwhile; ?>
@@ -38,12 +38,11 @@
 
 	</div>
 
-		<!-- Prev/next controls -->
+	<!-- Prev/next controls -->
+	<a href="#" class="btn btn--info jcarousel-control-prev">
+	<i class="icon-arrow-left"></i></a>
+	<a href="#" class="btn btn--info jcarousel-control-next">
+	<i class="icon-arrow-right"></i></a>
 
-		<a href="#" class="jcarousel-control-prev">
-				<span class="icon-arrow-left"></span>
-		</a>
-		<a href="#" class="jcarousel-control-next">
-				<span class="icon-arrow-right"></span>
-		</a>
+
 </div>

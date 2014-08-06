@@ -516,6 +516,10 @@ header.banner {
   z-index: 9000;
 }
 
+.h-entry .entry-content figure.col__12 {
+  height: 350px;
+}
+
 footer.content-info {
   margin-left: auto;
   margin-right: auto;
