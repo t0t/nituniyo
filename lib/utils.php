@@ -25,6 +25,20 @@ function new_excerpt_length($length) {
 }
 add_filter('excerpt_length', 'new_excerpt_length');
 
+/* No me carges los scripts de cf7 si no hace falta */
+add_action( 'wp_print_scripts', 'deregister_cf7_javascript');
+function deregister_cf7_javascript() {
+	if (!is_page('contacto')) {
+	    wp_deregister_script('contact-form-7');
+	}
+}
+
+add_action('wp_print_styles','deregister_cf7_styles');
+function deregister_cf7_styles() {
+	if (!is_page('contacto')) {
+	    wp_deregister_style('contact-form-7');
+	}
+}
 
 // quita admin bar
 add_filter('show_admin_bar', '__return_false');
