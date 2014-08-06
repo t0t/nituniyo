@@ -11,6 +11,7 @@
 @import "lib/mixins/espaciados.scss";
 @import "lib/mixins/grid.scss";
 @import "lib/mixins/sombras.scss";
+@import "lib/mixins/formularios.scss";
 
 @import "layouts/general.scss";
 @import "layouts/header.scss";
@@ -31,6 +32,7 @@
 @import "componentes/navbar.scss";
 @import "componentes/navegacion.scss";
 @import "componentes/texturas.scss";
+@import "componentes/formularios.scss";
 
 // Sliders
 @import "componentes/sliders.scss";

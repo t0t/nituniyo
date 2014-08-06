@@ -25,12 +25,10 @@
 		</div>
 
 		<div class="col__4">
-			
 			<h6>Redes Sociales</h6>
 			<a href=""><i class="icon-facebook3"></i></a>
 			<a href=""><i class="icon-twitter"></i></a>
 			<a href=""><i class="icon-vimeo"></i></a>
-
 		</div>
 	</div>
 
@@ -41,6 +39,7 @@
 			- <?php echo date('Y'); ?>
 		</small - >
 		<?php edit_post_link(' EDIT') ?>
+		<?php wp_loginout(); ?>
 	</p>
 
 </footer>

@@ -33,12 +33,11 @@
     </div>
     
     <!-- Prev/next controls -->
-    <a href="#" class="jcarousel-control-next">
-        <span class="glyphicon glyphicon-chevron-right"></span>
-    </a>
-    <a href="#" class="jcarousel-control-prev">
-        <span class="glyphicon glyphicon-chevron-left"></span>
-    </a>
+    <!-- Prev/next controls -->
+    <a href="#" class="jcarousel-control-prev btn btn--info">
+    <span class="icon-arrow-left"></span></a>
+    <a href="#" class="jcarousel-control-next btn btn--info">
+    <span class="icon-arrow-right"></span></a>
 
     <?php endif; 
     ?>
