@@ -10,8 +10,9 @@ module.exports = function(grunt) {
     'assets/js/plugins/jcarousel/jquery.jcarousel.min.js',
     'assets/js/plugins/jcarousel/jcarousel.skeleton.js',
     // 'assets/vendor/lightbox/js/lightbox.min.js',
-    // 'assets/js/plugins/lightbox.min.js',
+    // 'assets/js/plugins/lightbox.js',
     'assets/vendor/lightbox/js/lightbox.js',
+    'assets/vendor/fitvids/jquery.fitvids.js',
     'assets/js/plugins/*.js',
     'assets/js/*.min.js',
     'assets/js/_*.js'
@@ -28,7 +29,7 @@ module.exports = function(grunt) {
         '!assets/js/scripts.js',
         '!assets/js/plugins/jcarousel/jquery.jcarousel.min.js',
         '!assets/js/plugins/jcarousel/jcarousel.skeleton.js',
-        // '!assets/js/plugins/lightbox.min.js',
+        // '!assets/vendor/lightbox/js/lightbox.min.js',
         '!assets/**/*.min.*'
       ]
     },
@@ -114,7 +115,7 @@ module.exports = function(grunt) {
       default: {
         options: {
           format: true,
-          length: 32,
+          length: 5,
           manifest: 'assets/manifest.json',
           querystring: {
             style: 'roots_css',

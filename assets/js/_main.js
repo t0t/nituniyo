@@ -34,6 +34,9 @@ var Roots = {
         });
     }
 
+    // FitVids
+    $("main").fitVids();
+
 
     // jcarousel
     $('.jcarousel').jcarousel({

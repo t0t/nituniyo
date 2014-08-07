@@ -26,6 +26,7 @@ function new_excerpt_length($length) {
 add_filter('excerpt_length', 'new_excerpt_length');
 
 /* No me carges los scripts de cf7 si no hace falta */
+// DA ERROR en DEBUG TRUE ¿?
 add_action( 'wp_print_scripts', 'deregister_cf7_javascript');
 function deregister_cf7_javascript() {
 	if (!is_page('contacto')) {
