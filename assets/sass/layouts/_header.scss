@@ -6,7 +6,12 @@ header {
 		z-index: 9000;
 	}
 }
-.banner { }
+.banner {
+	.brand {
+		// position: fixed;
+		// top: 50px;
+	}
+}
 .brand {
 	.icon-logo-t0theme {
 		vertical-align: middle;
