@@ -6,9 +6,7 @@
       </div>
     <![endif]-->
   
-    <div id="site-wrapper">
 
-        <div id="site-canvas">
             <?php
             do_action('get_header');
             get_template_part('templates/header');
@@ -28,8 +26,7 @@
       
             <?php get_template_part('templates/footer'); ?>
             
-      </div> <!-- site canvas -->
-  </div><!-- site wrapper -->
+  
 
 </body>
 </html>

@@ -7,7 +7,6 @@
         </h1>
     </div>
 
-    <div id="site-menu">
        <!-- <a href="#" class="toggle-nav">
        <i class="icon-close"></i></a> -->
        
@@ -19,7 +18,6 @@
             ?>
         </nav>
 
-    </div>
     
     <a href="#" class="toggle-nav btn btn-lg btn-success">
     <i class="icon-collapse"></i></a>

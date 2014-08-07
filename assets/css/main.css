@@ -2389,66 +2389,6 @@ input:required:focus:valid {
   border: 1px solid #5bb75b;
 }
 
-/*
-* http://codepen.io/ncerminara/pen/quJpi
-*/
-#site-wrapper {
-  position: relative;
-  overflow: hidden;
-  width: 100%;
-}
-
-#site-canvas {
-  width: 100%;
-  height: 100%;
-  position: relative;
-  -webkit-transform: translate(0);
-  -ms-transform: translate(0);
-  -o-transform: translate(0);
-     transform: translate(0);
-  -webkit-transform: translate3d(0, 0, 0);
-  transform: translate3d(0, 0, 0);
-  -webkit-transition: all 200ms;
-  -o-transition: all 200ms;
-     transition: all 200ms;
-  -webkit-backface-visibility: hidden;
-  -ms-backface-visibility: hidden;
-  backface-visibility: hidden;
-}
-
-.show-nav #site-canvas {
-  -webkit-transform: translate(-200px);
-  -ms-transform: translate(-200px);
-  -o-transform: translate(-200px);
-     transform: translate(-200px);
-  -webkit-transform: translate3d(-200px, 0, 0);
-  transform: translate3d(-200px, 0, 0);
-}
-
-#site-menu {
-  width: 200px;
-  height: 100%;
-  position: absolute;
-  top: 0;
-  right: -200px;
-  background: #00ffdb;
-  padding: 20px;
-}
-#site-menu li {
-  list-style: none;
-}
-
-.toggle-nav {
-  position: absolute;
-  right: 10%;
-  top: 20px;
-}
-@media (max-width: 715px) {
-  .toggle-nav {
-    right: 6%;
-  }
-}
-
 .jcarousel {
   position: relative;
   overflow: hidden;
