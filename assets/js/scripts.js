@@ -614,6 +614,18 @@ $(document).keyup(function(e) {
     }
 });
 
+// $('#site-wrapper').click(function() {
+//   if ($('#site-wrapper').hasClass('show-nav')) {
+//       $('#site-wrapper').removeClass('show-nav');
+//     }
+// });
+
+// $("body > div").click(function() {
+//     if ($('#site-wrapper').hasClass("show-nav"))
+//     {
+//        $(this).removeClass('show-nav');
+//     }
+// });
 
 
 // ----------

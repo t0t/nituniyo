@@ -53,11 +53,12 @@ $push: 0 !default;
     $FONT-FACE
 \*------------------------------------*/
 // $basefont 					: "Lato", sans-serif;
-$basefont 					: "Helvetica", Arial, sans-serif;
-$altfont 					: "Amaranth", sans-serif;
+$basefont 					: "Open Sans", Helvetica, Arial, sans-serif;
+$altfont 					: "Courier New", serif;
 $codefont 					: "Courier New", monospace;
+$googlefont 				: "http://fonts.googleapis.com/css?family=Open+Sans";
 $baseheadingfont 			: $altfont;
-$baseheadingfontweight 		: normal;
+$baseheadingfontweight 		: inherit;
 $baseheadingfontcolor 		: inherit;
 
 $altlineheight : 1.35em;

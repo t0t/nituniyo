@@ -9,7 +9,7 @@
  * 2. Prevent iOS text size adjust after orientation change, without disabling
  *    user zoom.
  */
-@import url(http://fonts.googleapis.com/css?family=Amaranth);
+@import url(http://fonts.googleapis.com/css?family=Open+Sans);
 html {
   font-family: sans-serif;
   /* 1 */
@@ -495,10 +495,11 @@ footer.content-info {
 /* MIXIN
 ========================================================================== */
 body {
-  font-family: "Helvetica", Arial, sans-serif;
+  font-family: "Open Sans", Helvetica, Arial, sans-serif;
   line-height: 2em;
   color: gray;
   background-color: white;
+  letter-spacing: 1px;
 }
 
 .container {
@@ -1466,10 +1467,9 @@ h4,
 h5,
 h6 {
   margin: 0;
-  font-family: "Amaranth", sans-serif;
-  font-weight: normal;
+  font-family: "Courier New", serif;
+  font-weight: inherit;
   color: inherit;
-  font-style: italic;
   text-rendering: optimizelegibility;
 }
 h1.altheader,
@@ -1490,8 +1490,8 @@ h3 small {
 }
 
 h1, .h1 {
-  font-size: 31px;
-  font-size: 2.38462rem;
+  font-size: 20px;
+  font-size: 1.53846rem;
   line-height: 1;
   letter-spacing: 1px;
 }
@@ -1573,7 +1573,7 @@ blockquote {
   margin: 0 0 2em 0;
   padding-left: 3%;
   border-left: 10px solid #ff3332;
-  font-family: "Amaranth", sans-serif;
+  font-family: "Courier New", serif;
   font-style: normal;
   line-height: 2em;
 }
@@ -1869,7 +1869,7 @@ MOBILE NAV STYLES
   padding: 8px 35px 8px 14px;
   background-color: #fce4cf;
   border: 1px solid #f6ae6f;
-  font-family: "Helvetica", Arial, sans-serif;
+  font-family: "Open Sans", Helvetica, Arial, sans-serif;
   font-size: 14px;
   font-size: 1.07692rem;
   color: #904809;
@@ -2082,7 +2082,7 @@ input,
 button,
 select,
 textarea {
-  font-family: "Helvetica", Arial, sans-serif;
+  font-family: "Open Sans", Helvetica, Arial, sans-serif;
   -webkit-box-sizing: border-box;
   -ms-box-sizing: border-box;
   box-sizing: border-box;
