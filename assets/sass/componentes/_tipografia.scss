@@ -41,7 +41,7 @@ h3 small {
                                                         (h5, 7, 17, 1)
                                                         (h6, 7, 15, 1){
   #{$header}, .#{$header} {
-  	margin-bottom : $baselineheight / 2;
+  	// margin-bottom : $baselineheight / 2;
   	@include font-size($font-size);
   	line-height : $line-height;
   	letter-spacing: $baseletterspacing;

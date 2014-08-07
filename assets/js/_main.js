@@ -34,6 +34,55 @@ var Roots = {
         });
     }
 
+
+
+// -------------
+/*====================================
+=            off canvas ON DOM READY 
+http://scotch.io/tutorials/off-canvas-menus-with-css3-transitions-and-transforms           =
+====================================*/
+$(function() {
+  
+    // Toggle Nav on Click
+    $('.toggle-nav').click(function() {
+        // Calling a function in case you want to expand upon this.
+        toggleNav();
+    });
+
+  
+});
+
+
+/*========================================
+=            off canvas CUSTOM FUNCTIONS 
+http://scotch.io/tutorials/off-canvas-menus-with-css3-transitions-and-transforms           =
+========================================*/
+function toggleNav() {
+    if ($('#site-wrapper').hasClass('show-nav')) {
+        // Do things on Nav Close
+        $('#site-wrapper').removeClass('show-nav');
+    } else {
+        // Do things on Nav Open
+        $('#site-wrapper').addClass('show-nav');
+    }
+
+    //$('#site-wrapper').toggleClass('show-nav');
+}
+//cierra menu con tecla ESC
+$(document).keyup(function(e) {
+    if (e.keyCode === 27) {
+        if ($('#site-wrapper').hasClass('show-nav')) {
+            // Assuming you used the function I made from the demo
+            toggleNav();
+        }
+    }
+});
+
+
+
+// ----------
+
+
     // FitVids
     $("main").fitVids();
 
@@ -57,10 +106,10 @@ var Roots = {
     
     // });
 
-    $('.mobile').on('click', function (e) {
-        e.preventDefault();
-        $('nav').toggleClass('on');
-    });
+    // $('.mobile').on('click', function (e) {
+    //     e.preventDefault();
+    //     $('nav').toggleClass('on');
+    // });
 
     
     $('nav ul li ul').each(function() {

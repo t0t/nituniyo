@@ -7,7 +7,7 @@ nav ul {
 
 
   li {
-    float:left;
+    // float:left;
     position:relative;
     z-index:20;
 
@@ -117,61 +117,61 @@ nav ul {
 /***************************
 MOBILE NAV STYLES
 ***************************/
-.mobile {
-  display:none;
-  // padding:$paddingbase ($paddingbase - 5);
-  position:fixed;
-  left: 50%;
-  top: 100px;
-  z-index: 20000;
+// .mobile {
+//   display:none;
+//   // padding:$paddingbase ($paddingbase - 5);
+//   position:fixed;
+//   left: 50%;
+//   top: 100px;
+//   z-index: 20000;
 
-  @media (max-width:$bp3) {
-    // display:table;
-      display: block;
-        text-decoration:none;
-        line-height:0;
-  }
-}
+//   @media (max-width:$bp3) {
+//     // display:table;
+//       display: block;
+//         text-decoration:none;
+//         line-height:0;
+//   }
+// }
 
-nav {
-  @media (max-width:$bp3) {
-    display: none;
-    position: fixed;
-    z-index: 1000;
-    top: $paddingbase*6;
-    right: 0;
+// nav {
+//   @media (max-width:$bp3) {
+//     display: none;
+//     position: fixed;
+//     z-index: 1000;
+//     top: $paddingbase*6;
+//     right: 0;
     
-    &.on {
-    max-height:9000px !important;
-    display: block;
-    background-color: $color-base;
-    left: 0;
-      li {
-        max-width: 50%;
-        float: left;
-        width: 100%;
-        // @include padding($paddingbase);
-      }
-    }
-  }
-}
+//     &.on {
+//     max-height:9000px !important;
+//     display: block;
+//     background-color: $color-base;
+//     left: 0;
+//       li {
+//         max-width: 50%;
+//         float: left;
+//         width: 100%;
+//         // @include padding($paddingbase);
+//       }
+//     }
+//   }
+// }
 
-.mobile {
-      i {
-        float:right;
-        height:50px;
-        width:10%;
-        position:absolute;
-        right:0;
-        top:1px;
-        color: $color-base;
-        @include transition(0.7s);
+// .mobile {
+//       i {
+//         float:right;
+//         height:50px;
+//         width:10%;
+//         position:absolute;
+//         right:0;
+//         top:1px;
+//         color: $color-base;
+//         @include transition(0.7s);
 
-        &:hover {
-          cursor:pointer;
-        }
-    }
-  }
+//         &:hover {
+//           cursor:pointer;
+//         }
+//     }
+//   }
 
 
 

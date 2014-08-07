@@ -1,6 +1,6 @@
 header {
 	&.banner {
-		@extend %text-center;
+		// @extend %text-center;
 		@include max-width($bp1);
 		// @include padding();
 		z-index: 9000;
