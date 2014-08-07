@@ -517,8 +517,8 @@ header.banner {
   z-index: 9000;
 }
 
-.h-entry .entry-content figure.col__12 {
-  height: 350px;
+.h-entry .col__6 figure {
+  height: 240px;
 }
 
 footer.content-info {
@@ -600,7 +600,7 @@ Instead of a list of all class selectors,
 you can use the generic selector below, but it"s slower:
 [class*="icon-"] {
 */
-.icon-tick, .icon-logo, .icon-logo-mazizo, .icon-collapse, .icon-facebook, .icon-facebook2, .icon-facebook3, .icon-github, .icon-git, .icon-twitter, .icon-twitter2, .icon-cc, .icon-caret, .icon-apple, .icon-wordpress, .icon-flickr, .icon-youtube, .icon-vimeo, .icon-linkedin, .icon-attachment, .icon-link2, .icon-mail2, .icon-cart, .icon-location, .icon-anchor, .icon-safari, .icon-quote, .icon-html5, .icon-firefox, .icon-chrome, .icon-mail, .icon-IE, .icon-call37, .icon-image, .icon-code, .icon-console, .icon-paypal, .icon-download, .icon-arrow-left, .icon-arrow-right, .icon-cross-circle, .icon-mobile, .icon-phone, .icon-happy, .icon-link, .icon-laptop, .icon-close, .icon-diamonds, .icon-quotes-left, .icon-earth, .icon-neutral, .icon-wondering, .icon-wordpress2, .icon-plus, .icon-play, .icon-pause, .icon-stop, .icon-backward, .icon-forward, .icon-paperclip, .icon-house, .icon-bookmark, .icon-maximize, .icon-radio-unchecked, .icon-googleplus, .icon-minus, .icon-star-outline {
+.icon-logo-t0theme, .icon-tick, .icon-logo, .icon-logo-mazizo, .icon-collapse, .icon-facebook, .icon-facebook2, .icon-facebook3, .icon-github, .icon-git, .icon-twitter, .icon-twitter2, .icon-cc, .icon-caret, .icon-apple, .icon-wordpress, .icon-flickr, .icon-youtube, .icon-vimeo, .icon-linkedin, .icon-attachment, .icon-link2, .icon-mail2, .icon-cart, .icon-location, .icon-anchor, .icon-safari, .icon-quote, .icon-html5, .icon-firefox, .icon-chrome, .icon-mail, .icon-IE, .icon-call37, .icon-image, .icon-code, .icon-console, .icon-paypal, .icon-download, .icon-arrow-left, .icon-arrow-right, .icon-cross-circle, .icon-mobile, .icon-phone, .icon-happy, .icon-link, .icon-laptop, .icon-close, .icon-diamonds, .icon-quotes-left, .icon-earth, .icon-neutral, .icon-wondering, .icon-wordpress2, .icon-plus, .icon-play, .icon-pause, .icon-stop, .icon-backward, .icon-forward, .icon-paperclip, .icon-house, .icon-bookmark, .icon-maximize, .icon-radio-unchecked, .icon-googleplus, .icon-minus, .icon-star-outline {
   font-family: "icomoon";
   speak: none;
   font-style: normal;
@@ -610,6 +610,10 @@ you can use the generic selector below, but it"s slower:
   /* Better Font Rendering =========== */
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-logo-t0theme:before {
+  content: "\e657";
 }
 
 .icon-apple:before {
@@ -1198,7 +1202,7 @@ body:after {
   font-size: 100%;
   letter-spacing: 1px;
   white-space: nowrap;
-  background-color: #00cccd;
+  background-color: #00ffdb;
   border: none;
   cursor: pointer;
   margin: 0;
@@ -1238,7 +1242,7 @@ body:after {
 * Inputs con estilo de botones
 */
 input[type="submit"].btn:hover {
-  border-color: #00cccd;
+  border-color: #00ffdb;
 }
 
 /**
@@ -1256,14 +1260,14 @@ input[type="submit"].btn:hover {
   height: 50px;
   border-radius: 5px;
   color: rgba(0, 0, 0, 0.3);
-  background-color: #ff3332;
+  background-color: #ff0024;
 }
 .btn--slidemenu:hover {
-  color: #ff3332;
-  background-color: #00cccd;
+  color: #ff0024;
+  background-color: #00ffdb;
 }
 .btn--slidemenu:visited {
-  color: #00cccd;
+  color: #00ffdb;
 }
 
 /**
@@ -1297,7 +1301,7 @@ input[type="submit"].btn:hover {
 .btn--primary {
   font-size: 19px;
   font-size: 1.46154rem;
-  background-color: #00cccd;
+  background-color: #00ffdb;
   height: 100%;
   -webkit-transition: all 0.1s;
   -o-transition: all 0.1s;
@@ -1312,7 +1316,7 @@ input[type="submit"].btn:hover {
   -webkit-transition: all 0.1s;
   -o-transition: all 0.1s;
      transition: all 0.1s;
-  background-color: #00cccd;
+  background-color: #00ffdb;
 }
 
 /**
@@ -1409,7 +1413,7 @@ hr {
   padding: 0;
   height: 1px;
   border: 0;
-  border-top: 1px dotted #ff3332;
+  border-top: 1px dotted #ff0024;
 }
 
 /*------------------------------------*\
@@ -1429,7 +1433,7 @@ img {
 .img--polaroid {
   padding: 1.5%;
   background-color: white;
-  border: 1px solid #ff3332;
+  border: 1px solid #ff0024;
   -webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
           box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
 }
@@ -1478,7 +1482,7 @@ h3.altheader,
 h4.altheader,
 h5.altheader,
 h6.altheader {
-  font-weight: 700;
+  font-weight: 600;
 }
 
 h1 small,
@@ -1572,7 +1576,7 @@ ul {
 blockquote {
   margin: 0 0 2em 0;
   padding-left: 3%;
-  border-left: 10px solid #ff3332;
+  border-left: 10px solid #ff0024;
   font-family: "Courier New", serif;
   font-style: normal;
   line-height: 2em;
@@ -1622,7 +1626,7 @@ dt {
 }
 
 abbr[title] {
-  border-bottom: 1px dotted #ff3332;
+  border-bottom: 1px dotted #ff0024;
   cursor: help;
 }
 
@@ -1641,7 +1645,7 @@ ins {
 }
 
 mark {
-  background-color: #cdffff;
+  background-color: white;
   color: gray;
 }
 
@@ -1761,7 +1765,7 @@ nav ul li a {
   padding: 15px 20px;
 }
 nav ul li a:hover {
-  background: #00dbdc;
+  background: #0fffdd;
 }
 @media (max-width: 715px) {
   nav ul li a {
@@ -1915,7 +1919,7 @@ MOBILE NAV STYLES
 }
 
 .alert--inverse {
-  background-color: #ff3332;
+  background-color: #ff0024;
   border-color: black;
   color: white;
 }
@@ -1945,7 +1949,7 @@ MOBILE NAV STYLES
   white-space: nowrap;
   border-radius: 5px;
   color: gray;
-  background-color: #00cccd;
+  background-color: #00ffdb;
   -webkit-transition: all background-color 0.25s 0 linear;
   -o-transition: all background-color 0.25s 0 linear;
      transition: all background-color 0.25s 0 linear;
@@ -2018,13 +2022,13 @@ MOBILE NAV STYLES
 
 ::-moz-selection {
   background-color: #e6e6e6;
-  color: #000101;
+  color: #00332c;
   text-shadow: none;
 }
 
 ::selection {
   background-color: #e6e6e6;
-  color: #000101;
+  color: #00332c;
   text-shadow: none;
 }
 
@@ -2244,7 +2248,7 @@ textarea[readonly] {
 
 input:focus,
 textarea:focus {
-  border-color: #00cccd, 40%;
+  border-color: #00ffdb, 40%;
   outline: 0;
   outline: thin dotted \9;
 }
@@ -2397,7 +2401,7 @@ input:required:focus:valid {
   position: absolute;
   top: 0;
   right: -300px;
-  background: #00cccd;
+  background: #00ffdb;
   padding: 20px;
 }
 #site-menu li {
@@ -2420,7 +2424,7 @@ input:required:focus:valid {
   overflow: hidden;
   width: 100%;
   border: 1px solid #e6e6e6;
-  background-color: #01feff;
+  background-color: #33ffe2;
 }
 .jcarousel ul {
   width: 20000em;
@@ -2645,64 +2649,64 @@ input:required:focus:valid {
 }
 
 .color-base {
-  background-color: #00cccd;
+  background-color: #00ffdb;
 }
 .color-base:before {
-  content: "#00cccd";
+  content: "#00ffdb";
   color: white;
   display: block;
 }
 
 .color-base-invert {
-  background-color: #ff3332;
+  background-color: #ff0024;
 }
 .color-base-invert::before {
-  content: "#ff3332";
+  content: "#ff0024";
   color: white;
   display: block;
 }
 
 .color-base-light {
-  background-color: #00dbdc;
+  background-color: #0fffdd;
 }
 .color-base-light::before {
-  content: "#00dbdc";
+  content: "#0fffdd";
   color: white;
   display: block;
 }
 
 .color-base-lighter {
-  background-color: #01feff;
+  background-color: #33ffe2;
 }
 .color-base-lighter::before {
-  content: "#01feff";
+  content: "#33ffe2";
   color: white;
   display: block;
 }
 
 .color-base-lighten {
-  background-color: #00e5e7;
+  background-color: #1affdf;
 }
 .color-base-lighten::before {
-  content: "#00e5e7";
+  content: "#1affdf";
   color: white;
   display: block;
 }
 
 .color-base-dark {
-  background-color: #00999a;
+  background-color: #00ccaf;
 }
 .color-base-dark::before {
-  content: "#00999a";
+  content: "#00ccaf";
   color: white;
   display: block;
 }
 
 .color-base-darken {
-  background-color: #000101;
+  background-color: #00332c;
 }
 .color-base-darken::before {
-  content: "#000101";
+  content: "#00332c";
   color: white;
   display: block;
 }

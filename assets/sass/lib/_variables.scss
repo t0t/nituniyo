@@ -78,7 +78,7 @@ $baseletterspacing 	: 1px;
 /**
  * Brand stuff
  */
-$color-base      	: rgb(0,204,205); //marron
+$color-base      	: rgb(0,255,219); //marron
 $color-base-invert 	: invert($color-base); //invierte
 $color-base-light	: lighten($color-base, 3%);
 $color-base-lighten	: lighten($color-base, 5%);

@@ -19,7 +19,7 @@ you can use the generic selector below, but it"s slower:
 */
 
 
-$icons: ".icon-tick, .icon-logo, .icon-logo-mazizo, .icon-collapse, .icon-facebook, .icon-facebook2, .icon-facebook3, .icon-github, .icon-git, .icon-twitter, .icon-twitter2, .icon-cc, .icon-caret, .icon-apple, .icon-wordpress, .icon-flickr, .icon-youtube, .icon-vimeo, .icon-linkedin, .icon-attachment, .icon-link2, .icon-mail2, .icon-cart, .icon-location, .icon-anchor, .icon-safari, .icon-quote, .icon-html5, .icon-safari, .icon-firefox, .icon-chrome, .icon-mail, .icon-IE, .icon-call37, .icon-image, .icon-code, .icon-console, .icon-paypal, .icon-download, .icon-arrow-left, .icon-arrow-right, .icon-cross-circle, .icon-mobile, .icon-phone, .icon-happy, .icon-link, .icon-laptop, .icon-close, .icon-diamonds, .icon-quotes-left, .icon-earth, .icon-neutral, .icon-wondering, .icon-wordpress2, .icon-plus, .icon-play, .icon-pause, .icon-stop, .icon-backward, .icon-forward, .icon-paperclip, .icon-house, .icon-bookmark, .icon-maximize, .icon-radio-unchecked, .icon-googleplus, .icon-minus, .icon-star-outline, .icon-cc";
+$icons: ".icon-logo-t0theme, .icon-tick, .icon-logo, .icon-logo-mazizo, .icon-collapse, .icon-facebook, .icon-facebook2, .icon-facebook3, .icon-github, .icon-git, .icon-twitter, .icon-twitter2, .icon-cc, .icon-caret, .icon-apple, .icon-wordpress, .icon-flickr, .icon-youtube, .icon-vimeo, .icon-linkedin, .icon-attachment, .icon-link2, .icon-mail2, .icon-cart, .icon-location, .icon-anchor, .icon-safari, .icon-quote, .icon-html5, .icon-safari, .icon-firefox, .icon-chrome, .icon-mail, .icon-IE, .icon-call37, .icon-image, .icon-code, .icon-console, .icon-paypal, .icon-download, .icon-arrow-left, .icon-arrow-right, .icon-cross-circle, .icon-mobile, .icon-phone, .icon-happy, .icon-link, .icon-laptop, .icon-close, .icon-diamonds, .icon-quotes-left, .icon-earth, .icon-neutral, .icon-wondering, .icon-wordpress2, .icon-plus, .icon-play, .icon-pause, .icon-stop, .icon-backward, .icon-forward, .icon-paperclip, .icon-house, .icon-bookmark, .icon-maximize, .icon-radio-unchecked, .icon-googleplus, .icon-minus, .icon-star-outline, .icon-cc";
 
 %icomoon {
 	font-family: "icomoon";
@@ -39,7 +39,9 @@ $icons: ".icon-tick, .icon-logo, .icon-logo-mazizo, .icon-collapse, .icon-facebo
 	// 	@extend: %icon;
 	// }
 }
-
+.icon-logo-t0theme:before {
+	content: "\e657";
+}
 .icon-apple:before {
 	content: "\e600";
 }

@@ -13,7 +13,7 @@
 		<div class="col__4">
 			<h6>
 			<a class="url" href="#">
-				<?php bloginfo('name'); ?>
+				<i class="icon-logo-t0theme"></i> <?php bloginfo('name'); ?>
 			</a></h6>
 			<address>
 				<span class="street-address">Calle número 13</span>

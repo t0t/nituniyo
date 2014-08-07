@@ -2,10 +2,10 @@
 .h-entry time { }
 .h-entry .byline { }
 .h-entry .entry-content { }
-.h-entry .entry-content { 
-	figure {
-		&.col__12 {
-			height: 350px;
+.h-entry { 
+	.col__6 {
+		figure {
+			height: 240px;
 		}
 	}
 }

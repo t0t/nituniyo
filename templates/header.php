@@ -2,7 +2,7 @@
 
     <div class="row">
         <h1 class="brand col__12">
-        <i class="icon-logo-mazizo"></i>
+        <i class="icon-logo-t0theme"></i>
         <a href="<?php echo esc_url(home_url('/')); ?>/"><?php bloginfo('name'); ?></a>
         </h1>
     </div>
