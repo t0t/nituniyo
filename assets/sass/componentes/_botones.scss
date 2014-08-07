@@ -92,8 +92,18 @@ input[type="submit"].btn:hover {
 }
 
 /**
-* Botón de Info
+* Botones
 */
+.btn--slider {
+	background-color: $color-base;
+	color : $color-base-darker;
+	&:hover {
+		color : lighten($color-info, 40%);
+	}
+	&:visited {
+		color : $color-base-darker;
+	}
+}
 .btn--info {
 	background-color: $color-info;
 	color : darken($color-info, 40%);
@@ -122,14 +132,14 @@ input[type="submit"].btn:hover {
 
 .btn--primary {
 	@include font-size;
-	background-color: $color-base;
+	background-color: $color-base-invert;
 	height: 100%;
 	&:hover, &:visited {
 		color: $white;
-		@include translate(2px,3px);
+		@include skew(2deg,3deg);
 		@include transition(.1s);
 		// background-color: $color-inverse;
-		background-color: invert($color-base-invert);
+		background-color: $color-base-invert;
 	}
 	@include transition(.1s);
 }

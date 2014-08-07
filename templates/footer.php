@@ -26,9 +26,12 @@
 
 		<div class="col__4">
 			<h6>Redes Sociales</h6>
-			<a href=""><i class="icon-facebook3"></i></a>
-			<a href=""><i class="icon-twitter"></i></a>
-			<a href=""><i class="icon-vimeo"></i></a>
+			<a href="https://twitter.com/t0tinspire" target="_blank">
+				<i class="icon-twitter"></i>
+			</a>
+			<a href="https://github.com/t0t" target="_blank">
+				<i class="icon-github"></i>
+			</a>
 		</div>
 	</div>
 

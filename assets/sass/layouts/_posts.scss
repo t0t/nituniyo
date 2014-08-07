@@ -4,9 +4,17 @@
 .h-entry .entry-content { }
 .h-entry { 
 	.col__6 {
-		figure {
-			height: 240px;
+		height: 340px;
+	}
+}
+.byline {
+	margin-bottom: $paddingbase;
+}
+.h-entry footer { }
+body {
+	&.category {
+		article {
+			margin-bottom: $paddingbase;
 		}
 	}
 }
-.h-entry footer { }

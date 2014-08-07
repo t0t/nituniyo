@@ -15,7 +15,8 @@ Template Name: Stylesheet
 		<div class="col__9">
 
 			<div class="col__6">
-				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum delectus modi in assumenda incidunt aliquid illum est explicabo autem eligendi vel temporibus sunt nisi molestias, nostrum, neque eum porro et.</p>
+			<h4>Bienvenido</h4>
+				<p>Este tema wordpress está en desarrollo.</p>
 			</div>
 
 			<div class="col__6">
@@ -25,8 +26,7 @@ Template Name: Stylesheet
 		</div>
 
 		<div class="col__3">
-			<a href="" class="btn btn--info"><i class="icon-arrow-left"></i></a>
-			<a href="" class="btn btn--info"><i class="icon-arrow-right"></i></a>
+			<a href="/home-cpt/" class="btn btn--primary">Call to action ! <i class="icon-arrow-right"></i></a>
 		</div>
 
 </section>
@@ -44,7 +44,7 @@ Template Name: Stylesheet
 								    'posts_per_page' => 4 
 		)); ?>
 
-		<ul class="">
+		<ul>
 		
 			<?php while ($loop->have_posts()) : $loop->the_post(); ?>
 								
@@ -73,13 +73,13 @@ Template Name: Stylesheet
 
 		</ul>
 
-    <!-- Prev/next controls -->
-    <a href="#" class="jcarousel-control-prev btn btn--info">
-    <span class="icon-arrow-left"></span></a>
-    <a href="#" class="jcarousel-control-next btn btn--info">
-    <span class="icon-arrow-right"></span></a>
-
 	</div>
+
+    <!-- Prev/next controls -->
+    <a href="#" class="jcarousel-control-prev btn btn--slider">
+    <span class="icon-arrow-left"></span></a>
+    <a href="#" class="jcarousel-control-next btn btn--slider">
+    <span class="icon-arrow-right"></span></a>
 
 </section>
 

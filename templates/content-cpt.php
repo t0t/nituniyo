@@ -15,7 +15,7 @@
   </article>
 <?php endwhile; ?>
 
-
+<hr>
 
 <div class="row">
 
@@ -57,32 +57,10 @@
 
 	</div>
 
-		<!-- Prev/next controls -->
+	<!-- Prev/next controls -->
+    <a href="#" class="jcarousel-control-prev btn btn--slider">
+    <span class="icon-arrow-left"></span></a>
+    <a href="#" class="jcarousel-control-next btn btn--slider">
+    <span class="icon-arrow-right"></span></a>
 
-		<a href="#" class="jcarousel-control-prev">
-				<span class="icon-arrow-left"></span>
-		</a>
-		<a href="#" class="jcarousel-control-next">
-				<span class="icon-arrow-right"></span>
-		</a>
 </div>
-
-
-
-
-<!-- borrar si no lo uso -->
-				<?php if ( get_field('imagen') ) {?>
-
-					<?php $attachment_id = get_field('imagen');
-					$size = "thumbnail";
-					$image = wp_get_attachment_image_src( $attachment_id, $size );
-					?>
-					<img src="<?php echo $image[0]; ?>" class="img-rounded">
-
-				<?php }?>
-
-				<?php if ( has_post_thumbnail()) : ?>
-
-					<?php //the_post_thumbnail('thumbnail', array('class' => 'img-rounded')); ?>
-
-				<?php endif; ?>

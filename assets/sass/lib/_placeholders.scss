@@ -82,6 +82,8 @@
   * http://bit.ly/1e3YaBH
   */
 %clearfix {
+    clear: both; // para que me flote this element
+  
 	&:after{
         content:"";
         display:table;

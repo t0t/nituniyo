@@ -13,21 +13,21 @@
   position: relative;
   @include translateX(0); //fallback
   @include translate3d(0,0,0); //improve performance
-  @include transition(300ms);
+  @include transition(200ms);
   @include vendor( backface-visibility, hidden ); //http://scotch.io/tutorials/off-canvas-menus-with-css3-transitions-and-transforms
 }
 
 .show-nav #site-canvas {
-  @include translateX(-300px); //fallback
-  @include translate3d(-300px,0,0);//improve performance
+  @include translateX(-200px); //fallback
+  @include translate3d(-200px,0,0);//improve performance
 }
 
 #site-menu {
-  width: 300px;
+  width: 200px;
   height: 100%;
   position: absolute;
   top: 0;
-  right: -300px;
+  right: -200px;
   background: $color-base;
   padding: $paddingbase;
   li {
@@ -38,10 +38,10 @@
 
 .toggle-nav {
 	position: absolute;
-	right: 0;
+	right: 10%;
 	top: $paddingbase;
 	// background: $color-base-invert;
 	@media (max-width: $bp3) {
-		right: 0;
+		right: 6%;
 	}
 }

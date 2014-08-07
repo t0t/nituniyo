@@ -8,8 +8,8 @@
     </div>
 
     <div id="site-menu">
-       <a href="#" class="toggle-nav">
-       <i class="icon-close"></i></a>
+       <!-- <a href="#" class="toggle-nav">
+       <i class="icon-close"></i></a> -->
        
         <nav class="nav" role="navigation">
             <?php
@@ -19,10 +19,11 @@
             ?>
         </nav>
 
-     </div>
+    </div>
     
-     <a href="#" class="toggle-nav btn btn-lg btn-success" id="big-sexy">
-     <i class="icon-collapse"></i></a>
+    <a href="#" class="toggle-nav btn btn-lg btn-success">
+    <i class="icon-collapse"></i></a>
+    
 
     <!-- collapse btn -->
    <!--  <div class="mobile">

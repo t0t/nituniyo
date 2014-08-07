@@ -15,7 +15,7 @@
         float:#{$fold};
         // background: $color-base;
         // cursor: pointer;
-        border: $borde;
+        // border: $borde;
         padding: $paddingbase;
         width: (($unit * $col) - $margin ) + ( $margin / ( $grid-columns / $col) );
        
@@ -41,7 +41,7 @@
       
         &:hover {
             background: $lightergrey;
-            color: $darkgrey;
+            color: $black;
         }
 }
 

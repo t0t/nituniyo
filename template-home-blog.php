@@ -58,9 +58,9 @@ Template Name: Blog
 	</div>
 
 	<!-- Prev/next controls -->
-	<a href="#" class="btn btn--info jcarousel-control-prev">
+	<a href="#" class="btn btn--slider jcarousel-control-prev">
 	<i class="icon-arrow-left"></i></a>
-	<a href="#" class="btn btn--info jcarousel-control-next">
+	<a href="#" class="btn btn--slider jcarousel-control-next">
 	<i class="icon-arrow-right"></i></a>
 
 </div>
@@ -91,8 +91,7 @@ Template Name: Blog
 										
 				<?}else {?>
 										
-						<img src="<?php echo get_template_directory_uri(); ?>/assets/img/logo.svg" alt="Alt" class="logo-img">
-						<figcaption>El caption</figcaption>
+						<img src="<?php echo get_template_directory_uri(); ?>/assets/img/logo.svg" alt="Alt" class="logo-img" height="155px">
 					</figure>
 		
 				<?}?>
