@@ -120,14 +120,14 @@ nav ul {
     position: absolute;
     background:$lightergrey;
     right: 0;
-    top: $paddingbase * 2;
+    top: $paddingbase * 3.6;
     max-width: 250px;
   }
 }
 .toggle-nav{
     position: absolute;
-    top: 0;
-    right: 0;
+    top: $paddingbase * 1.5;
+    right: $paddingbase / 0.8;
 }
 
 

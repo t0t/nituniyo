@@ -71,9 +71,13 @@ function toggleNav() {
     if ($('.nav').hasClass('show-nav')) {
         // Do things on Nav Close
         $('.nav').removeClass('show-nav');
+        $('.toggle-nav i').removeClass('icon-cross-circle');
+        $('.toggle-nav i').addClass('icon-collapse');
     } else {
         // Do things on Nav Open
         $('.nav').addClass('show-nav');
+        $('.toggle-nav i').removeClass('icon-collapse');
+        $('.toggle-nav i').addClass('icon-cross-circle');
     }
 
     //$('#site-wrapper').toggleClass('show-nav');
