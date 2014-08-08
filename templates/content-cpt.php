@@ -17,33 +17,36 @@
         <ul class="pager row">
         
             <li class="previous col__4">
-                <?php 
-                $previousPost = get_previous_post(true); 
-                $previousthumbnail = get_the_post_thumbnail($previousPost->ID, 'mini', array('class' => 'img--rounded') ); echo $previousthumbnail; 
-                ?>
-                <?php 
-                previous_post_link( '%link', '&larr; %title' );
-                ?>
+
+            <?php 
+                
+                $prevPost = get_previous_post();
+                
+                if($prevPost) 
+            {
+                $prevthumbnail = get_the_post_thumbnail($prevPost->ID, 'mini', array('class' => 'img--rounded') );
+                previous_post_link('%link', "$prevthumbnail &larr; %title"); 
+            } 
+            ?>
+            </li>
+
+             <li class="col__4">
+                <a href="/home-cpt/">
+                &curren; <?php $post_type = get_post_type_object( get_post_type($post) ); echo $post_type->label; ?></a>
             </li>
 
             <li class="col__4">
-                <a href="/home-cpt/">
-				&curren; <?php $post_type = get_post_type_object( get_post_type($post) ); echo $post_type->label; ?></a>
-            </li>
             
-            <li class="next col__4">
+            <?php
 
-                <?php 
-                $nextPost = get_next_post(true); 
-                $nextthumbnail = get_the_post_thumbnail($nextPost->ID, 'mini', array('class' => 'img--rounded') ); echo $nextthumbnail; 
-                ?>
-                <?php 
-                next_post_link( '%link', '%title &rarr;' );
-                ?>
+                $nextPost = get_next_post();
 
-                <?php //if ( has_post_thumbnail()) : ?>
-                <?php //endif; ?>
-
+                if($nextPost) 
+            {
+                $nextthumbnail = get_the_post_thumbnail($nextPost->ID, 'mini', array('class' => 'img--rounded'));  
+                next_post_link('%link', "$nextthumbnail &rarr; %title"); 
+            }
+            ?>
             </li>
       </ul>
 
