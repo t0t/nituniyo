@@ -510,7 +510,6 @@ body {
   margin-right: auto;
   max-width: 1224px;
   width: 100%;
-  padding-top: 100px;
 }
 
 header.banner {
@@ -526,7 +525,6 @@ header.banner {
   top: 0;
   right: 0;
   left: 0;
-  background-color: white;
 }
 
 h1.brand {
@@ -2433,9 +2431,9 @@ input:required:focus:valid {
 }
 
 .col__1 {
-  -webkit-transition: all 0.5s;
-  -o-transition: all 0.5s;
-     transition: all 0.5s;
+  -webkit-transition: all 0.3s;
+  -o-transition: all 0.3s;
+     transition: all 0.3s;
   float: left;
   padding: 20px;
   width: 6.5%;
@@ -2445,7 +2443,6 @@ input:required:focus:valid {
   margin-right: 0;
 }
 .col__1:hover {
-  background: #e6e6e6;
   color: black;
 }
 @media only screen and (max-width: 767px) {
@@ -2456,9 +2453,9 @@ input:required:focus:valid {
 }
 
 .col__2 {
-  -webkit-transition: all 0.5s;
-  -o-transition: all 0.5s;
-     transition: all 0.5s;
+  -webkit-transition: all 0.3s;
+  -o-transition: all 0.3s;
+     transition: all 0.3s;
   float: left;
   padding: 20px;
   width: 15.0%;
@@ -2468,7 +2465,6 @@ input:required:focus:valid {
   margin-right: 0;
 }
 .col__2:hover {
-  background: #e6e6e6;
   color: black;
 }
 @media only screen and (max-width: 767px) {
@@ -2479,9 +2475,9 @@ input:required:focus:valid {
 }
 
 .col__3 {
-  -webkit-transition: all 0.5s;
-  -o-transition: all 0.5s;
-     transition: all 0.5s;
+  -webkit-transition: all 0.3s;
+  -o-transition: all 0.3s;
+     transition: all 0.3s;
   float: left;
   padding: 20px;
   width: 23.5%;
@@ -2491,7 +2487,6 @@ input:required:focus:valid {
   margin-right: 0;
 }
 .col__3:hover {
-  background: #e6e6e6;
   color: black;
 }
 @media only screen and (max-width: 767px) {
@@ -2502,9 +2497,9 @@ input:required:focus:valid {
 }
 
 .col__4 {
-  -webkit-transition: all 0.5s;
-  -o-transition: all 0.5s;
-     transition: all 0.5s;
+  -webkit-transition: all 0.3s;
+  -o-transition: all 0.3s;
+     transition: all 0.3s;
   float: left;
   padding: 20px;
   width: 32%;
@@ -2514,7 +2509,6 @@ input:required:focus:valid {
   margin-right: 0;
 }
 .col__4:hover {
-  background: #e6e6e6;
   color: black;
 }
 @media only screen and (max-width: 767px) {
@@ -2525,9 +2519,9 @@ input:required:focus:valid {
 }
 
 .col__6 {
-  -webkit-transition: all 0.5s;
-  -o-transition: all 0.5s;
-     transition: all 0.5s;
+  -webkit-transition: all 0.3s;
+  -o-transition: all 0.3s;
+     transition: all 0.3s;
   float: left;
   padding: 20px;
   width: 49%;
@@ -2537,7 +2531,6 @@ input:required:focus:valid {
   margin-right: 0;
 }
 .col__6:hover {
-  background: #e6e6e6;
   color: black;
 }
 @media only screen and (max-width: 767px) {
@@ -2548,9 +2541,9 @@ input:required:focus:valid {
 }
 
 .col__9 {
-  -webkit-transition: all 0.5s;
-  -o-transition: all 0.5s;
-     transition: all 0.5s;
+  -webkit-transition: all 0.3s;
+  -o-transition: all 0.3s;
+     transition: all 0.3s;
   float: left;
   padding: 20px;
   width: 74.5%;
@@ -2560,7 +2553,6 @@ input:required:focus:valid {
   margin-right: 0;
 }
 .col__9:hover {
-  background: #e6e6e6;
   color: black;
 }
 @media only screen and (max-width: 767px) {
@@ -2571,9 +2563,9 @@ input:required:focus:valid {
 }
 
 .col__12 {
-  -webkit-transition: all 0.5s;
-  -o-transition: all 0.5s;
-     transition: all 0.5s;
+  -webkit-transition: all 0.3s;
+  -o-transition: all 0.3s;
+     transition: all 0.3s;
   float: left;
   padding: 20px;
   width: 100%;
@@ -2583,7 +2575,6 @@ input:required:focus:valid {
   margin-right: 0;
 }
 .col__12:hover {
-  background: #e6e6e6;
   color: black;
 }
 @media only screen and (max-width: 767px) {

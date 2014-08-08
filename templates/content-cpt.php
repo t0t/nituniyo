@@ -19,10 +19,9 @@
             <li class="previous col__4">
                 <?php 
                 $previousPost = get_previous_post(true); 
-                $previousThumbnail = get_the_post_thumbnail($previousPost->ID, 'mini', array('class' => 'img--rounded') ); echo $previousthumbnail; 
+                $previousthumbnail = get_the_post_thumbnail($previousPost->ID, 'mini', array('class' => 'img--rounded') ); echo $previousthumbnail; 
                 ?>
                 <?php 
-                previous_post_link( '%link', $previousThumbnail ); 
                 previous_post_link( '%link', '&larr; %title' );
                 ?>
             </li>
@@ -36,10 +35,9 @@
 
                 <?php 
                 $nextPost = get_next_post(true); 
-                $nextThumbnail = get_the_post_thumbnail($nextPost->ID, 'mini', array('class' => 'img--rounded') ); echo $nextthumbnail; 
+                $nextthumbnail = get_the_post_thumbnail($nextPost->ID, 'mini', array('class' => 'img--rounded') ); echo $nextthumbnail; 
                 ?>
                 <?php 
-                next_post_link( '%link', $nextThumbnail ); 
                 next_post_link( '%link', '%title &rarr;' );
                 ?>
 

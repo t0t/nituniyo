@@ -13,6 +13,8 @@ module.exports = function(grunt) {
     // 'assets/js/plugins/lightbox.js',
     'assets/vendor/lightbox/js/lightbox.js',
     'assets/vendor/fitvids/jquery.fitvids.js',
+    // 'assets/vendor/paper/dist/paper-full.min.js',
+    // 'assets/vendor/fabric/dist/fabric.min.js',
     'assets/js/plugins/*.js',
     'assets/js/*.min.js',
     'assets/js/_*.js'

@@ -10,7 +10,7 @@ body {
 .container {
 		@include max-width ($bp1);
 		@extend %clearfix;
-			padding-top: $paddingbase * 5;
+			// padding-top: $paddingbase * 5;
 
 			@media (max-width: 1220px) { //padding horizontal en resoluciones decrecientes
 	  			// @include padding();
@@ -23,3 +23,4 @@ body {
 
 // Main content area
 .main { }
+

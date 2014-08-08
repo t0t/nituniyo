@@ -572,6 +572,15 @@ var Roots = {
 
 
 
+
+
+
+
+
+
+
+
+
 // -------------
 /*====================================
 =            off canvas ON DOM READY 
@@ -737,3 +746,5 @@ var UTIL = {
 $(document).ready(UTIL.loadEvents);
 
 })(jQuery); // Fully reference jQuery after this point.
+
+
