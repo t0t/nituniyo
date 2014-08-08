@@ -55,6 +55,7 @@ function roots_display_sidebar() {
     array(
       'is_404',
       'is_front_page'
+      // array( 'is_post_type_archive', array('cpt') )
     ),
     /**
      * Page template checks (via is_page_template())

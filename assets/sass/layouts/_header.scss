@@ -2,21 +2,31 @@ header {
 	&.banner {
 		// @extend %text-center;
 		@include max-width($bp1);
+		// @include max-width($bp1 - ($paddingbase * 2));
 		// @include padding();
 		z-index: 9000;
 	}
 }
 .banner {
-	.brand {
-		// position: fixed;
-		// top: 50px;
-	}
+		position: fixed;
+		top: 0;
+		right: 0;
+		left: 0;
+		background-color: white;
+		.brand {
+			// margin-top: $paddingbase;
+		}
 }
-.brand {
-	.icon-logo-t0theme {
+h1 {
+	&.brand {
+		margin-bottom: 0;
+
+		.icon-logo-t0theme {
 		vertical-align: middle;
-		font-size: 200%;
+		font-size: 172%;
 		color: $color-base;
+		}
 	}
+	
 }
 

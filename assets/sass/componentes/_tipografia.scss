@@ -63,7 +63,7 @@ address {
 	small {
 		// @include font-size(10);
 		// letter-spacing: $baseletterspacing;
-		letter-spacing: 0;
+		// letter-spacing: 0;
 		line-height: $baselineheight / 3;
 		// background-color: yellow;
 	}
@@ -94,14 +94,13 @@ ul {
 blockquote  {
 	margin : 0 0 $baselineheight 0;
 	padding-left : $gutterwidth;
-	border-left : ($paddingbase / 2) solid $bordercolor;
+	border-left : ($paddingbase / 4) solid $bordercolor;
 	font-family : $altfont;
 	font-style : normal;
 	line-height: $baselineheight;
 	p {
 		@include font-size(18);
 		color:$grey;
-		font-style: italic;
 		line-height: $baselineheight / 1.2;
 	}
 }

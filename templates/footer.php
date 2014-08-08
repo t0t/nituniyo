@@ -38,11 +38,11 @@
 	<p class="creditos" rel="author">
 		 
 		<small>
-			<a href="http://sergiofores.net" target="_blank"><i class="icon-logo-mazizo"></i> Sergio Forés</a> => <?php bloginfo('name'); ?> 
-			- <?php echo date('Y'); ?>
-		</small - >
-		<?php edit_post_link(' EDIT') ?>
-		<?php wp_loginout(); ?>
+			<a href="http://sergiofores.net" target="_blank"><i class="icon-logo-mazizo"></i> Sergio Forés</a> &sdot; <?php bloginfo('name'); ?>
+			 <?php echo date('Y'); ?>
+		</small>
+		 <?php edit_post_link('&oplus; Editar ') ?>&sdot;
+		 <?php wp_loginout(); ?>
 	</p>
 
 </footer>

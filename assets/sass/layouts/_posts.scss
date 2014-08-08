@@ -7,14 +7,14 @@
 		height: 340px;
 	}
 }
-.byline {
-	margin-bottom: $paddingbase;
+.published, .byline {
+	// margin-bottom: $paddingbase;
+	// float: left;
 }
 .h-entry footer { }
-body {
-	&.category {
-		article {
-			margin-bottom: $paddingbase;
-		}
+.post {
+	border-bottom: $borde;
+	&:last-child {
+		border-bottom: none;
 	}
 }

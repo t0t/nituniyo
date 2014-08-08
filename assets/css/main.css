@@ -430,7 +430,7 @@ th {
 /*------------------------------------*\
     $PLACEHOLDERS
 \*------------------------------------*/
-footer.content-info {
+footer.content-info, .post--nav {
   text-align: center;
 }
 
@@ -510,6 +510,7 @@ body {
   margin-right: auto;
   max-width: 1224px;
   width: 100%;
+  padding-top: 100px;
 }
 
 header.banner {
@@ -520,9 +521,20 @@ header.banner {
   z-index: 9000;
 }
 
-.brand .icon-logo-t0theme {
+.banner {
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  background-color: white;
+}
+
+h1.brand {
+  margin-bottom: 0;
+}
+h1.brand .icon-logo-t0theme {
   vertical-align: middle;
-  font-size: 200%;
+  font-size: 172%;
   color: #00ffdb;
 }
 
@@ -530,12 +542,11 @@ header.banner {
   height: 340px;
 }
 
-.byline {
-  margin-bottom: 20px;
+.post {
+  border-bottom: 1px dashed #00ffdb;
 }
-
-body.category article {
-  margin-bottom: 20px;
+.post:last-child {
+  border-bottom: none;
 }
 
 .sidebar ul {
@@ -1445,7 +1456,7 @@ hr {
   padding: 0;
   height: 1px;
   border: 0;
-  border-top: 1px dotted #ff0024;
+  border-top: 1px dotted #00ffdb;
 }
 
 /*------------------------------------*\
@@ -1465,7 +1476,7 @@ img {
 .img--polaroid {
   padding: 1.5%;
   background-color: white;
-  border: 1px solid #ff0024;
+  border: 1px solid #00ffdb;
   -webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
           box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
 }
@@ -1579,7 +1590,6 @@ ol small,
 ul small,
 dl small,
 address small {
-  letter-spacing: 0;
   line-height: 0.66667em;
 }
 
@@ -1606,7 +1616,7 @@ ul {
 blockquote {
   margin: 0 0 2em 0;
   padding-left: 3%;
-  border-left: 10px solid #ff0024;
+  border-left: 5px solid #00ffdb;
   font-family: "Courier New", serif;
   font-style: normal;
   line-height: 2em;
@@ -1615,7 +1625,6 @@ blockquote p {
   font-size: 18px;
   font-size: 1.38462rem;
   color: gray;
-  font-style: italic;
   line-height: 1.66667em;
 }
 
@@ -1656,7 +1665,7 @@ dt {
 }
 
 abbr[title] {
-  border-bottom: 1px dotted #ff0024;
+  border-bottom: 1px dotted #00ffdb;
   cursor: help;
 }
 
@@ -1771,20 +1780,12 @@ nav ul {
   padding-left: 0;
 }
 nav ul li {
+  float: left;
   position: relative;
   z-index: 20;
   /******************
   SUBNAV
   ******************/
-}
-@media (max-width: 715px) {
-  nav ul li {
-    float: none;
-    position: relative;
-  }
-  nav ul li:last-child {
-    border-bottom: 1px solid #e6e6e6;
-  }
 }
 nav ul li.active > a {
   text-decoration: underline;
@@ -1799,8 +1800,7 @@ nav ul li a:hover {
 }
 @media (max-width: 715px) {
   nav ul li a {
-    display: table;
-    padding: 20px 2px;
+    padding: 20px;
     width: 100%;
   }
 }
@@ -1809,7 +1809,7 @@ nav ul li:hover ul {
   max-height: 1000px;
   background: white;
   padding: 10px 0;
-  border: 1px solid #e6e6e6;
+  border: 1px dashed #00ffdb;
 }
 @media (max-width: 715px) {
   nav ul li:hover ul {
@@ -1865,6 +1865,24 @@ nav ul li ul li a:hover {
     padding-left: 20px;
     background: #e6e6e6;
   }
+}
+
+.nav {
+  display: none;
+}
+.nav.show-nav {
+  display: block;
+  position: absolute;
+  background: #e6e6e6;
+  right: 0;
+  top: 40px;
+  max-width: 250px;
+}
+
+.toggle-nav {
+  position: absolute;
+  top: 0;
+  right: 0;
 }
 
 /***************************
@@ -2343,11 +2361,8 @@ input:-moz-placeholder {
   margin-right: 3px;
 }
 
-.form-search input,
-.form-search textarea,
-.form-search select {
-  display: inline-block;
-  margin-bottom: 0;
+input.search-field {
+  width: auto;
 }
 
 .form-search .search-query {
@@ -2393,7 +2408,7 @@ input:required:focus:valid {
   position: relative;
   overflow: hidden;
   width: 100%;
-  border: 1px solid #e6e6e6;
+  border: 1px dashed #00ffdb;
   background-color: #33ffe2;
 }
 .jcarousel ul {

@@ -1,6 +1,10 @@
 <?php if ( is_singular('cpt') ) :  ?>
   
-	<h3>Productos</h3>
+	<h5><?php _e('More', 'roots'); ?> 
+	<?php 
+$post_type = get_post_type_object( get_post_type($post) );
+echo $post_type->label;
+?></h5>
 	
 	<ul>
 			

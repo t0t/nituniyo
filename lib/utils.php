@@ -1,4 +1,9 @@
 <?php
+
+// SUPERINTERESANTE
+// http://premium.wpmudev.org/blog/adding-custom-images-sizes-to-the-wordpress-media-library/
+
+
 /**
  * Utility functions
  */

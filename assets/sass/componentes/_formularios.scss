@@ -285,13 +285,18 @@ input:-moz-placeholder {
 }
 
 // .form-search
-
-.form-search input,
-.form-search textarea,
-.form-search select {
-	display : inline-block;
-	margin-bottom : 0;
+input {
+	&.search-field {
+		width: auto;
+	}
 }
+
+// .form-search input,
+// .form-search textarea,
+// .form-search select {
+// 	display : inline-block;
+// 	margin-bottom : 0;
+// }
 
 .form-search .search-query {
 	padding-left : 14px;

@@ -26,7 +26,7 @@ Template Name: Stylesheet
 		</div>
 
 		<div class="col__3">
-			<a href="/home-cpt/" class="btn btn--primary">Call to action ! <i class="icon-arrow-right"></i></a>
+			<a href="/home-cpt/" class="btn btn--primary">Go! <i class="icon-arrow-right"></i></a>
 		</div>
 
 </section>

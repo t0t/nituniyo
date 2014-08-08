@@ -7,15 +7,15 @@ nav ul {
 
 
   li {
-    // float:left;
+    float:left;
     position:relative;
     z-index:20;
 
     @media (max-width:$bp3) {
-      float:none;
-      position:relative;
+      // float:none;
+      // position:relative;
         &:last-child {
-          border-bottom: $borde;
+          // border-bottom: $borde;
         }
     }
 
@@ -35,8 +35,8 @@ nav ul {
       }
 
       @media (max-width:$bp3) {
-        display:table;
-        padding:$paddingbase 2px;
+        // display:table;
+        padding:$paddingbase;
         // border-top:$borde;
         width:100%;
       }
@@ -111,6 +111,23 @@ nav ul {
 
   }
 
+}
+
+.nav {
+  display: none;
+  &.show-nav {
+    display: block;
+    position: absolute;
+    background:$lightergrey;
+    right: 0;
+    top: $paddingbase * 2;
+    max-width: 250px;
+  }
+}
+.toggle-nav{
+    position: absolute;
+    top: 0;
+    right: 0;
 }
 
 
@@ -200,4 +217,7 @@ MOBILE NAV STYLES
             display:block;
         }
     }
+}
+.post--nav{
+  @extend %text-center;
 }
