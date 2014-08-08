@@ -31,5 +31,3 @@
     </div> -->
 
 </header>
-
-<canvas id="c"></canvas>

@@ -510,6 +510,7 @@ body {
   margin-right: auto;
   max-width: 1224px;
   width: 100%;
+  padding-top: 100px;
 }
 
 header.banner {
@@ -595,6 +596,11 @@ article, aside, figure, footer, header, hgroup, nav, section {
 figure.alignnone {
   margin-left: 0;
   margin-right: 0;
+  max-width: 100%;
+}
+
+.wp-caption {
+  float: left;
   max-width: 100%;
 }
 
@@ -1462,6 +1468,8 @@ hr {
 \*------------------------------------*/
 img {
   max-width: 100%;
+  height: 100%;
+  height: auto;
   border-width: 0;
   vertical-align: middle;
   -ms-interpolation-mode: bicubic;

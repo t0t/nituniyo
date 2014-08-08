@@ -14,10 +14,12 @@ figure.alignnone {
   margin-right: 0;
   max-width: 100%;
 }
-// Captions
 .wp-caption {
-  // @extend .thumbnail;
+  float: left;
+  max-width: 100%;
 }
+// Captions
+
 
 // Gallery shortcode
 .gallery-row {
