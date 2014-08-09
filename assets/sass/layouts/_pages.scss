@@ -1,0 +1,24 @@
+.home {
+	background-image: url(../img/home_bg.jpg);
+	background-position: center top;
+	background-repeat: no-repeat;
+	background-size: contain;
+	.well {
+		h1 {
+			font-size: 500%;
+			color: $color-base;
+			margin-bottom: $paddingbase * 3;
+			@media (max-width: 850px) {
+				font-size: 200%;
+			}
+		}
+	}
+	.banner {
+		background-color: transparent;
+		.brand {
+			a {
+				color: $color-base;
+			}
+		}
+	}
+}

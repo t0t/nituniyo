@@ -168,7 +168,12 @@
 }
 
 	.well--large {
-		padding : ($paddingbase * 1.5) ($paddingbase * 2);
+		padding : ($paddingbase * 2) ($paddingbase * 2);
+		@extend %text-center;
+		background-color: transparent;
+		border: none;
+		border-radius: none;
+		box-shadow: none;
 	}
 
 	.well--small {

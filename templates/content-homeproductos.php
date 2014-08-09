@@ -47,11 +47,10 @@
 
 </div>
 
-
-
-	<h2>Listas de definición</h2>
 		
 <section class="row">
+
+	<h2>Listas de definición</h2>
 		<dl class="col__4">
 			<dt>Titulo de un definition list</dt>
 			<dd class="icon-tick"> Descripcion A</dd>
