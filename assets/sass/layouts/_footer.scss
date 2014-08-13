@@ -1,7 +1,7 @@
 footer {
 	&.content-info {
 		@extend %text-center;
-		@include max-width($bp1);
+		// @include max-width($bp1);
 		.creditos {
 			// @include padding();
 		}

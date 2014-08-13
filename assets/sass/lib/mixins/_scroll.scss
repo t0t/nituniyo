@@ -1,12 +1,22 @@
-section {
-  &.skrollr {
-
+.cover {
+  @media (min-width: $bp2) {
+    height: 700px;
   }
 }
-#fondo {
-  
+
+.features {
+    // background-color: $white;
+    @extend %background-color;
+    float: left;
+    width: 100%;
+    .row {
+      @include max-width($bp1);
+      @extend %text-center;
+    }
 }
 
+
+// skrollr ofsset debug
 #offset {
   position: fixed;
   top: 0;

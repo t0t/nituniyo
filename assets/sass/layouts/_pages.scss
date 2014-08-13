@@ -1,13 +1,20 @@
 .home {
-	background-image: url(../img/home_bg.jpg);
-	background-position: center top;
-	background-repeat: no-repeat;
-	background-size: contain;
+	.banner {
+		background-color: transparent;
+	}
+}
+.cover {
+	background: url(../img/home_bg.jpg) no-repeat 0px top $darkgrey;
+	background-size: cover;
+	background-attachment: fixed;
+
 	.well {
 		h1 {
 			font-size: 500%;
 			color: $color-base;
-			margin-bottom: $paddingbase * 3;
+			@extend %inline-block;
+			@extend %clearfix;
+			@include margin-bottom();
 			@media (max-width: 850px) {
 				font-size: 200%;
 			}

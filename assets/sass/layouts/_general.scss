@@ -4,23 +4,31 @@ body {
 	color: $textcolor;
 	background-color: $background;
 	letter-spacing: $baseletterspacing;
+	
+}
+
+h1 {
+	@include max-width ($bp2);
+	// @extend %text-center;
 }
 
 // Content wrapper
-.container {
-		@include max-width ($bp1);
-		@extend %clearfix;
-			padding-top: $paddingbase * 5;
-
-			@media (max-width: 1220px) { //padding horizontal en resoluciones decrecientes
-	  			// @include padding();
-	  			// padding-top: 75px;
-	  			// background-color: red;
-	  		}
-	}
-.wrap { }
+.wrap { 
+	@include max-width ($bp1);
+	@extend %clearfix;
+	margin-top: 100px;
+}
 
 
 // Main content area
-.main { }
+.main {}
 
+footer {
+	.main-footer {
+	@include max-width ($bp1);
+    // background: url('../img/home_bg.jpg') no-repeat center top;
+    background-color: $color-base;
+    @extend %inline-block;
+    // z-index: -9000;
+  }
+}

@@ -46,10 +46,17 @@ var Roots = {
 
 
     // skrollr.init();
-    // var s = skrollr.init({
-    // forceHeight: true
-    // });
-    var s = skrollr.init();
+    var s = skrollr.init({
+        forceHeight: false,
+        easing: {
+            //This easing will sure drive you crazy
+            wtf: Math.random,
+            inverted: function(p) {
+                return 1 - p;
+            }
+        }
+    });
+    // var s = skrollr.init();
     // $('html').addClass('skrollr');
 
 

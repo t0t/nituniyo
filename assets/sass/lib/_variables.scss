@@ -1,7 +1,7 @@
 /*------------------------------------*\
     $BREAKPOINTS
 \*------------------------------------*/
-$bp1 : 1224px;
+$bp1 : 1400px;
 $bp2 : 1024px;
 $bp3 : 715px;
 $bp4 : 640px;
@@ -105,6 +105,7 @@ $grey 				: lighten($black, 50%);
 $lightgrey 			: lighten($black, 75%);
 $lightergrey 		: lighten($black, 90%);
 $white 				: rgb(255,255,255);
+$white-alpha 		: rgba(255,255,255,0.3);
 
 // Web
 $background			: 	$white;
@@ -112,7 +113,7 @@ $textcolor			: 	$grey;
 $textcolor-strong	:	$black;
 
 // Links  //////////////////////
-$linkcolor 		: darken($color-cuatro,50%);
+$linkcolor 			: darken($color-cuatro,50%);
 $linkcolorhover 	: lighten($linkcolor, 10%);
 $linkcolorvisited   : $linkcolor;
 $linkcolorfocus 	: $linkcolorvisited;
