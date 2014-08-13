@@ -36,13 +36,21 @@ var Roots = {
 
 
 
+    // var s = skrollr.init({
+    //     render: function(data) {
+    //     //Log the current scroll position.
+    //     //console.log(data.curTop);
+    //     $('#offset').text(data.curTop);
+    //     }
+    // });
 
 
-
-
-
-
-
+    // skrollr.init();
+    // var s = skrollr.init({
+    // forceHeight: true
+    // });
+    var s = skrollr.init();
+    // $('html').addClass('skrollr');
 
 
 // -------------

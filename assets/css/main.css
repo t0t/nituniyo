@@ -497,6 +497,19 @@ footer.content-info, .post--nav, .well--large {
 
 /* MIXIN
 ========================================================================== */
+#offset {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  text-align: center;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: #fff;
+  padding: 0 10px;
+  z-index: 9999;
+}
+
 body {
   font-family: "Open Sans", Helvetica, Arial, sans-serif;
   line-height: 2em;
@@ -1486,6 +1499,11 @@ hr {
   height: 1px;
   border: 0;
   border-top: 1px dotted #00ffdb;
+}
+
+canvas {
+  width: 100%;
+  height: 100%;
 }
 
 /*------------------------------------*\

@@ -46,9 +46,8 @@ Template Name: Home
 		</dl>
 	
 		<dl class="col__4">
-			<dt>Listado de <?php the_title() ?></dt>
+		<dt>Listado de <?php the_title() ?></dt>
 			
-	
 		<?php while ($loop->have_posts()) : $loop->the_post(); ?>
 
 			<dd class="icon-tick">

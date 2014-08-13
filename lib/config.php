@@ -64,6 +64,7 @@ function roots_display_sidebar() {
     array(
       'template-custom.php',
       'template-stylesheet.php',
+      'template-skrollr.php',
       'template-cpt1.php'
     )
   );
