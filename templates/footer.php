@@ -1,7 +1,4 @@
-<footer 
-data-end="opacity:1;"
-data-100-end="opacity:0;"
-class="content-info" role="contentinfo">
+<footer class="content-info" role="contentinfo">
   
 	<div class="main-footer">
 	<div class="row">

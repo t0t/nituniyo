@@ -18,6 +18,7 @@ module.exports = function(grunt) {
     // 'assets/vendor/fabric/dist/fabric.min.js',
     // 'assets/vendor/jquery.stellar/src/jquery.stellar.js',
     // 'assets/vendor/skrollr-stylesheets/src/skrollr.stylesheets.js',
+    'assets/vendor/enquire/dist/enquire.min.js',
     'assets/vendor/skrollr/src/skrollr.js',
     'assets/js/plugins/*.js',
     'assets/js/*.min.js',
