@@ -2,29 +2,43 @@
 	.banner {
 		background-color: transparent;
 	}
-}
-.cover {
-	background: url(../img/home_bg.jpg) no-repeat 0px top $darkgrey;
-	background-size: cover;
-	background-attachment: fixed;
-
-	.well {
-		h1 {
-			font-size: 500%;
-			color: $color-base;
-			@extend %inline-block;
-			@extend %clearfix;
-			@include margin-bottom();
-			@media (max-width: 850px) {
-				font-size: 200%;
+	.features {
+    // background-color: $white;
+    @extend %background-color;
+    float: left;
+    width: 100%;
+	    .row {
+	      @include max-width($bp1);
+	      @extend %text-center;
+	    }
+	}
+	.cover {
+		background: url(../img/home_bg.jpg) no-repeat 0px top $darkgrey;
+		background-size: cover;
+		// background-attachment: fixed;
+		background-color: red;
+		@extend %inline-block;
+		@media (max-width: $bp1) {
+			height: 500px;
+		}
+		.well {
+			h1 {
+				font-size: 500%;
+				color: $color-base;
+				@extend %inline-block;
+				@extend %clearfix;
+				@include margin-bottom();
+				@media (max-width: 850px) {
+					font-size: 200%;
+				}
 			}
 		}
-	}
-	.banner {
-		background-color: transparent;
-		.brand {
-			a {
-				color: $color-base;
+		.banner {
+			background-color: transparent;
+			.brand {
+				a {
+					color: $color-base;
+				}
 			}
 		}
 	}

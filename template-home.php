@@ -11,21 +11,24 @@ Template Name: Home
 <?php endwhile; ?>
 
 <section class="cover"
-	data-top-bottom="background-position: center -700px"
-	data-top="background-position: center 0px"
+data-top="background-position: 100% 0%"
+data-top-bottom="background-position: 100% 100%"
 >
 	<div class="row">
 		<div class="col__12">
 			<div class="well well--large">
-				<div class="class="col__12"">
+				<div class="col__12">
 				<h1
-				data-top-bottom="opacity: 0"
-				data--500-bottom-top="opacity: 1"
+				data-top="opacity: 0"
+				data-16p-top="opacity: 1"
 				>
 				A Wordpress Starter theme with love
 				</h1>
 				</div>
-				<div class="col__12">
+	<div class="col__12"
+	data--100-center="transform: rotate(10deg); opacity: 0"
+	data-center="transform: rotate(0deg); opacity: 1"
+	>
 				<a href="/video/" class="btn btn--primary">Look! <i class="icon-arrow-right"></i></a>
 				</div>
 			</div>
@@ -45,9 +48,8 @@ Template Name: Home
 								)); 
 		?>	
 			<dl class="col__4"
-			data-bottom="opacity: 0; transform: scale(0.5w)"
-			data--80-bottom="opacity: 1; transform: scale(1)"
-			>
+	data-bottom="opacity: 0; transform: translateX(10px) rotate(-6deg) scale(0.9)"
+	data--80-bottom="opacity: 1; transform: translateX(0px) rotate(0deg) scale(1)">
 				<dt>Listado de <?php the_title() ?></dt>
 				
 			<?php while ($loop->have_posts()) : $loop->the_post(); ?>
