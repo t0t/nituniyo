@@ -1,3 +1,4 @@
+// home
 .home {
 	.banner {
 		background-color: transparent;
@@ -17,19 +18,26 @@
 		background-size: cover;
 		// background-attachment: fixed;
 		background-color: red;
-		@extend %inline-block;
-		@media (max-width: $bp1) {
-			height: 500px;
-		}
+		height: 400px;
+		// @extend %inline-block;
+			@media (min-width: $bp2) {
+				height: 600px;
+			}
+			@media (min-width: $bp1) {
+				height: 650px;
+			}
 		.well {
 			h1 {
-				font-size: 500%;
 				color: $color-base;
 				@extend %inline-block;
 				@extend %clearfix;
 				@include margin-bottom();
-				@media (max-width: 850px) {
-					font-size: 200%;
+				@include max-width ($bp2);
+				@media (min-width: $bp3) {
+					font-size: 300%;
+				}
+				@media (min-width: $bp2) {
+					font-size: 550%;
 				}
 			}
 		}

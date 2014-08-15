@@ -6,5 +6,8 @@ footer {
 			// @include padding();
 		}
 	}
+	address, p, form {
+		margin-bottom: 0;
+	}
 }
 .content-info { }

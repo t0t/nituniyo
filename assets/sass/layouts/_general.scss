@@ -7,11 +7,6 @@ body {
 	
 }
 
-h1 {
-	@include max-width ($bp2);
-	// @extend %text-center;
-}
-
 // Content wrapper
 .wrap { 
 	@include max-width ($bp1);

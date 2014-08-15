@@ -2,11 +2,9 @@
   
 	<div class="main-footer">
 	<div class="row">
-		<div class="">
-		    	<?php dynamic_sidebar('sidebar-footer'); ?>
-			</div>
+		<?php dynamic_sidebar('sidebar-footer'); ?>
 		
-			<div class="col__12">
+			
 		
 				<div class="col__4">
 					<?php get_search_form(); ?>
@@ -18,11 +16,10 @@
 						<i class="icon-logo-t0theme"></i> <?php bloginfo('name'); ?>
 					</a></h6>
 					<address>
-						<span class="street-address">Calle número 13</span>
-						<span class="region">La Provincia</span>
-						<span class="postal-code">12980</span>
-						<span class="country-name">Spain</span>
-						<span class="phone">+44 (0)345 345345</span>
+						<small>Calle número 13
+						La Provincia, 
+						12980 Spain
+						+44 (0)345 345345</small>
 					</address>
 				</div>
 		
@@ -36,8 +33,6 @@
 					</a>
 				</div>
 			
-			</div>
-		<div class="col__12">
 			<p class="creditos" rel="author">
 				 
 				<small>
@@ -47,7 +42,6 @@
 				 <?php edit_post_link('&oplus; Editar ') ?>&sdot;
 				 <?php wp_loginout(); ?>
 			</p>
-		</div>
 		</div>
 		</div>
 
