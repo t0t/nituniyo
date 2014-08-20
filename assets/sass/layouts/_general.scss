@@ -14,16 +14,76 @@ body {
 	margin-top: 100px;
 }
 
+main {
+	h2 {
+		&.h1 {
+		@extend %text-center;	
+		}
+	}
+	&.col__9 {
+		h1 {
+			text-align: inherit;
+		}
+	}
+}
+//content area
+.content {
+	@include max-width ($bp2);
+}
 
-// Main content area
-.main {}
+// Contact Form 7
+.wpcf7 {
+	float: left;
+}
 
+// GRID
+	
+	.row {
+		width: 100%;
+		@include margin-bottom($gutterwidth);
+		float: left;
+	}
+
+	.col__1 {
+		@include grid(1);
+		@include break(tablet, 12);
+	}
+	.col__2 {
+		@include grid(2);
+		@include break(tablet, 12);
+	}
+
+	.col__3 {
+		@include grid(3);
+		@include break(tablet, 12);
+	}
+
+	.col__4 {
+		@include grid(4);
+		@include break(tablet, 12);
+	}
+
+	.col__6 {
+		@include grid(6);
+		@include break(tablet, 12);
+	}
+
+	.col__9 {
+		@include grid(9);
+		@include break(tablet, 12);
+	}
+
+	.col__12 {
+		@include grid(12);
+		@include break(tablet, 12);
+	}
+
+// Footer
 footer {
 	.main-footer {
 	@include max-width ($bp1);
     // background: url('../img/home_bg.jpg') no-repeat center top;
     background-color: $color-base;
     @extend %inline-block;
-    // z-index: -9000;
   }
 }

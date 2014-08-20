@@ -1,32 +1,32 @@
 header {
 	&.banner {
-		// @extend %text-center;
 		@include max-width($bp1);
-		// @include max-width($bp1 - ($paddingbase * 2));
-		// @include padding();
 		z-index: 9000;
-	}
-}
-.banner {
 		position: fixed;
 		top: 0;
-		right: 0;
-		left: 0;
 		background-color: $white-alpha;
-		.brand {
-		// margin-top: $paddingbase;
-		}
-}
-h1 {
-	&.brand {
-		margin-bottom: 0;
-
-		.icon-logo-t0theme {
-		vertical-align: middle;
-		font-size: 172%;
-		color: $color-base;
+		@media (min-width: $bp1) {
+			right: 0;
+			left: 0;
 		}
 	}
-	
+
+	h1 {
+		&.brand {
+			margin-bottom: 0;
+			@include padding(1%);
+			.icon-logo-t0theme {
+			vertical-align: middle;
+			// font-size: 172%;
+			color: $color-base;
+			@media (min-width: $bp2) {
+				font-size: 172%;
+			}
+			@media (min-width: $bp1) {
+				padding-left: 0;
+			}
+			}
+		}
+	}
 }
 

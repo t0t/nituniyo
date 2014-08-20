@@ -1,33 +1,6 @@
 <?php if ( is_singular('cpt') ) :  ?>
   
-	<h5><?php _e('More', 'roots'); ?> 
-	<?php 
-$post_type = get_post_type_object( get_post_type($post) );
-echo $post_type->label;
-?></h5>
 	
-	<ul>
-			
-	<?php 
-	$this_post = $post->ID;
-	$loop = new WP_Query( array( 
-							'post_type' => 'cpt',
-							'post__not_in' => array($this_post),
-							'category_name' => '' 
-							)); 
-	?>
-	
-	<?php while ($loop->have_posts()) : $loop->the_post(); ?>
-
-			<li class="icon-tick">
-			<a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>">
-			<?php the_title(); ?></a>
-			</li>
-			
-			<?php endwhile; ?>
-			<?php wp_reset_postdata(); ?>
-
-	</ul>
 
 
 <? else: 

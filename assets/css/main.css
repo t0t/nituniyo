@@ -430,7 +430,7 @@ th {
 /*------------------------------------*\
     $PLACEHOLDERS
 \*------------------------------------*/
-.home .features .row, footer.content-info, .post--nav, .well--large {
+main h2.h1, .home .features .row, footer.content-info, .post--nav, .well--large {
   text-align: center;
 }
 
@@ -535,6 +535,160 @@ body {
   margin-top: 100px;
 }
 
+main.col__9 h1 {
+  text-align: inherit;
+}
+
+.content {
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 1024px;
+  width: 100%;
+}
+
+.wpcf7 {
+  float: left;
+}
+
+.row {
+  width: 100%;
+  margin-bottom: 3%;
+  float: left;
+}
+
+.col__1 {
+  -webkit-transition: all 0.3s;
+  -o-transition: all 0.3s;
+     transition: all 0.3s;
+  float: left;
+  padding: 20px;
+  width: 6.5%;
+  margin-right: 2%;
+}
+.col__1:last-child {
+  margin-right: 0;
+}
+@media only screen and (max-width: 815px) {
+  .col__1 {
+    width: 97%;
+    margin: 1.5%;
+  }
+}
+
+.col__2 {
+  -webkit-transition: all 0.3s;
+  -o-transition: all 0.3s;
+     transition: all 0.3s;
+  float: left;
+  padding: 20px;
+  width: 15.0%;
+  margin-right: 2%;
+}
+.col__2:last-child {
+  margin-right: 0;
+}
+@media only screen and (max-width: 815px) {
+  .col__2 {
+    width: 97%;
+    margin: 1.5%;
+  }
+}
+
+.col__3 {
+  -webkit-transition: all 0.3s;
+  -o-transition: all 0.3s;
+     transition: all 0.3s;
+  float: left;
+  padding: 20px;
+  width: 23.5%;
+  margin-right: 2%;
+}
+.col__3:last-child {
+  margin-right: 0;
+}
+@media only screen and (max-width: 815px) {
+  .col__3 {
+    width: 97%;
+    margin: 1.5%;
+  }
+}
+
+.col__4 {
+  -webkit-transition: all 0.3s;
+  -o-transition: all 0.3s;
+     transition: all 0.3s;
+  float: left;
+  padding: 20px;
+  width: 32%;
+  margin-right: 2%;
+}
+.col__4:last-child {
+  margin-right: 0;
+}
+@media only screen and (max-width: 815px) {
+  .col__4 {
+    width: 97%;
+    margin: 1.5%;
+  }
+}
+
+.col__6 {
+  -webkit-transition: all 0.3s;
+  -o-transition: all 0.3s;
+     transition: all 0.3s;
+  float: left;
+  padding: 20px;
+  width: 49%;
+  margin-right: 2%;
+}
+.col__6:last-child {
+  margin-right: 0;
+}
+@media only screen and (max-width: 815px) {
+  .col__6 {
+    width: 97%;
+    margin: 1.5%;
+  }
+}
+
+.col__9 {
+  -webkit-transition: all 0.3s;
+  -o-transition: all 0.3s;
+     transition: all 0.3s;
+  float: left;
+  padding: 20px;
+  width: 74.5%;
+  margin-right: 2%;
+}
+.col__9:last-child {
+  margin-right: 0;
+}
+@media only screen and (max-width: 815px) {
+  .col__9 {
+    width: 97%;
+    margin: 1.5%;
+  }
+}
+
+.col__12 {
+  -webkit-transition: all 0.3s;
+  -o-transition: all 0.3s;
+     transition: all 0.3s;
+  float: left;
+  padding: 20px;
+  width: 100%;
+  margin-right: 2%;
+}
+.col__12:last-child {
+  margin-right: 0;
+}
+@media only screen and (max-width: 815px) {
+  .col__12 {
+    width: 97%;
+    margin: 1.5%;
+  }
+}
+
 footer .main-footer {
   margin-left: auto;
   margin-right: auto;
@@ -549,25 +703,39 @@ header.banner {
   max-width: 1400px;
   width: 100%;
   z-index: 9000;
-}
-
-.banner {
   position: fixed;
   top: 0;
-  right: 0;
-  left: 0;
   background-color: rgba(255, 255, 255, 0.95);
 }
-
-h1.brand {
-  margin-bottom: 0;
+@media (min-width: 1400px) {
+  header.banner {
+    right: 0;
+    left: 0;
+  }
 }
-h1.brand .icon-logo-t0theme {
+header h1.brand {
+  margin-bottom: 0;
+  padding: 1%;
+}
+header h1.brand .icon-logo-t0theme {
   vertical-align: middle;
-  font-size: 172%;
   color: #00ffdb;
 }
+@media (min-width: 1024px) {
+  header h1.brand .icon-logo-t0theme {
+    font-size: 172%;
+  }
+}
+@media (min-width: 1400px) {
+  header h1.brand .icon-logo-t0theme {
+    padding-left: 0;
+  }
+}
 
+.home .col__12 {
+  padding-right: 0;
+  padding-left: 0;
+}
 .home .banner {
   background-color: transparent;
 }
@@ -2526,149 +2694,6 @@ input:required:focus:valid {
   width: 300px;
   height: 100%;
   padding: 20px;
-}
-
-.wpcf7 {
-  float: left;
-}
-
-.row {
-  width: 100%;
-  margin-bottom: 3%;
-  float: left;
-}
-
-.col__1 {
-  -webkit-transition: all 0.3s;
-  -o-transition: all 0.3s;
-     transition: all 0.3s;
-  float: left;
-  padding: 20px;
-  width: 6.5%;
-  margin-right: 2%;
-}
-.col__1:last-child {
-  margin-right: 0;
-}
-@media only screen and (max-width: 767px) {
-  .col__1 {
-    width: 97%;
-    margin: 1.5%;
-  }
-}
-
-.col__2 {
-  -webkit-transition: all 0.3s;
-  -o-transition: all 0.3s;
-     transition: all 0.3s;
-  float: left;
-  padding: 20px;
-  width: 15.0%;
-  margin-right: 2%;
-}
-.col__2:last-child {
-  margin-right: 0;
-}
-@media only screen and (max-width: 767px) {
-  .col__2 {
-    width: 97%;
-    margin: 1.5%;
-  }
-}
-
-.col__3 {
-  -webkit-transition: all 0.3s;
-  -o-transition: all 0.3s;
-     transition: all 0.3s;
-  float: left;
-  padding: 20px;
-  width: 23.5%;
-  margin-right: 2%;
-}
-.col__3:last-child {
-  margin-right: 0;
-}
-@media only screen and (max-width: 767px) {
-  .col__3 {
-    width: 97%;
-    margin: 1.5%;
-  }
-}
-
-.col__4 {
-  -webkit-transition: all 0.3s;
-  -o-transition: all 0.3s;
-     transition: all 0.3s;
-  float: left;
-  padding: 20px;
-  width: 32%;
-  margin-right: 2%;
-}
-.col__4:last-child {
-  margin-right: 0;
-}
-@media only screen and (max-width: 767px) {
-  .col__4 {
-    width: 97%;
-    margin: 1.5%;
-  }
-}
-
-.col__6 {
-  -webkit-transition: all 0.3s;
-  -o-transition: all 0.3s;
-     transition: all 0.3s;
-  float: left;
-  padding: 20px;
-  width: 49%;
-  margin-right: 2%;
-}
-.col__6:last-child {
-  margin-right: 0;
-}
-@media only screen and (max-width: 767px) {
-  .col__6 {
-    width: 97%;
-    margin: 1.5%;
-  }
-}
-
-.col__9 {
-  -webkit-transition: all 0.3s;
-  -o-transition: all 0.3s;
-     transition: all 0.3s;
-  float: left;
-  padding: 20px;
-  width: 74.5%;
-  margin-right: 2%;
-}
-.col__9:last-child {
-  margin-right: 0;
-}
-@media only screen and (max-width: 767px) {
-  .col__9 {
-    width: 97%;
-    margin: 1.5%;
-  }
-}
-
-.col__12 {
-  -webkit-transition: all 0.3s;
-  -o-transition: all 0.3s;
-     transition: all 0.3s;
-  float: left;
-  padding: 20px;
-  width: 100%;
-  margin-right: 2%;
-}
-.col__12:last-child {
-  margin-right: 0;
-}
-@media only screen and (max-width: 767px) {
-  .col__12 {
-    width: 97%;
-    margin: 1.5%;
-  }
 }
 
 .galeria__item {

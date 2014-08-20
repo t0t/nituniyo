@@ -1,7 +1,6 @@
 <header class="banner" role="banner">
 
-        <div class="">
-        <h1 class="brand col__6">
+        <h1 class="brand">
 
         <i class="icon-logo-t0theme"></i>
         <a href="<?php echo esc_url(home_url('/')); ?>/"><?php bloginfo('name'); ?></a>
@@ -19,7 +18,6 @@
             ?>
         </nav>
 
-        </div>
 
        <!-- <a href="#" class="toggle-nav">
        <i class="icon-close"></i></a> -->

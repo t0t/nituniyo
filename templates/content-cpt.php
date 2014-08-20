@@ -2,12 +2,39 @@
 
   <article <?php post_class(); ?>>
     <header>
-      <h1 class="entry-title"><?php the_title(); ?></h1>
+      <h2 class="h1 entry-title"><?php the_title(); ?></h2>
       <?php //get_template_part('templates/entry-meta'); ?>
     </header>
 
     <div class="entry-content">
-		<?php the_content(); ?>
+		
+        <?php if( have_rows('content') ): ?>
+
+            <? while ( have_rows('content') ) : the_row(); ?>
+
+            <div class="row"
+data--500-top="opacity: 0; transform: translateX(-110px)"
+data-top="opacity: 1; transform: translateX(0px)"
+            >
+
+            <figure class="col__9">
+            <img src="<? the_sub_field('img'); ?>" alt="">
+            </figure>
+
+            <div class="col__3">
+                <p><? the_sub_field('txt'); ?></p>
+            </div>
+
+            </div>
+
+           <? endwhile;
+
+        else : ?>
+        <? endif; ?>
+
+        <?php the_content(); ?>
+
+
     </div>
 
     <footer>
@@ -57,6 +84,37 @@
     </footer>
   </article>
 <?php endwhile; ?>
+
+<hr>
+
+<h5><?php _e('More', 'roots'); ?> 
+    <?php 
+$post_type = get_post_type_object( get_post_type($post) );
+echo $post_type->label;
+?></h5>
+    
+    <ul>
+            
+    <?php 
+    $this_post = $post->ID;
+    $loop = new WP_Query( array( 
+                            'post_type' => 'cpt',
+                            'post__not_in' => array($this_post),
+                            'category_name' => '' 
+                            )); 
+    ?>
+    
+    <?php while ($loop->have_posts()) : $loop->the_post(); ?>
+
+            <li class="icon-tick">
+            <a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>">
+            <?php the_title(); ?></a>
+            </li>
+            
+            <?php endwhile; ?>
+            <?php wp_reset_postdata(); ?>
+
+    </ul>
 
 <hr>
 

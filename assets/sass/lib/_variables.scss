@@ -4,13 +4,12 @@
 $bp1 : 1400px;
 $bp2 : 1024px;
 $bp3 : 715px;
-$bp4 : 640px;
 $bp5 : 320px;
 
-$break-wide: 1240px;
-$break-desktop: 990px;
-$break-tablet: 767px;
-$break-mobile: 480px;
+$break-wide: $bp1;
+$break-desktop: $bp2;
+$break-tablet: $bp3 + 100px;
+$break-mobile: $bp5;
 
 
 

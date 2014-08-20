@@ -22,7 +22,7 @@ function roots_main_class() {
     $class = 'col__9';
   } else {
     // Classes on full width pages
-    $class = 'full';
+    $class = 'col__12';
   }
 
   return apply_filters('roots/main_class', $class);
@@ -54,7 +54,9 @@ function roots_display_sidebar() {
      */
     array(
       'is_404',
-      'is_front_page'
+      'is_front_page',
+      'is_page',
+      array( 'is_singular', array('cpt') )
       // array( 'is_post_type_archive', array('cpt') )
     ),
     /**
