@@ -13,6 +13,7 @@
 @import "lib/mixins/sombras.scss";
 @import "lib/mixins/formularios.scss";
 @import "lib/mixins/scroll.scss";
+@import "componentes/reset.scss";
 
 @import "layouts/general.scss";
 @import "layouts/header.scss";
@@ -22,7 +23,6 @@
 @import "layouts/cpt.scss";
 @import "layouts/footer.scss";
 
-@import "componentes/reset.scss";
 @import "componentes/wp-classes.scss"; // Clases de Wordpress
 @import "componentes/fuentes.scss";
 @import "componentes/links.scss";

@@ -2,7 +2,7 @@ header {
 	&.banner {
 		@include max-width($bp1);
 		z-index: 9000;
-		position: fixed;
+		// position: fixed;
 		top: 0;
 		background-color: $white-alpha;
 		@media (min-width: $bp1) {

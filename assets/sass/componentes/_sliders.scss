@@ -3,18 +3,22 @@
 	position: relative;
 	overflow: hidden;
 	width: 100%;
-	border: $borde;
+	// border: $borde;
 	background-color: $color-base-lighter;
 
 	ul {
 		width: 20000em;
-    		position: relative;
+    	position: relative;
 	}
 
 	li {
 		float: left;
-		width: 300px;
+		width: $bp1 / 2;
 		height: 100%;
-		padding: $paddingbase;
+		// padding: $paddingbase;
+	}
+
+	img {
+		// width: 100%;
 	}
 }

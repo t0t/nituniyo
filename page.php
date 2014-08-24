@@ -1,5 +1,3 @@
-
-
 <?php while (have_posts()) : the_post(); ?>
   <?php get_template_part('templates/page', 'header'); ?>
   <h3><?php the_field('h3'); ?></h3>

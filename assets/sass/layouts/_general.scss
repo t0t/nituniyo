@@ -6,15 +6,39 @@ body {
 	letter-spacing: $baseletterspacing;
 	
 }
+	section {
+		@media (min-width: $bp3) {
+			padding: $margin*2;
+		}
+	}
+section {
+	@extend %text-center;
+	@extend %clearfix;
+}
 
+// fondos
+.bg1, .bg2 {
+	@include background-image(bg1,100%);
+	background-color: $color-base-dark;
+}
+.bg1 {
+	background-position: bottom;
+}
+.bg2 {
+	background-position: center top;
+}
 // Content wrapper
 .wrap { 
 	@include max-width ($bp1);
 	@extend %clearfix;
-	margin-top: 100px;
+	// margin-top: 62px;
 }
 
 main {
+	h1:first-child {
+		@extend %text-center;
+		padding-top: $baselineheight/2;
+	}
 	h2 {
 		&.h1 {
 		@extend %text-center;	
@@ -24,6 +48,9 @@ main {
 		h1 {
 			text-align: inherit;
 		}
+	}
+	&.col__12 {
+		padding: 0;
 	}
 }
 //content area
@@ -80,10 +107,14 @@ main {
 
 // Footer
 footer {
+	@media (min-width: $bp3) {
+		padding: $margin*2;
+	}
+	// position: fixed;
 	.main-footer {
 	@include max-width ($bp1);
     // background: url('../img/home_bg.jpg') no-repeat center top;
-    background-color: $color-base;
+    // background-color: $color-base;
     @extend %inline-block;
   }
 }

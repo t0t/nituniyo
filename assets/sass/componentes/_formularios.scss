@@ -52,7 +52,8 @@ input,
 button,
 select,
 textarea {
-	@include font-size(14);
+	@include font-size($basefontsize);
+	letter-spacing: $baseletterspacing;
 	border-radius: $radius;
 	vertical-align : baseline;
 	*vertical-align : middle;

@@ -430,7 +430,7 @@ th {
 /*------------------------------------*\
     $PLACEHOLDERS
 \*------------------------------------*/
-main h2.h1, .home .features .row, footer.content-info, .post--nav, .well--large {
+section, main h1:first-child, main h2.h1, .home .features .row, footer.content-info, .post--nav, .well--large {
   text-align: center;
 }
 
@@ -445,7 +445,7 @@ footer .main-footer, .home .cover .well h1 {
 }
 
 .home .features {
-  background-color: white;
+  background-color: #e6e3d9;
 }
 
 /**
@@ -477,10 +477,10 @@ footer .main-footer, .home .cover .well h1 {
 * Clear floats.
 * http://bit.ly/1e3YaBH
 */
-.wrap, .home .cover .well h1 {
+section, .wrap, .home .cover .well h1 {
   clear: both;
 }
-.wrap:after, .home .cover .well h1:after {
+section:after, .wrap:after, .home .cover .well h1:after {
   content: "";
   display: table;
   clear: both;
@@ -519,12 +519,65 @@ footer .main-footer, .home .cover .well h1 {
   z-index: 9999;
 }
 
+/*------------------------------------*\
+    $RESET
+\*------------------------------------*/
+html, body, body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, abbr, address, cite, code, del, dfn, em, img, ins, kbd, q, samp, small, strong, sub, sup, var, b, i, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, figure, footer, header, hgroup, menu, nav, section, time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  background: transparent;
+}
+
+article, aside, figure, footer, header, hgroup, nav, section {
+  display: block;
+}
+
+*, *::before, *::after {
+  -webkit-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  -o-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
 body {
   font-family: "Open Sans", Helvetica, Arial, sans-serif;
   line-height: 2em;
   color: gray;
-  background-color: white;
+  background-color: #e6e3d9;
   letter-spacing: 1px;
+}
+
+@media (min-width: 715px) {
+  section {
+    padding: 6%;
+  }
+}
+
+.bg1, .bg2 {
+  background-image: url(../img/bg1.svg);
+  -webkit-background-size: 100% 100%;
+          background-size: 100%;
+  background-color: #d2ccba;
+}
+.no-svg .bg1, .no-svg .bg2 {
+  background-image: url(../img/bg1.png);
+}
+@media only screen and (-moz-min-device-pixel-ratio: 1.5), only screen and (-o-min-device-pixel-ratio: 3 / 2), only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min-device-pixel-ratio: 1.5) {
+  .no-svg .bg1, .no-svg .bg2 {
+    background-image: url(../img/bg1@2x.png);
+  }
+}
+
+.bg1 {
+  background-position: bottom;
+}
+
+.bg2 {
+  background-position: center top;
 }
 
 .wrap {
@@ -532,11 +585,16 @@ body {
   margin-right: auto;
   max-width: 1400px;
   width: 100%;
-  margin-top: 100px;
 }
 
+main h1:first-child {
+  padding-top: 1em;
+}
 main.col__9 h1 {
   text-align: inherit;
+}
+main.col__12 {
+  padding: 0;
 }
 
 .content {
@@ -689,12 +747,16 @@ main.col__9 h1 {
   }
 }
 
+@media (min-width: 715px) {
+  footer {
+    padding: 6%;
+  }
+}
 footer .main-footer {
   margin-left: auto;
   margin-right: auto;
   max-width: 1400px;
   width: 100%;
-  background-color: #00ffdb;
 }
 
 header.banner {
@@ -703,7 +765,6 @@ header.banner {
   max-width: 1400px;
   width: 100%;
   z-index: 9000;
-  position: fixed;
   top: 0;
   background-color: rgba(255, 255, 255, 0.95);
 }
@@ -719,7 +780,7 @@ header h1.brand {
 }
 header h1.brand .icon-logo-t0theme {
   vertical-align: middle;
-  color: #00ffdb;
+  color: #e6e3d9;
 }
 @media (min-width: 1024px) {
   header h1.brand .icon-logo-t0theme {
@@ -754,20 +815,20 @@ header h1.brand .icon-logo-t0theme {
   -webkit-background-size: cover;
           background-size: cover;
   background-color: red;
-  height: 400px;
+  height: 500px;
 }
 @media (min-width: 1024px) {
   .home .cover {
-    height: 600px;
+    height: 100%;
   }
 }
 @media (min-width: 1400px) {
   .home .cover {
-    height: 650px;
+    height: 100%;
   }
 }
 .home .cover .well h1 {
-  color: #00ffdb;
+  color: #e6e3d9;
   margin-bottom: 3%;
   margin-left: auto;
   margin-right: auto;
@@ -788,7 +849,7 @@ header h1.brand .icon-logo-t0theme {
   background-color: transparent;
 }
 .home .cover .banner .brand a {
-  color: #00ffdb;
+  color: #e6e3d9;
 }
 
 .h-entry .col__6 {
@@ -796,7 +857,7 @@ header h1.brand .icon-logo-t0theme {
 }
 
 .post {
-  border-bottom: 1px dashed #00ffdb;
+  border-bottom: 3px double #938760;
 }
 .post:last-child {
   border-bottom: none;
@@ -806,32 +867,26 @@ header h1.brand .icon-logo-t0theme {
   padding-left: 0;
 }
 
+footer.content-info .creditos {
+  -webkit-transition: all 0.3s;
+  -o-transition: all 0.3s;
+     transition: all 0.3s;
+  float: left;
+  padding: 20px;
+  width: 100%;
+  margin-right: 2%;
+}
+footer.content-info .creditos:last-child {
+  margin-right: 0;
+}
+@media only screen and (max-width: 815px) {
+  footer.content-info .creditos {
+    width: 97%;
+    margin: 1.5%;
+  }
+}
 footer address, footer p, footer form {
   margin-bottom: 0;
-}
-
-/*------------------------------------*\
-    $RESET
-\*------------------------------------*/
-html, body, body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, abbr, address, cite, code, del, dfn, em, img, ins, kbd, q, samp, small, strong, sub, sup, var, b, i, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, figure, footer, header, hgroup, menu, nav, section, time, mark, audio, video {
-  margin: 0;
-  padding: 0;
-  border: 0;
-  outline: 0;
-  font-size: 100%;
-  vertical-align: baseline;
-  background: transparent;
-}
-
-article, aside, figure, footer, header, hgroup, nav, section {
-  display: block;
-}
-
-*, *::before, *::after {
-  -webkit-box-sizing: border-box;
-  -ms-box-sizing: border-box;
-  -o-box-sizing: border-box;
-  box-sizing: border-box;
 }
 
 .aligncenter {
@@ -1483,13 +1538,12 @@ body:after {
 .btn {
   display: inline-block;
   line-height: 2.6em;
-  color: gray;
+  color: #938760;
   text-align: center;
   vertical-align: middle;
   font-size: 100%;
   letter-spacing: 1px;
   white-space: nowrap;
-  background-color: #00ffdb;
   border: none;
   cursor: pointer;
   margin: 0;
@@ -1515,7 +1569,7 @@ body:after {
   outline: none;
 }
 .btn:visited {
-  color: gray;
+  color: #938760;
 }
 
 /*------------------------------------*\
@@ -1529,7 +1583,7 @@ body:after {
 * Inputs con estilo de botones
 */
 input[type="submit"].btn:hover {
-  border-color: #00ffdb;
+  border-color: #e6e3d9;
 }
 
 /**
@@ -1547,28 +1601,28 @@ input[type="submit"].btn:hover {
   height: 50px;
   border-radius: 5px;
   color: rgba(0, 0, 0, 0.3);
-  background-color: #ff0024;
+  background-color: #d9dce6;
 }
 .btn--slidemenu:hover {
-  color: #ff0024;
-  background-color: #00ffdb;
+  color: #d9dce6;
+  background-color: #e6e3d9;
 }
 .btn--slidemenu:visited {
-  color: #00ffdb;
+  color: #e6e3d9;
 }
 
 /**
 * Botones
 */
 .btn--slider {
-  background-color: #00ffdb;
-  color: black;
+  background-color: #e6e3d9;
+  color: #18160f;
 }
 .btn--slider:hover {
   color: white;
 }
 .btn--slider:visited {
-  color: black;
+  color: #18160f;
 }
 
 .btn--info {
@@ -1599,22 +1653,26 @@ input[type="submit"].btn:hover {
 .btn--primary {
   font-size: 23px;
   font-size: 1rem;
-  background-color: #00ffdb;
+  background-color: none;
+  border: 3px double #938760;
   height: 100%;
   -webkit-transition: all 0.2s;
   -o-transition: all 0.2s;
      transition: all 0.2s;
 }
 .btn--primary:hover {
-  color: white;
-  -webkit-transform: skew(2deg, 3deg);
-  -ms-transform: skewX(2deg) skewY(3deg);
-  -o-transform: skew(2deg, 3deg);
-     transform: skew(2deg, 3deg);
+  color: #18160f;
+  -webkit-transform: translate(5px);
+  -ms-transform: translate(5px);
+  -o-transform: translate(5px);
+     transform: translate(5px);
   -webkit-transition: all 0.2s;
   -o-transition: all 0.2s;
      transition: all 0.2s;
-  background-color: #ff0024;
+  background-color: #d2ccba;
+  -webkit-box-shadow: 4px 5px 0 #938760;
+          box-shadow: 4px 5px 0 #938760;
+  border: 3px double #938760;
 }
 
 /**
@@ -1711,7 +1769,7 @@ hr {
   padding: 0;
   height: 1px;
   border: 0;
-  border-top: 1px dotted #00ffdb;
+  border-top: 1px dotted #938760;
 }
 
 canvas {
@@ -1738,7 +1796,7 @@ img {
 .img--polaroid {
   padding: 1.5%;
   background-color: white;
-  border: 1px solid #00ffdb;
+  border: 1px solid #938760;
   -webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
           box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
 }
@@ -1885,7 +1943,7 @@ ul {
 blockquote {
   margin: 0 0 2em 0;
   padding-left: 3%;
-  border-left: 5px solid #00ffdb;
+  border-left: 5px solid #938760;
   font-family: "Courier New", serif;
   font-style: normal;
   line-height: 2em;
@@ -1934,7 +1992,7 @@ dt {
 }
 
 abbr[title] {
-  border-bottom: 1px dotted #00ffdb;
+  border-bottom: 1px dotted #938760;
   cursor: help;
 }
 
@@ -2065,7 +2123,7 @@ nav ul li a {
   padding: 15px 20px;
 }
 nav ul li a:hover {
-  background: #0fffdd;
+  background: #eceae2;
 }
 @media (max-width: 715px) {
   nav ul li a {
@@ -2078,7 +2136,7 @@ nav ul li:hover ul {
   max-height: 1000px;
   background: white;
   padding: 10px 0;
-  border: 1px dashed #00ffdb;
+  border: 3px double #938760;
 }
 @media (max-width: 715px) {
   nav ul li:hover ul {
@@ -2236,7 +2294,7 @@ MOBILE NAV STYLES
 }
 
 .alert--inverse {
-  background-color: #ff0024;
+  background-color: #191c26;
   border-color: black;
   color: white;
 }
@@ -2266,7 +2324,7 @@ MOBILE NAV STYLES
   white-space: nowrap;
   border-radius: 5px;
   color: gray;
-  background-color: #00ffdb;
+  background-color: #e6e3d9;
   -webkit-transition: all background-color 0.25s 0 linear;
   -o-transition: all background-color 0.25s 0 linear;
      transition: all background-color 0.25s 0 linear;
@@ -2344,13 +2402,13 @@ MOBILE NAV STYLES
 
 ::-moz-selection {
   background-color: #e6e6e6;
-  color: #00332c;
+  color: #938760;
   text-shadow: none;
 }
 
 ::selection {
   background-color: #e6e6e6;
-  color: #00332c;
+  color: #938760;
   text-shadow: none;
 }
 
@@ -2397,8 +2455,9 @@ input,
 button,
 select,
 textarea {
-  font-size: 14px;
-  font-size: 0.6087rem;
+  font-size: 23px;
+  font-size: 1rem;
+  letter-spacing: 1px;
   border-radius: 5px;
   vertical-align: baseline;
   *vertical-align: middle;
@@ -2570,7 +2629,7 @@ textarea[readonly] {
 
 input:focus,
 textarea:focus {
-  border-color: #00ffdb, 40%;
+  border-color: #e6e3d9, 40%;
   outline: 0;
   outline: thin dotted \9;
 }
@@ -2682,8 +2741,7 @@ input:required:focus:valid {
   position: relative;
   overflow: hidden;
   width: 100%;
-  border: 1px dashed #00ffdb;
-  background-color: #33ffe2;
+  background-color: #fafaf8;
 }
 .jcarousel ul {
   width: 20000em;
@@ -2691,9 +2749,8 @@ input:required:focus:valid {
 }
 .jcarousel li {
   float: left;
-  width: 300px;
+  width: 700px;
   height: 100%;
-  padding: 20px;
 }
 
 .galeria__item {
@@ -2730,73 +2787,73 @@ input:required:focus:valid {
 }
 
 .color-base {
-  background-color: #00ffdb;
+  background-color: #e6e3d9;
 }
 .color-base:before {
-  content: "#00ffdb";
+  content: "#e6e3d9";
   color: white;
   display: block;
 }
 
 .color-base-invert {
-  background-color: #ff0024;
+  background-color: #d9dce6;
 }
 .color-base-invert::before {
-  content: "#ff0024";
+  content: "#d9dce6";
   color: white;
   display: block;
 }
 
 .color-base-light {
-  background-color: #0fffdd;
+  background-color: #eceae2;
 }
 .color-base-light::before {
-  content: "#0fffdd";
+  content: "#eceae2";
   color: white;
   display: block;
 }
 
 .color-base-lighter {
-  background-color: #33ffe2;
+  background-color: #fafaf8;
 }
 .color-base-lighter::before {
-  content: "#33ffe2";
+  content: "#fafaf8";
   color: white;
   display: block;
 }
 
 .color-base-lighten {
-  background-color: #1affdf;
+  background-color: #f0eee8;
 }
 .color-base-lighten::before {
-  content: "#1affdf";
+  content: "#f0eee8";
   color: white;
   display: block;
 }
 
 .color-base-dark {
-  background-color: #00ccaf;
+  background-color: #d2ccba;
 }
 .color-base-dark::before {
-  content: "#00ccaf";
+  content: "#d2ccba";
   color: white;
   display: block;
 }
 
 .color-base-darken {
-  background-color: #00332c;
+  background-color: #938760;
 }
 .color-base-darken::before {
-  content: "#00332c";
+  content: "#938760";
   color: white;
   display: block;
 }
 
 .color-base-darker {
-  background-color: black;
+  background-color: #18160f;
 }
 .color-base-darker::before {
-  content: "black";
+  content: "#18160f";
   color: white;
   display: block;
 }

@@ -1,4 +1,4 @@
-<h3><?php the_field('h3'); ?></h3>
+
 <div class="row">
 	<?php 
 	$this_post = $post->ID;
@@ -12,29 +12,26 @@
 
 	<div class="jcarousel">
 		<ul>
-				<?php while ($loop->have_posts()) : $loop->the_post(); ?>
+			<?php while ($loop->have_posts()) : $loop->the_post(); ?>
 								
-				<li>
-
+			<li>
 				<? if ( has_post_thumbnail() ) { ?>
 				<a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>">
-						<?php the_post_thumbnail('thumbnail'); ?>
+				<?php the_post_thumbnail('thumbnail'); ?>
 				</a>
 				<?}else {?>
 				<img src="<?php echo get_template_directory_uri(); ?>/assets/img/logo.svg" alt="Alt" class="logo-img">
 				<?}?>
-
-					<h3>
-						<a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>">
-								<? the_title(); ?></a>
-					</h3>
-					<p><?php //the_excerpt(); ?></p>
+				<h3>
+					<a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>">
+					<? the_title(); ?></a>
+				</h3>
+				<p><?php //the_excerpt(); ?></p>
 					
-				</li>
+			</li>
 				
 				<?php endwhile; ?>
 				<?php wp_reset_postdata(); ?>
-
 		</ul>
 
 	</div>
@@ -68,7 +65,7 @@
 		</dl>
 	
 		<dl class="col__4">
-			<dt>Listado de <?php the_title() ?></dt>
+		<dt>Listado de <?php the_title() ?></dt>
 			
 	
 		<?php while ($loop->have_posts()) : $loop->the_post(); ?>
@@ -83,7 +80,3 @@
 		</dl>
 
 </section>
-
-
-
-

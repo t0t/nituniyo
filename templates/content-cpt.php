@@ -1,3 +1,4 @@
+<section class="bg1">
 <?php while (have_posts()) : the_post(); ?>
 
   <article <?php post_class(); ?>>
@@ -7,7 +8,7 @@
     </header>
 
     <div class="entry-content">
-		
+        
         <?php if( have_rows('content') ): ?>
 
             <? while ( have_rows('content') ) : the_row(); ?>
@@ -85,8 +86,9 @@ data-top="opacity: 1; transform: translateX(0px)"
   </article>
 <?php endwhile; ?>
 
-<hr>
+</section>
 
+<section>
 <h5><?php _e('More', 'roots'); ?> 
     <?php 
 $post_type = get_post_type_object( get_post_type($post) );
@@ -115,10 +117,9 @@ echo $post_type->label;
             <?php wp_reset_postdata(); ?>
 
     </ul>
+</section>
 
-<hr>
-
-<div class="row">
+<section>
 
 	<h3>Más productos:</h3>
 	<?php 
@@ -163,5 +164,4 @@ echo $post_type->label;
     <span class="icon-arrow-left"></span></a>
     <a href="#" class="jcarousel-control-next btn btn--slider">
     <span class="icon-arrow-right"></span></a>
-
-</div>
+<section>

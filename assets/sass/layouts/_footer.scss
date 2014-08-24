@@ -4,6 +4,9 @@ footer {
 		// @include max-width($bp1);
 		.creditos {
 			// @include padding();
+			// @extend %clearfix;
+			@include grid(12);
+			@include break(tablet, 12);
 		}
 	}
 	address, p, form {

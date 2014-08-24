@@ -17,8 +17,8 @@ $break-mobile: $bp5;
     $IMAGE-DIR
 \*------------------------------------*/
 $image-path: '../img' !default;
-// $fallback-extension: 'png' !default;
-// $retina-suffix: '@2x';
+$fallback-extension: 'png' !default;
+$retina-suffix: '@2x';
 
 /*------------------------------------*\
     $LAYOUT
@@ -77,7 +77,7 @@ $baseletterspacing 	: 1px;
 /**
  * Brand stuff
  */
-$color-base      	: rgb(0,255,219); //marron
+$color-base      	: rgb(230,227,217); //marron
 $color-base-invert 	: complement($color-base); //invierte
 $color-base-light	: lighten($color-base, 3%);
 $color-base-lighten	: lighten($color-base, 5%);
@@ -90,7 +90,8 @@ $color-dos      	: darken(rgb(41,0,164), 8%);
 $color-tres			: rgb(41,0,164);
 $color-cuatro     	: rgb(41,0,164); //ocre
 $color-cinco     	: red; //rojo menu
-$bordercolor    	: $color-base;
+$bordercolor    	: $color-base-darken;
+$bordercolorhover   : $color-base-darken;
 $compcolor      	: rgb(206,240,227);
 
 /**
@@ -107,7 +108,7 @@ $white 				: rgb(255,255,255);
 $white-alpha 		: rgba(255,255,255,0.95);
 
 // Web
-$background			: 	$white;
+$background			: 	$color-base;
 $textcolor			: 	$grey;
 $textcolor-strong	:	$black;
 
@@ -219,5 +220,6 @@ $navitembordercolor    : $bordercolor;
 $navitempadding        : $gutterwidth / 2;
 $navtabsbordercolor    : $bordercolor;
 
-// Borde
-$borde				: 1px dashed $bordercolor;
+// Bordes
+$borde				: 3px double $bordercolor;
+$bordehover			: 3px double $bordercolorhover;
