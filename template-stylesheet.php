@@ -32,59 +32,7 @@ Template Name: Stylesheet
 </section>
 
 
-<section class="row">
-
-	<h2>Carrusel</h2>
-	
-	<div class="jcarousel">
-
-		<?php $loop = new WP_Query( array( 
-								    'post_type' => 'cpt', 
-								    'category_name' => '', 
-								    'posts_per_page' => 4 
-		)); ?>
-
-		<ul>
-		
-			<?php while ($loop->have_posts()) : $loop->the_post(); ?>
-								
-				<li>
-
-				<? if ( has_post_thumbnail() ) { ?>
-					
-					<a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>">
-						<?php the_post_thumbnail('thumbnail'); ?>
-					</a>
-
-				<?}else {?>
-
-					<img src="<?php echo get_template_directory_uri(); ?>/assets/img/logo.svg" alt="t0theme" class="logo-img">
-				
-				<?}?>
-
-					<h6>
-						<a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>"><? the_title(); ?></a>
-					</h6>
-
-				</li>
-				
-			<?php endwhile; ?>
-			<?php wp_reset_postdata(); ?>
-
-		</ul>
-
-	</div>
-
-    <!-- Prev/next controls -->
-    <a href="#" class="jcarousel-control-prev btn btn--slider">
-    <span class="icon-arrow-left"></span></a>
-    <a href="#" class="jcarousel-control-next btn btn--slider">
-    <span class="icon-arrow-right"></span></a>
-
-</section>
-
-
-<section class="row">
+<section>
 <h2>Blog</h2>
 	<div class="col__9">
 		<article>
@@ -111,12 +59,12 @@ Template Name: Stylesheet
 			<hr>
 		</article>
 	</div>
-	<div class="col__3">
+	<div class="col__12">
 		<?php include roots_sidebar_path(); ?>
 	</div>
 </section>
 
-<section class="row">
+<section>
 <h2>Botones</h2>
 	<div class="col__6">
 		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odio repellendus optio ullam quae fugit fugiat repudiandae tempore velit nobis eum, blanditiis provident ipsum quisquam officia harum deleniti, voluptate, consequuntur nisi.</p>

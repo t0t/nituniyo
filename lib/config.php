@@ -19,10 +19,10 @@ define('GOOGLE_ANALYTICS_ID', ''); // UA-XXXXX-Y (Note: Universal Analytics only
 function roots_main_class() {
   if (roots_display_sidebar()) {
     // Classes on pages with the sidebar
-    $class = 'col__9';
+    $class = '';
   } else {
     // Classes on full width pages
-    $class = 'col__12';
+    $class = '';
   }
 
   return apply_filters('roots/main_class', $class);
@@ -32,7 +32,7 @@ function roots_main_class() {
  * .sidebar classes
  */
 function roots_sidebar_class() {
-  return apply_filters('roots/sidebar_class', 'col__3');
+  return apply_filters('roots/sidebar_class', '');
 }
 
 /**
@@ -55,8 +55,8 @@ function roots_display_sidebar() {
     array(
       'is_404',
       'is_front_page',
-      'is_page',
-      array( 'is_singular', array('cpt') )
+      'is_page'
+      // array( 'is_singular', array('cpt') )
       // array( 'is_post_type_archive', array('cpt') )
     ),
     /**

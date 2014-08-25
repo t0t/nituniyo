@@ -1,9 +1,12 @@
 <section class="bg1">
+
 <?php while (have_posts()) : the_post(); ?>
 
   <article <?php post_class(); ?>>
     <header>
-      <h2 class="h1 entry-title"><?php the_title(); ?></h2>
+      <h1 class="entry-title">
+      <?php the_title(); ?>
+      </h1>
       <?php //get_template_part('templates/entry-meta'); ?>
     </header>
 
@@ -32,11 +35,12 @@ data-top="opacity: 1; transform: translateX(0px)"
 
         else : ?>
         <? endif; ?>
+</div>
+</section>
 
         <?php the_content(); ?>
 
 
-    </div>
 
     <footer>
 
@@ -88,40 +92,14 @@ data-top="opacity: 1; transform: translateX(0px)"
 
 </section>
 
+
 <section>
-<h5><?php _e('More', 'roots'); ?> 
+
+	<h3><?php _e('More', 'roots'); ?> 
     <?php 
 $post_type = get_post_type_object( get_post_type($post) );
 echo $post_type->label;
-?></h5>
-    
-    <ul>
-            
-    <?php 
-    $this_post = $post->ID;
-    $loop = new WP_Query( array( 
-                            'post_type' => 'cpt',
-                            'post__not_in' => array($this_post),
-                            'category_name' => '' 
-                            )); 
-    ?>
-    
-    <?php while ($loop->have_posts()) : $loop->the_post(); ?>
-
-            <li class="icon-tick">
-            <a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>">
-            <?php the_title(); ?></a>
-            </li>
-            
-            <?php endwhile; ?>
-            <?php wp_reset_postdata(); ?>
-
-    </ul>
-</section>
-
-<section>
-
-	<h3>Más productos:</h3>
+?></h3>
 	<?php 
 	$this_post = $post->ID;
 	$loop5 = new WP_Query( array( 
@@ -164,4 +142,3 @@ echo $post_type->label;
     <span class="icon-arrow-left"></span></a>
     <a href="#" class="jcarousel-control-next btn btn--slider">
     <span class="icon-arrow-right"></span></a>
-<section>

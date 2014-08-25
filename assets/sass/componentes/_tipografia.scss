@@ -48,6 +48,7 @@ h3 small {
   	line-height 	: $line-height;
   	letter-spacing  : $baseletterspacing;
   	text-transform: uppercase;
+  	@extend %text-center;
   }
 }
 // TYPOGRAFÍA ====================================================

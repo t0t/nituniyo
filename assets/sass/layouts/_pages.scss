@@ -1,11 +1,21 @@
+
 // home
 .home {
+	.wrap {
+		padding-top: 0;
+	}
+	.main {
+		h1:first-child {
+			padding-top: 0;
+			margin-top: 0;
+		}
+	}
 	.col__12 {
 		padding-right: 0;
 		padding-left: 0;
 	}
 	.banner {
-		background-color: transparent;
+		// background-color: transparent;
 	}
 	.features {
     // background-color: $white;
@@ -21,7 +31,6 @@
 		background: url(../img/home_bg.jpg) no-repeat 0px top $darkgrey;
 		background-size: cover;
 		// background-attachment: fixed;
-		background-color: red;
 		height: 500px;
 		// @extend %inline-block;
 			@media (min-width: $bp2) {
@@ -32,11 +41,13 @@
 			}
 		.well {
 			h1 {
-				color: $color-base;
+				color: $color-base-darken;
 				@extend %inline-block;
 				@extend %clearfix;
 				@include margin-bottom();
 				@include max-width ($bp2);
+				@include animation(load-in-slow, initial, 3s, ease-in, 1);
+
 				@media (min-width: $bp3) {
 					font-size: 300%;
 				}

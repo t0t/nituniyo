@@ -127,5 +127,5 @@ data-top-bottom="background-position: 100% 100%"
 			Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit...
 		</h2>
 	</div>
-		<a href="/cpt/" class="btn btn--primary"> <i class="icon-code"></i></a>
+		<a href="/home-cpt/" class="btn btn--primary"> <i class="icon-code"></i></a>
 </section>

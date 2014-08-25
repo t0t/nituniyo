@@ -82,10 +82,9 @@ Template Name: Blog
 
 	<article class="h-entry">
 
-		<div id="entrada" 
-		data-bottom="opacity: 0;"
-		data--100-bottom="opacity: 1;"
-		class="col__6 entry-content">
+	<!-- data-bottom="opacity: 0;"
+		data--100-bottom="opacity: 1;" -->
+	<div id="entrada" class="col__6 entry-content">
 
 		<? if ( has_post_thumbnail() ) { ?>
 						
