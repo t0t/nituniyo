@@ -4,48 +4,45 @@
 </header>
 
 
-<section>
-  <?php if( get_field('content') ): ?>
 
+<section id="content">
+
+  <?php if( get_field('content') ): ?>
     <?php while( has_sub_field("content") ): ?>
 
-        <?php if(get_row_layout() == "image"): // layout: Text ?>
-            <div class="col__12">
-                <img src="<?php the_sub_field("image"); ?>" alt="<?php the_sub_field("caption"); ?>">
-                <small><?php the_sub_field("caption"); ?></small>
-            </div>
+    <?php if(get_row_layout() == "image"): // Layout imagen ?>
+
+    <div class="row">
+        <img src="<?php the_sub_field("image"); ?>" alt="<?php the_sub_field("caption"); ?>">
+        <small><?php the_sub_field("caption"); ?></small>
+    </div>
 
 
-
-    <?php elseif(get_row_layout() == "parrafos"): // layout:Parrafos ?>
-
-
+    <?php elseif(get_row_layout() == "parrafos"): // Layout parrafos ?>
 
     <?php if(get_sub_field('repeater_parrafos')): ?>
 
     <div class="row">
 
-        <?php while(has_sub_field('repeater_parrafos')): ?>
-             
+        <?php while(has_sub_field('repeater_parrafos')): ?>  
 
-        <?php if (get_sub_field("1parrafo")): ?>
+            <?php if (get_sub_field("1parrafo")): ?>
+                
+            <h1><?php the_sub_field("1parrafo"); ?></h1>
             
-        <h1><?php the_sub_field("1parrafo"); ?></h1>
-        
-        <?php endif ?>
+            <?php endif ?>
 
-        <?php if (get_sub_field("2parrafos")): ?>
-        <div class="col__6">
-        <p><?php the_sub_field("2parrafos"); ?></p>
-        </div>
-        <?php endif ?>
+            <?php if (get_sub_field("2parrafos")): ?>
+            <div class="col__6">
+            <p><?php the_sub_field("2parrafos"); ?></p>
+            </div>
+            <?php endif ?>
 
-        <?php if (get_sub_field("2parrafos_2")): ?>
-        <div class="col__6">
-        <p><?php the_sub_field("2parrafos_2"); ?></p>
-        </div>
-        <?php endif ?>
-
+            <?php if (get_sub_field("2parrafos_2")): ?>
+            <div class="col__6">
+            <p><?php the_sub_field("2parrafos_2"); ?></p>
+            </div>
+            <?php endif ?>
     
         <?php endwhile; ?>
 
@@ -54,82 +51,63 @@
     <?php endif; ?> 
 
 
+    <?php elseif(get_row_layout() == "quote"): //Layout Quotes?>
+
+    <div class="row">
+        <div class="col__12">
+            <blockquote><?php the_sub_field("quote"); ?>
+            <small><?php the_sub_field("name"); ?></small>
+            </blockquote>
+        </div>
+    </div>
+
+
+    <?php elseif(get_row_layout() == "gallery"): //Layout Gallery ?>
+
+    <div class="row">
+        <h3 class="h1"><?php the_sub_field("title"); ?></h3>
+        <h3><?php the_sub_field("description"); ?></h3>
     
-
-
-
-
-
-
-
-
-
-
-
-        <?php elseif(get_row_layout() == "gallery"): // layout: Gallery ?>
-
-           <div><?php the_sub_field("title"); ?></div>
-<?php
-    $images = the_sub_field('gallery');
- 
-    if( $images ): ?>
-
-        <ul>
-            <?php foreach( $images as $image ): ?>
-                <li>
-                    <a href="<?php echo $image['url']; ?>" data-lightbox="serie" data-title="<?php echo $image['description']; ?>">
-                        <img src="<?php echo $image['sizes']['medium']; ?>" alt="<?php echo $image['alt']; ?>" />
-                    </a>
-                    <footer>
-                        <p class="descripcion-img">
-                            <?php echo $image['caption']; ?>
-                        </p>
-                    </footer>
-                </li>
-            <?php endforeach; ?>
-        </ul>
-
-    <?php endif; 
-    ?>
-            </div>
-            <div><?php the_sub_field("description"); ?></div>
-
-
-        <?php elseif(get_row_layout() == "featured_posts"): // layout: Featured Posts ?>
-
-            <div>
-                <h2><?php the_sub_field("title"); ?></h2>
-                <?php the_sub_field("content"); ?>
-
-                <?php if(get_sub_field("posts")): ?>
-                    <ul>
-                    <?php foreach(get_sub_field("posts") as $p): ?>
-                        <li><a href="<?php echo get_permalink($p->ID); ?>"><?php echo get_the_title($p->ID); ?></a></li>
-                    <?php endforeach; ?>
-                    </ul>
-                <?php endif; ?>
-
-            </div>
-
+        <?php
+        $images = get_sub_field('gallery');
+     
+        if( $images ): ?>
+    
+            <ul>
+                <?php foreach( $images as $image ): ?>
+                    <li class="col__3">
+                        <a href="<?php echo $image['url']; ?>" data-lightbox="serie" data-title="<?php echo $image['description']; ?>">
+                            <img src="<?php echo $image['sizes']['thumbnail']; ?>" alt="<?php echo $image['alt']; ?>" />
+                        </a>
+                        <footer>
+                            <small class="descripcion-img">
+                                <?php echo $image['caption']; ?>
+                            </small>
+                        </footer>
+                    </li>
+                <?php endforeach; ?>
+            </ul>
+    
         <?php endif; ?>
+    </div>
 
+    <?php //elseif(get_row_layout() == "featured_posts"): ?>
+
+    <?php endif; ?>
     <?php endwhile; ?>
 
 <?php endif; ?>
-</section>
+
+</section> <!-- #/content -->
 
 
-<section>
 
+
+
+
+<!-- Post nav -->
+<?php //post_class(); ?>
 <?php while (have_posts()) : the_post(); ?>
-  
-  <article <?php post_class(); ?>>
-    
-    <div class="entry-content">
-      <p><?php the_content(); ?></p>
-    </div>
-
-    <footer>
 
     <nav class="post--nav">  
     
@@ -173,9 +151,5 @@
 
    <?php //wp_link_pages(array('before' => '<nav class="page-nav"><p>' . __('Pages:', 'roots'), 'after' => '</p></nav>')); ?> <!-- navega entre un post de varias paginas -->
 
-    </footer>
-
-    <?php //comments_template('/templates/comments.php'); ?>
-  </article>
 <?php endwhile; ?>
-</section>
+

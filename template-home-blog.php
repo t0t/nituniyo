@@ -5,6 +5,8 @@ Template Name: Blog
 ?>
 
 <?php get_template_part('templates/page', 'header'); ?>
+<h2><?php the_field('h3'); ?></h2>
+
 
 <?php if (!have_posts()) : ?>
   <div class="alert alert-warning">
@@ -12,6 +14,7 @@ Template Name: Blog
   </div>
   <?php get_search_form(); ?>
 <?php endif; ?>
+
 
 
 <div class="row">
@@ -53,7 +56,6 @@ Template Name: Blog
 				
 			<?php endwhile; ?>
 			<?php wp_reset_postdata(); ?>
-
 		</ul>
 
 	</div>
@@ -78,24 +80,22 @@ Template Name: Blog
 						)); 
 	?>
 
-		<?php while ($loop2->have_posts()) : $loop2->the_post(); ?>
+	<?php while ($loop2->have_posts()) : $loop2->the_post(); ?>
 
 	<article class="h-entry">
 
-	<!-- data-bottom="opacity: 0;"
-		data--100-bottom="opacity: 1;" -->
 	<div id="entrada" class="col__6 entry-content">
 
 		<? if ( has_post_thumbnail() ) { ?>
 						
 					<figure class="">
 		
-						<a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>">
+					<a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>">
 							<?php the_post_thumbnail('thumbnail'); ?></a>
 										
 				<?}else {?>
 										
-						<img src="<?php echo get_template_directory_uri(); ?>/assets/img/logo.svg" alt="Alt" class="logo-img" height="155px">
+					<img src="<?php echo get_template_directory_uri(); ?>/assets/img/logo.svg" alt="Alt" class="logo-img" height="155px">
 					</figure>
 		
 				<?}?>

@@ -64,32 +64,21 @@ Template Name: Stylesheet
 	</div>
 </section>
 
-<section>
-<h2>Botones</h2>
-	<div class="col__6">
-		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odio repellendus optio ullam quae fugit fugiat repudiandae tempore velit nobis eum, blanditiis provident ipsum quisquam officia harum deleniti, voluptate, consequuntur nisi.</p>
-		<a href="" class="btn btn--info">Más info <i class="icon-arrow-right"></i></a>
-	</div>
-	<div class="col__6">
-		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem, blanditiis! Tempore quibusdam excepturi recusandae non laudantium ipsum minima, id labore praesentium unde voluptas perferendis velit! Culpa, consequatur illo ipsa qui.</p>
-		<a href="" class="btn btn--error">Error <i class="icon-wondering"></i></a>
-	</div>
 
-</section>
 
 <section class="row">
-	
-	<h2>Botones</h2>
+    
+    <h2>Botones</h2>
 
-	<div class="col__12">
-		<a href="" class="btn btn--primary">Entrar <i class="icon-arrow-right"></i></a>
-		<a href="" class="btn btn--success"><i class="icon-tick"></i> Success</a>
-		<a href="" class="btn btn--warning">Warning <i class="icon-close"></i></a>
-		<a href="" class="btn btn--warning btn--inactive">Inactivo <i class="icon-close"></i></a>
-		<a href="" class="btn btn--large">Grande</a>
-		<a href="" class="btn btn--small">Peque</a>
-		<a href="" class="btn btn--mini">Mini</a>
-	</div>
+    <div class="col__12">
+        <a href="" class="btn btn--primary">Entrar <i class="icon-arrow-right"></i></a>
+        <a href="" class="btn btn--success"><i class="icon-tick"></i> Success</a>
+        <a href="" class="btn btn--warning">Warning <i class="icon-close"></i></a>
+        <a href="" class="btn btn--warning btn--inactive">Inactivo <i class="icon-close"></i></a>
+        <a href="" class="btn btn--large">Grande</a>
+        <a href="" class="btn btn--small">Peque</a>
+        <a href="" class="btn btn--mini">Mini</a>
+    </div>
 
 </section>
 

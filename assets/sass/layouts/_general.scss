@@ -6,11 +6,13 @@ body {
 	letter-spacing: $baseletterspacing;
 	
 }
+
 	section {
 		@media (min-width: $bp3) {
 			padding: $margin*2;
 		}
 	}
+	
 section {
 	@extend %text-center;
 	@extend %clearfix;

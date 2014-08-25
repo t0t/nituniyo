@@ -55,6 +55,7 @@ echo $post_type->label;
 				<?php endwhile; ?>
 				<?php wp_reset_postdata(); ?>
 	</div>
+	
 	<div class="col__4">
 	<h3>Blog</h3>
 	<?php 
@@ -74,6 +75,11 @@ echo $post_type->label;
 			
 			<?php endwhile; ?>
 			<?php wp_reset_postdata(); ?>
+
+	<h3>Categorías</h3>
+	<ul>
+		<?php wp_list_categories('title_li'); ?>
+	</ul>
 	</div>
 </section>
 
