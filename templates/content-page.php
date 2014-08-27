@@ -8,8 +8,10 @@
     <?php if(get_row_layout() == "image"): // Layout imagen ?>
 
     <div class="row">
-        <img src="<?php the_sub_field("image"); ?>" alt="<?php the_sub_field("caption"); ?>">
-        <small><?php the_sub_field("caption"); ?></small>
+        <figure>
+            <img src="<?php the_sub_field("image"); ?>" alt="<?php the_sub_field("caption"); ?>">
+            <figcaption><?php the_sub_field("caption"); ?></figcaption>
+        </figure>
     </div>
 
 
@@ -77,7 +79,6 @@
 
     <?php if(get_sub_field('listas')): ?>
 	
-	
 	<dl class="col__4">
 
 	<dt><?php the_sub_field('titulo'); ?></dt>
@@ -91,7 +92,6 @@
 	<?php endwhile; ?>
 
 	</dl>
-
 
     <?php endif; ?> 
 
@@ -108,6 +108,75 @@
             </blockquote>
         </div>
     </div>
+
+
+
+	<?php elseif(get_row_layout() == "img_carrousel"): //Layout Carrusel ?>
+
+    <div class="row">
+
+        <h3 class="h1"><?php the_sub_field("title"); ?></h3>
+        <h3><?php the_sub_field("description"); ?></h3>
+    
+        <?php
+        $images = get_sub_field('gallery');
+     
+        if( $images ): ?>
+		<div class="jcarousel">
+            <ul>
+                <?php foreach( $images as $image ): ?>
+                    <li class="col__3">
+                        <a href="<?php echo $image['url']; ?>" data-lightbox="serie" data-title="<?php echo $image['description']; ?>">
+                            <img src="<?php echo $image['sizes']['medium']; ?>" alt="<?php echo $image['alt']; ?>" />
+                        </a>
+                        <footer>
+                            <small class="descripcion-img">
+                                <?php echo $image['caption']; ?>
+                            </small>
+                        </footer>
+                    </li>
+                <?php endforeach; ?>
+            </ul>
+    	</div>
+        <?php endif; ?>
+    </div>
+
+
+
+
+<?php elseif(get_row_layout() == "posts_carrousel"): //Layout Carrusel ?>
+
+    <div id="carrusel" class="row">
+
+        <h3 class="h1"><?php the_sub_field("title"); ?></h3>
+        <h3><?php the_sub_field("description"); ?></h3>
+        
+
+        <?php if(get_sub_field("repeater")): ?>
+        <?php while(has_sub_field("repeater")): ?>  
+
+			<?php //the_sub_field("post") ?>
+			
+			<?php $post_objects = the_sub_field('post');
+
+			if( $post_objects ): ?>
+			    <ul>
+			    <?php foreach( $post_objects as $post_object): ?>
+			        <li>
+			            <a href="<?php echo get_permalink($post_object->ID); ?>"><?php echo get_the_title($post_object->ID); ?></a>
+			            <span>Post Object Custom Field: <?php the_field('post', $post_object->ID); ?></span>
+			        </li>
+			    <?php endforeach; ?>
+			    </ul>
+			<?php endif;?>
+
+		<?php endwhile; ?>
+		<?php endif; ?>
+
+    </div>
+
+
+
 
 
     <?php elseif(get_row_layout() == "gallery"): //Layout Gallery ?>

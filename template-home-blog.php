@@ -5,9 +5,6 @@ Template Name: Blog
 ?>
 
 <?php get_template_part('templates/page', 'header'); ?>
-<h2><?php the_field('h3'); ?></h2>
-
-
 <?php if (!have_posts()) : ?>
   <div class="alert alert-warning">
     <?php _e('Sorry, no results were found.', 'roots'); ?>
@@ -16,7 +13,11 @@ Template Name: Blog
 <?php endif; ?>
 
 
+<h2><?php the_field('h3'); ?></h2>
+<?php get_template_part('templates/content', 'page'); ?>
 
+
+--
 <div class="row">
 	<?php 
 	$this_post = $post->ID;
@@ -69,7 +70,6 @@ Template Name: Blog
 </div>
 
 
-<section class="row">
 	<?php 
 	$this_post = $post->ID;
 	$loop2 = new WP_Query( array( 
@@ -117,14 +117,6 @@ Template Name: Blog
 		<?php wp_reset_postdata(); ?>
 
 
-</section>
 
 
-<?php if ($wp_query->max_num_pages > 1) : ?>
-  <nav class="post-nav">
-    <ul class="pager">
-      <li class="previous"><?php next_posts_link(__('&larr; Older posts', 'roots')); ?></li>
-      <li class="next"><?php previous_posts_link(__('Newer posts &rarr;', 'roots')); ?></li>
-    </ul>
-  </nav>
-<?php endif; ?>
+

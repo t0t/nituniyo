@@ -4,19 +4,53 @@ body {
 	color: $textcolor;
 	background-color: $background;
 	letter-spacing: $baseletterspacing;
-	
 }
 
-	section {
-		@media (min-width: $bp3) {
-			padding: $margin*2;
+// Content wrapper
+.wrap { 
+	@include max-width ($bp1);
+	@extend %clearfix;
+	padding-top: $baselineheight*3;
+}
+section {
+	@extend %clearfix;
+	.row {
+		@extend %text-center;
+		p, blockquote {
+			@extend %text-left;
+		}
+		.col__3 {
+			h3 {
+				@extend %text-right;
+			}
+		}
+		.col__9 {
+			ul {
+				list-style-type: circle;
+				li {
+					@extend %text-left;
+				}
+			}
 		}
 	}
-	
-section {
-	@extend %text-center;
-	@extend %clearfix;
+	@media (min-width: $bp3) {
+		padding: $margin*2;
+	}
 }
+
+.sidebar {
+	figure {
+		> a {
+			float: left;
+			@extend %clearfix;
+		}
+		figcaption {
+			float: right;
+			width: 80%;
+		}
+	}
+}
+
 
 // fondos
 .bg1, .bg2 {
@@ -29,27 +63,8 @@ section {
 .bg2 {
 	background-position: center top;
 }
-// Content wrapper
-.wrap { 
-	@include max-width ($bp1);
-	@extend %clearfix;
-	padding-top: $baselineheight*3;
-}
 
-.main {
-	&.col__9 {
-		h1 {
-			// text-align: inherit;
-		}
-	}
-	&.col__12 {
-		// padding: 0;
-	}
-}
-//content area
-.content {
-	@include max-width ($bp2);
-}
+
 
 // Contact Form 7
 .wpcf7 {
@@ -103,6 +118,7 @@ section {
   0% { opacity: 0; }
   100% { opacity: 1; }
 }
+
 // Footer
 footer {
 	@media (min-width: $bp3) {

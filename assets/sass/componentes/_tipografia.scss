@@ -52,7 +52,6 @@ h3 small {
   }
 }
 // TYPOGRAFÍA ====================================================
-
 p,
 ol,
 ul,
@@ -61,7 +60,6 @@ address {
 	margin-bottom : $baselineheight;
 	line-height : $baselineheight;
 	letter-spacing: $baseletterspacing;
-
 	small {
 		font-style: normal;
 		line-height: $baselineheight / 4;
@@ -98,9 +96,9 @@ blockquote  {
 	font-style : normal;
 	line-height: $baselineheight;
 	p {
-		@include font-size(18);
+		@include font-size(21);
+		@include margin-bottom(0);
 		color:$grey;
-		line-height: $baselineheight / 1.2;
 	}
 }
 

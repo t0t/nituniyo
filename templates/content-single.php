@@ -13,9 +13,34 @@
     <?php if(get_row_layout() == "image"): // Layout imagen ?>
 
     <div class="row">
-        <img src="<?php the_sub_field("image"); ?>" alt="<?php the_sub_field("caption"); ?>">
-        <small><?php the_sub_field("caption"); ?></small>
+        <figure>
+            <img src="<?php the_sub_field("image"); ?>" alt="<?php the_sub_field("caption"); ?>">
+            <figcaption><?php the_sub_field("caption"); ?></figcaption>
+        </figure>
     </div>
+
+
+
+
+    <?php elseif(get_row_layout() == "listas_layout"): // Layout Listas ?>
+
+    <?php if(get_sub_field('listas')): ?>
+    <dl class="col__4">
+
+    <dt><?php the_sub_field('titulo'); ?></dt>
+
+    <?php while(has_sub_field('listas')): ?>  
+
+        <?php //if (get_sub_field('lista')): ?>
+            <dd><i class="icon-tick"></i> <?php the_sub_field('lista'); ?></dd>
+        <?php //endif ?>
+    
+    <?php endwhile; ?>
+
+    </dl>
+    <?php endif; ?> 
+
+
 
 
     <?php elseif(get_row_layout() == "parrafos"): // Layout parrafos ?>
@@ -55,9 +80,33 @@
 
     <div class="row">
         <div class="col__12">
-            <blockquote><?php the_sub_field("quote"); ?>
+            <blockquote>
+            <p><?php the_sub_field("quote"); ?></p>
             <small><?php the_sub_field("name"); ?></small>
             </blockquote>
+        </div>
+    </div>
+
+
+
+    <?php elseif(get_row_layout() == "layout_content_estrecho"): //Layout Content centrado estrecho?>
+
+    <div class="row">
+        <div class="col__3">
+            <?php while(has_sub_field('repeater')): ?>  
+
+            <?php if (get_sub_field("destacado")): ?>
+            <h3 class="h1"><?php the_sub_field("destacado"); ?></h3>
+            <?php endif ?>
+
+            <?php if (get_sub_field("imagen")): ?>
+            <img src="<?php the_sub_field("imagen"); ?>" alt="">
+            <?php endif ?>
+    
+        <?php endwhile; ?>
+        </div>
+        <div class="col__9">
+            <?php the_sub_field("content"); ?>
         </div>
     </div>
 
@@ -76,14 +125,12 @@
             <ul>
                 <?php foreach( $images as $image ): ?>
                     <li class="col__3">
+                        <figure>
                         <a href="<?php echo $image['url']; ?>" data-lightbox="serie" data-title="<?php echo $image['description']; ?>">
                             <img src="<?php echo $image['sizes']['thumbnail']; ?>" alt="<?php echo $image['alt']; ?>" />
                         </a>
-                        <footer>
-                            <small class="descripcion-img">
-                                <?php echo $image['caption']; ?>
-                            </small>
-                        </footer>
+                        <figcaption><?php echo $image['caption']; ?></figcaption>
+                        </figure>
                     </li>
                 <?php endforeach; ?>
             </ul>
