@@ -12,19 +12,16 @@ data-top-bottom="background-position: 100% 100%"
 		<div class="col__12">
 			<div class="well well--large">
 				<div class="col__12">
+
 				<h1
 				data-top="opacity: 0"
 				data-16p-top="opacity: 1"
 				>
 				A Wordpress Starter theme with love
 				</h1>
-				</div>
-	<div class="col__12"
-	data--100-center="transform: rotate(10deg); opacity: 0"
-	data-center="transform: rotate(0deg); opacity: 1"
-	>
+
 				<a href="/video/" class="btn btn--primary">Look! <i class="icon-arrow-right"></i></a>
-				</div>
+
 			</div>
 		</div>
 	</div>

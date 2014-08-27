@@ -17,8 +17,8 @@ Template Name: Blog
 <?php get_template_part('templates/content', 'page'); ?>
 
 
---
-<div class="row">
+
+<section>
 	<?php 
 	$this_post = $post->ID;
 	$loop = new WP_Query( array( 
@@ -29,24 +29,23 @@ Template Name: Blog
 							)); 
 	?>
 
-
 	<div class="jcarousel">
 
 		<ul>
 			<?php while ($loop->have_posts()) : $loop->the_post(); ?>
-								
+									
 				<li>
 
 				<? if ( has_post_thumbnail() ) { ?>
-				
+					
 				<a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>">
 						<?php the_post_thumbnail('thumbnail'); ?>
 				</a>
-				
+					
 				<?}else {?>
-				
+					
 				<img src="<?php echo get_template_directory_uri(); ?>/assets/img/logo.svg" alt="Nanos i Gegants" class="logo-img">
-				<?}?>
+					<?}?>
 
 					<h3>
 						<a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>"><? the_title(); ?></a>
@@ -54,69 +53,73 @@ Template Name: Blog
 					<p><?php //the_excerpt(); ?></p>
 
 				</li>
-				
+					
 			<?php endwhile; ?>
 			<?php wp_reset_postdata(); ?>
 		</ul>
 
-	</div>
+	</div> <!-- /carrousel -->
 
-	<!-- Prev/next controls -->
-	<a href="#" class="btn btn--slider jcarousel-control-prev">
-	<i class="icon-arrow-left"></i></a>
-	<a href="#" class="btn btn--slider jcarousel-control-next">
-	<i class="icon-arrow-right"></i></a>
+		<!-- Prev/next controls -->
+		<a href="#" class="btn btn--slider jcarousel-control-prev">
+		<i class="icon-arrow-left"></i></a>
+		<a href="#" class="btn btn--slider jcarousel-control-next">
+		<i class="icon-arrow-right"></i></a>
 
-</div>
+</section>
+
+
+
+<section>
 
 
 	<?php 
 	$this_post = $post->ID;
 	$loop2 = new WP_Query( array( 
-						'post_type' => 'post',
-						'posts_per_page' => '',
-						'post__not_in' => array($this_post),
-						'category_name' => '' 
-						)); 
+				'post_type' => 'post',
+				'posts_per_page' => '',
+				'post__not_in' => array($this_post),
+				'category_name' => '' 
+				)); 
 	?>
+	
+	<!-- Listado de posts -->
 
 	<?php while ($loop2->have_posts()) : $loop2->the_post(); ?>
 
-	<article class="h-entry">
+	<article class="h-entry row">
 
-	<div id="entrada" class="col__6 entry-content">
+		<div id="entrada" class="entry-content">
 
-		<? if ( has_post_thumbnail() ) { ?>
-						
-					<figure class="">
-		
-					<a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>">
-							<?php the_post_thumbnail('thumbnail'); ?></a>
-										
-				<?}else {?>
-										
-					<img src="<?php echo get_template_directory_uri(); ?>/assets/img/logo.svg" alt="Alt" class="logo-img" height="155px">
-					</figure>
-		
-				<?}?>
-		
-				<div class="">
-					<h3>
-						<a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>"><? the_title(); ?></a>
-					</h3>
-				</div>
-		
-				<footer class="">
-					<p><?php the_excerpt(); ?></p>
-				</footer>
+			<figure>
+
+			<? if ( has_post_thumbnail() ) { ?>
+							
+				<a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>">
+					<?php the_post_thumbnail('medium', array('class' => 'img--rounded')); ?>
+				</a>
+											
+			<?}else {?>
+				
+				<!-- Cargame esta imagen por defecto -->
+				<img src="<?php echo get_template_directory_uri(); ?>/assets/img/logo.svg" alt="Alt" class="logo-img" height="155px">
+			
+			<?}?>
+			
+			</figure>
+
+				<h1>
+					<a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>"><? the_title(); ?>
+					</a>
+				</h1>
+			
+			<a href="<?php the_permalink(); ?>" class="btn btn--primary">Look! <i class="icon-arrow-right"></i></a>
+
 		</div>
 
 	</article>
 
-		<?php endwhile; ?>
-		<?php wp_reset_postdata(); ?>
+	<?php endwhile; ?>
+	<?php wp_reset_postdata(); ?>
 
-
-
-
-
+</section>

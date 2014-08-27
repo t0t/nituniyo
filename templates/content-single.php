@@ -175,8 +175,10 @@
             </li>
 
              <li class="col__4">
-                <a href="/home-cpt/">
-                &curren; <?php $post_type = get_post_type_object( get_post_type($post) ); echo $post_type->label; ?></a>
+                <a href="/blog/">
+                <i class="icon-house"></i>
+                <?php //$post_type = get_post_type_object( get_post_type($post) ); echo $post_type->label; ?>
+                </a>
             </li>
 
             <li class="col__4">
@@ -188,7 +190,7 @@
                 if($nextPost) 
             {
                 $nextthumbnail = get_the_post_thumbnail($nextPost->ID, 'mini', array('class' => 'img--rounded'));  
-                next_post_link('%link', "$nextthumbnail &rarr; %title"); 
+                next_post_link('%link', "%title &rarr; $nextthumbnail"); 
             }
             ?>
             </li>

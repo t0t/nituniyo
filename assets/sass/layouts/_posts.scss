@@ -1,7 +1,21 @@
 .h-entry header { }
 .h-entry time { }
 .h-entry .byline { }
-.h-entry .entry-content { }
+.h-entry .entry-content { 
+	position: relative;
+	h1 {
+		position: absolute;
+		top: 10%;
+		left: 13%;
+		width: 250px;
+		@extend %text-right;
+	}
+	.btn--primary {
+		position: absolute;
+		top: 70%;
+		right: 45%;
+	}
+}
 .h-entry { 
 	.col__6 {
 		height: 340px;

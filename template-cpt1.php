@@ -7,7 +7,4 @@ Template Name: CPT1 Productos
 <h2><?php the_field('h3'); ?></h2>
 
 
-borrar:
 <?php get_template_part('templates/content', 'homeproductos'); ?>
-
-<?php //get_template_part('templates/content', 'cpt-tienda'); ?>
