@@ -1,6 +1,10 @@
-<?php if( get_field('content_template_page') ): ?>
+<section>
+
+ <?php if( get_field('content_template_page') ): ?>
 
      <?php while( has_sub_field("content_template_page") ): ?>
+
+
 
 
 
@@ -26,42 +30,18 @@
 
 
 
+
+
         <?php elseif(get_row_layout() == "list"): // Layout lista ?>
                 
-<div class="row">
-
-<?php
-
-// check if the repeater field has rows of data
-if( have_rows('lista') ):
-
-    // loop through the rows of data
-    while ( have_rows('lista') ) : the_row();
-        ?>
-        <dl class="col__4">
-            <dt><?php the_sub_field('titulo'); ?></dt>
+            <dl class="col__4">
+                <dt><?php the_sub_field('titulo'); ?></dt>
             <?php while(has_sub_field('item_repeater')): ?>  
-                     
-            <dd><i class="icon-tick"></i> <?php the_sub_field('item'); ?></dd>
-                                    
+                <dd><i class="icon-tick"></i> <?php the_sub_field('item'); ?></dd>
             <?php endwhile; ?>
             </dl>
-        <?
-    endwhile;
-
-else :
-
-    // no rows found
-
-endif;
-
-?>
-
-
-
-                
-</div>
      
+
  
 
 
@@ -75,6 +55,8 @@ endif;
                     </blockquote>
                 </div>
             </div>
+
+
 
 
 
@@ -112,4 +94,6 @@ endif;
  
     <?php endwhile; ?>
 
-<?php endif; ?>
+ <?php endif; ?>
+
+ </section>

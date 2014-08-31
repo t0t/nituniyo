@@ -69,7 +69,9 @@ address {
 small {
 	@include font-size(18);
 }
-
+dd {
+		line-height : $baselineheight / 2;
+}
 
 ul,
 ol {

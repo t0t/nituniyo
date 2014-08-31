@@ -1,22 +1,22 @@
-<header>
-    <h1 class="entry-title"><?php the_title(); ?></h2>
-    <?php get_template_part('templates/entry-meta'); ?>
-</header>
-
-
+<h1><?php the_title(); ?></h1>
 
 <section id="content">
 
-  <?php if( get_field('content') ): ?>
-    <?php while( has_sub_field("content") ): ?>
+  <?php if( get_field('content_posts') ): ?>
+    <?php while( has_sub_field("content_posts") ): ?>
+
+
+
 
     <?php if(get_row_layout() == "image"): // Layout imagen ?>
 
     <div class="row">
+
         <figure>
             <img src="<?php the_sub_field("image"); ?>" alt="<?php the_sub_field("caption"); ?>">
             <figcaption><?php the_sub_field("caption"); ?></figcaption>
         </figure>
+
     </div>
 
 
@@ -25,6 +25,7 @@
     <?php elseif(get_row_layout() == "listas_layout"): // Layout Listas ?>
 
     <?php if(get_sub_field('listas')): ?>
+    
     <dl class="col__4">
 
     <dt><?php the_sub_field('titulo'); ?></dt>
@@ -38,7 +39,9 @@
     <?php endwhile; ?>
 
     </dl>
+
     <?php endif; ?> 
+
 
 
 
@@ -76,6 +79,9 @@
     <?php endif; ?> 
 
 
+
+
+
     <?php elseif(get_row_layout() == "quote"): //Layout Quotes?>
 
     <div class="row">
@@ -89,9 +95,11 @@
 
 
 
+
+
     <?php elseif(get_row_layout() == "layout_content_estrecho"): //Layout Content centrado estrecho?>
 
-    <div class="row">
+    <div class="row layout-contenido-estrecho">
         <div class="col__3">
             <?php while(has_sub_field('repeater')): ?>  
 
@@ -109,6 +117,10 @@
             <?php the_sub_field("content"); ?>
         </div>
     </div>
+
+
+
+
 
 
     <?php elseif(get_row_layout() == "gallery"): //Layout Gallery ?>
@@ -136,6 +148,7 @@
             </ul>
     
         <?php endif; ?>
+
     </div>
 
     <?php //elseif(get_row_layout() == "featured_posts"): ?>
@@ -189,7 +202,7 @@
 
                 if($nextPost) 
             {
-                $nextthumbnail = get_the_post_thumbnail($nextPost->ID, 'mini', array('class' => 'img--rounded'));  
+                $nextthumbnail = get_the_post_thumbnail($nextPost->ID, 'mini', array('class' => 'img--circle'));  
                 next_post_link('%link', "%title &rarr; $nextthumbnail"); 
             }
             ?>

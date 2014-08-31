@@ -53,6 +53,11 @@ section {
 
 
 // fondos
+.layout-contenido-estrecho {
+	h1 {
+		@extend %text-right;
+	}
+}
 .bg1, .bg2 {
 	@include background-image(bg1,100%);
 	background-color: $color-base-dark;

@@ -4,6 +4,7 @@ Template Name: Home
 */
 ?>
 
+
 <section class="cover"
 data-top="background-position: 100% 0%"
 data-top-bottom="background-position: 100% 100%"
@@ -27,13 +28,16 @@ data-top-bottom="background-position: 100% 100%"
 	</div>
 </section>
 
-<?php while (have_posts()) : the_post(); ?>
-  <?php get_template_part('templates/page', 'header'); ?>
-  <?php get_template_part('templates/content', 'page'); ?>
-<?php endwhile; ?>
 
 
 <section>
+
+<?php //while (have_posts()) : the_post(); ?>
+  <?php //get_template_part('templates/page', 'header'); ?>
+  <?php get_template_part('templates/content', 'homeproductos'); ?>
+  <?php get_template_part('templates/content', 'page'); ?>
+<?php //endwhile; ?>
+
 
 	<?php 
 		$this_post = $post->ID;
@@ -58,14 +62,4 @@ data-top-bottom="background-position: 100% 100%"
 		<?php wp_reset_postdata(); ?>
 	</dl>
 	
-</section>
-
-<section class="bg1">
-	<div class="well--large">
-		<h3>Lorem</h3>
-		<h2 class="h1">
-			Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit...
-		</h2>
-	</div>
-	<a href="/home-cpt/" class="btn btn--primary">Look! <i class="icon-arrow-right"></i></a>
 </section>

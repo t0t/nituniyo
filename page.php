@@ -2,7 +2,7 @@
 
   <?php get_template_part('templates/page', 'header'); ?>
   <h2><?php the_field('h3'); ?></h2>
-  <?php get_template_part('templates/content', 'page'); ?>
+  <section><?php get_template_part('templates/content', 'page'); ?></section>
 
 <?php endwhile; ?>
 

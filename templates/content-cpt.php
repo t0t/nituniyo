@@ -1,96 +1,149 @@
 <section class="bg1">
+<?php if( get_field('content_cpt') ): ?>
 
-<?php while (have_posts()) : the_post(); ?>
+     <?php while( has_sub_field("content_cpt") ): ?>
 
-  <article <?php post_class(); ?>>
-    <header>
-      <h1 class="entry-title">
-      <?php the_title(); ?>
-      </h1>
-      <?php //get_template_part('templates/entry-meta'); ?>
-    </header>
 
-    <div class="entry-content">
-        
-        <?php if( have_rows('content') ): ?>
 
-            <? while ( have_rows('content') ) : the_row(); ?>
+        <?php if(get_row_layout() == "video"): // Layout Videos ?>
 
-            <div class="row"
-data--500-top="opacity: 0; transform: translateX(-110px)"
-data-top="opacity: 1; transform: translateX(0px)"
-            >
+            <?php if(get_sub_field('video_repeater')): ?>
+            <?php while(has_sub_field('video_repeater')): ?>  
 
-            <figure class="col__9">
-            <img src="<? the_sub_field('img'); ?>" alt="">
-            </figure>
+            <div class="row">
 
-            <div class="col__3">
-                <p><? the_sub_field('txt'); ?></p>
-            </div>
+                    <?php //if (get_sub_field("video")): ?>
+                    <?php the_sub_field("video"); ?>
+                    <?php //endif ?>
+
+                    <?php if (get_sub_field("descripcion")): ?>
+                    <p><?php the_sub_field("descripcion"); ?></p>
+                    <?php endif ?>
 
             </div>
-
-           <? endwhile;
-
-        else : ?>
-        <? endif; ?>
-</div>
-</section>
-
-        <?php the_content(); ?>
-
-
-
-    <footer>
-
-    <nav class="post--nav">  
-    
-        <ul class="pager row">
-        
-            <li class="previous col__4">
-
-            <?php 
-                
-                $prevPost = get_previous_post();
-                
-                if($prevPost) 
-            {
-                $prevthumbnail = get_the_post_thumbnail($prevPost->ID, 'mini', array('class' => 'img--rounded') );
-                previous_post_link('%link', "$prevthumbnail &larr; %title"); 
-            } 
-            ?>
-            </li>
-
-             <li class="col__4">
-                <a href="/home-cpt/">
-                &curren; <?php $post_type = get_post_type_object( get_post_type($post) ); echo $post_type->label; ?></a>
-            </li>
-
-            <li class="col__4">
             
-            <?php
+            <?php endwhile; ?>
+            <?php endif; ?> 
 
-                $nextPost = get_next_post();
 
-                if($nextPost) 
-            {
-                $nextthumbnail = get_the_post_thumbnail($nextPost->ID, 'mini', array('class' => 'img--rounded'));  
-                next_post_link('%link', "$nextthumbnail &rarr; %title"); 
-            }
-            ?>
-            </li>
-      </ul>
 
-  </nav>
+        <?php elseif(get_row_layout() == "list"): // Layout lista ?>
+                
+<div class="row">
 
-   <?php //wp_link_pages(array('before' => '<nav class="page-nav"><p>' . __('Pages:', 'roots'), 'after' => '</p></nav>')); ?> <!-- navega entre un post de varias paginas -->
+<?php
 
-    </footer>
-  </article>
-<?php endwhile; ?>
+// check if the repeater field has rows of data
+if( have_rows('lista') ):
 
+    // loop through the rows of data
+    while ( have_rows('lista') ) : the_row();
+        ?>
+        <dl class="col__4">
+            <dt><?php the_sub_field('titulo'); ?></dt>
+            <?php while(has_sub_field('item_repeater')): ?>  
+                     
+            <dd><i class="icon-tick"></i> <?php the_sub_field('item'); ?></dd>
+                                    
+            <?php endwhile; ?>
+            </dl>
+        <?
+    endwhile;
+
+else :
+
+    // no rows found
+
+endif;
+
+?>
+
+                
+</div>
+     
+ 
+
+
+        <?php elseif(get_row_layout() == "quote"): //Layout Quotes?>
+
+            <div class="row">
+                <div class="col__12">
+                    <blockquote>
+                    <p><?php the_sub_field("quote"); ?></p>
+                    <small><?php the_sub_field("autor"); ?></small>
+                    </blockquote>
+                </div>
+            </div>
+
+
+
+
+
+
+    <?php elseif(get_row_layout() == "layout_content_estrecho"): //Layout Content centrado estrecho?>
+
+    <div class="row layout-contenido-estrecho">
+        <div class="col__3">
+            <?php while(has_sub_field('repeater')): ?>  
+
+            <?php if (get_sub_field("destacado")): ?>
+            <h3 class="h1"><?php the_sub_field("destacado"); ?></h3>
+            <?php endif ?>
+
+            <?php if (get_sub_field("imagen")): ?>
+            <img src="<?php the_sub_field("imagen"); ?>" alt="">
+            <?php endif ?>
+    
+        <?php endwhile; ?>
+        </div>
+        <div class="col__9">
+            <?php the_sub_field("content"); ?>
+        </div>
+    </div>
+
+
+
+
+
+
+        <?php elseif(get_row_layout() == "gallery"): //Layout Gallery ?>
+
+            <div class="row">
+                <h3 class="h1"><?php the_sub_field("title"); ?></h3>
+                <h3><?php the_sub_field("description"); ?></h3>
+            
+                <?php
+                $images = get_sub_field('gallery');
+             
+                if( $images ): ?>
+            
+                    <ul>
+                        <?php foreach( $images as $image ): ?>
+                            <li class="col__3">
+                                <figure>
+                                <a href="<?php echo $image['url']; ?>" data-lightbox="serie" data-title="<?php echo $image['description']; ?>">
+                                    <img src="<?php echo $image['sizes']['thumbnail']; ?>" alt="<?php echo $image['alt']; ?>" class="img--circle" />
+                                </a>
+                                <figcaption><?php echo $image['caption']; ?></figcaption>
+                                </figure>
+                            </li>
+                        <?php endforeach; ?>
+                    </ul>
+            
+                <?php endif; ?>
+            </div>
+
+
+
+
+        <?php endif; ?> 
+ 
+    <?php endwhile; ?>
+
+<?php endif; ?>
 </section>
+
+
 
 
 <section>

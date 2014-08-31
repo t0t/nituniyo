@@ -4,7 +4,7 @@
 	overflow: hidden;
 	width: 100%;
 	// border: $borde;
-	background-color: $color-base-lighter;
+	background-color: $color-base-darker;
 
 	ul {
 		width: 20000em;
@@ -13,7 +13,7 @@
 
 	li {
 		float: left;
-		width: $bp1 / 2;
+		width: $bp3 / 2;
 		height: 100%;
 		// padding: $paddingbase;
 	}

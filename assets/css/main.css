@@ -434,7 +434,7 @@ section .row, .home .features .row, footer.content-info, h1, .h1, h2, .h2, h3, .
   text-align: center;
 }
 
-section .row .col__3 h3, .h-entry .entry-content h1 {
+section .row .col__3 h3, .layout-contenido-estrecho h1, .h-entry .entry-content h1 {
   text-align: right;
 }
 
@@ -2008,6 +2008,10 @@ small {
   font-size: 0.78261rem;
 }
 
+dd {
+  line-height: 1em;
+}
+
 ul,
 ol {
   margin: 0 0 2em 0;
@@ -2824,7 +2828,7 @@ input:required:focus:valid {
   position: relative;
   overflow: hidden;
   width: 100%;
-  background-color: #fafaf8;
+  background-color: #18160f;
 }
 .jcarousel ul {
   width: 20000em;
@@ -2832,7 +2836,7 @@ input:required:focus:valid {
 }
 .jcarousel li {
   float: left;
-  width: 700px;
+  width: 357.5px;
   height: 100%;
 }
 

@@ -1,8 +1,5 @@
-<section id="content">
-
-  <?php if( get_field('content') ): ?>
-    <?php while( has_sub_field("content") ): ?>
-
+<?php if( get_field('content_pages') ): ?>
+    <?php while( has_sub_field("content_pages") ): ?>
 
 
     <?php if(get_row_layout() == "image"): // Layout imagen ?>
@@ -79,7 +76,7 @@
 
     <?php if(get_sub_field('listas')): ?>
 	
-	<dl class="col__4">
+	<dl class="col__3">
 
 	<dt><?php the_sub_field('titulo'); ?></dt>
 
@@ -99,15 +96,18 @@
 
 
 
-    <?php elseif(get_row_layout() == "quote"): //Layout Quotes ?>
+    <?php elseif(get_row_layout() == "quote"): //Layout Quotes?>
 
     <div class="row">
         <div class="col__12">
-            <blockquote><?php the_sub_field("quote"); ?>
+            <blockquote>
+            <p><?php the_sub_field("quote"); ?></p>
             <small><?php the_sub_field("name"); ?></small>
             </blockquote>
         </div>
     </div>
+
+
 
 
 
@@ -125,7 +125,7 @@
 		<div class="jcarousel">
             <ul>
                 <?php foreach( $images as $image ): ?>
-                    <li class="col__3">
+                    <li class="">
                         <a href="<?php echo $image['url']; ?>" data-lightbox="serie" data-title="<?php echo $image['description']; ?>">
                             <img src="<?php echo $image['sizes']['medium']; ?>" alt="<?php echo $image['alt']; ?>" />
                         </a>
@@ -138,42 +138,71 @@
                 <?php endforeach; ?>
             </ul>
     	</div>
+    <!-- Prev/next controls -->
+    <a href="#" class="btn btn--slider jcarousel-control-prev">
+    <i class="icon-arrow-left"></i></a>
+    <a href="#" class="btn btn--slider jcarousel-control-next">
+    <i class="icon-arrow-right"></i></a>
         <?php endif; ?>
     </div>
 
 
 
 
+
 <?php elseif(get_row_layout() == "posts_carrousel"): //Layout Carrusel ?>
 
-    <div id="carrusel" class="row">
+    <div class="row">
 
         <h3 class="h1"><?php the_sub_field("title"); ?></h3>
         <h3><?php the_sub_field("description"); ?></h3>
-        
 
         <?php if(get_sub_field("repeater")): ?>
         <?php while(has_sub_field("repeater")): ?>  
+            
+            <?php $post_objects = the_sub_field('post_item');
 
-			<?php //the_sub_field("post") ?>
-			
-			<?php $post_objects = the_sub_field('post');
+            if( $post_objects ): ?>
+                <ul>
+                <?php foreach( $post_objects as $post_object): ?>
+                    <li>
+                        <a href="<?php echo get_permalink($post_object->ID); ?>"><?php echo get_the_title($post_object->ID); ?></a>
+                        <span>Post Object Custom Field: <?php the_field('post_item', $post_object->ID); ?></span>
+                    </li>
+                <?php endforeach; ?>
+                </ul>
+            <?php endif;?>
 
-			if( $post_objects ): ?>
-			    <ul>
-			    <?php foreach( $post_objects as $post_object): ?>
-			        <li>
-			            <a href="<?php echo get_permalink($post_object->ID); ?>"><?php echo get_the_title($post_object->ID); ?></a>
-			            <span>Post Object Custom Field: <?php the_field('post', $post_object->ID); ?></span>
-			        </li>
-			    <?php endforeach; ?>
-			    </ul>
-			<?php endif;?>
+        <?php endwhile; ?>
+        <?php endif; ?>
 
-		<?php endwhile; ?>
-		<?php endif; ?>
 
     </div>
+
+
+
+
+ <?php elseif(get_row_layout() == "layout_content_estrecho"): //Layout Content centrado estrecho ?>
+
+    <div class="row layout-contenido-estrecho">
+        <div class="col__3">
+            <?php while(has_sub_field('repeater')): ?>  
+
+            <?php if (get_sub_field("destacado")): ?>
+            <h1><?php the_sub_field("destacado"); ?></h1>
+            <?php endif ?>
+
+            <?php if (get_sub_field("imagen")): ?>
+            <img src="<?php the_sub_field("imagen"); ?>" alt="">
+            <?php endif ?>
+    
+        <?php endwhile; ?>
+        </div>
+        <div class="col__9">
+            <?php the_sub_field("content"); ?>
+        </div>
+    </div>
+
 
 
 
@@ -193,14 +222,12 @@
             <ul>
                 <?php foreach( $images as $image ): ?>
                     <li class="col__3">
+                        <figure>
                         <a href="<?php echo $image['url']; ?>" data-lightbox="serie" data-title="<?php echo $image['description']; ?>">
-                            <img src="<?php echo $image['sizes']['thumbnail']; ?>" alt="<?php echo $image['alt']; ?>" />
+                            <img src="<?php echo $image['sizes']['thumbnail']; ?>" alt="<?php echo $image['alt']; ?>" class="img--circle" />
                         </a>
-                        <footer>
-                            <small class="descripcion-img">
-                                <?php echo $image['caption']; ?>
-                            </small>
-                        </footer>
+                        <figcaption><?php echo $image['caption']; ?></figcaption>
+                        </figure>
                     </li>
                 <?php endforeach; ?>
             </ul>
@@ -214,7 +241,3 @@
     <?php endwhile; ?>
 
 <?php endif; ?>
-
-</section> <!-- #/content -->
-
-<?php wp_link_pages(array('before' => '<nav class="pagination">', 'after' => '</nav>')); ?>
