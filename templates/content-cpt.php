@@ -27,6 +27,13 @@
 
 
 
+<?php elseif(get_row_layout() == "sub_heading"): // Layout lista ?>
+    
+    <h3><?php the_sub_field('subheading'); ?> </h3>
+
+
+    
+
         <?php elseif(get_row_layout() == "list"): // Layout lista ?>
                 
 <div class="row">
@@ -62,6 +69,25 @@ endif;
 </div>
      
  
+
+
+<?php elseif(get_row_layout() == "image"): // Imagen grande ?>
+
+    <div class="row">
+
+        <figure>
+
+            <img src="<?php the_sub_field("image"); ?>" alt="<?php the_sub_field("caption"); ?>">
+            <figcaption><?php the_sub_field("caption"); ?></figcaption>
+            
+        </figure>
+
+    </div>
+
+
+
+
+
 
 
         <?php elseif(get_row_layout() == "quote"): //Layout Quotes?>

@@ -72,25 +72,45 @@
 
 	
 
-	<?php elseif(get_row_layout() == "listas_layout"): // Layout Listas ?>
+	<?php elseif(get_row_layout() == "list"): // Layout lista ?>
+                
+<div class="row">
 
-    <?php if(get_sub_field('listas')): ?>
-	
-	<dl class="col__3">
+    <?php
 
-	<dt><?php the_sub_field('titulo'); ?></dt>
+    // check if the repeater field has rows of data
+    if( have_rows('lista') ):
 
-	<?php while(has_sub_field('listas')): ?>  
+        // loop through the rows of data
+        while ( have_rows('lista') ) : the_row();
+            ?>
+            <dl class="col__4">
+                <dt><?php the_sub_field('titulo'); ?></dt>
+                <?php while(has_sub_field('item_repeater')): ?>  
+                         
+                <dd><i class="icon-tick"></i> <?php the_sub_field('item'); ?></dd>
+                                        
+                <?php endwhile; ?>
+                </dl>
+            <?
+        endwhile;
 
-    	<?php //if (get_sub_field('lista')): ?>
-        	<dd><i class="icon-tick"></i> <?php the_sub_field('lista'); ?></dd>
-		<?php //endif ?>
+    else :
+
+        // no rows found
+
+    endif;
+
+    ?>
+                
+</div>
+
+
+
+
+<?php elseif(get_row_layout() == "sub_heading"): // Layout lista ?>
     
-	<?php endwhile; ?>
-
-	</dl>
-
-    <?php endif; ?> 
+    <h3><?php the_sub_field('subheading'); ?> </h3>
 
 
 

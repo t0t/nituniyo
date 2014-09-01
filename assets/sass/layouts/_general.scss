@@ -14,6 +14,7 @@ body {
 }
 section {
 	@extend %clearfix;
+	padding: $margin*2;
 	.row {
 		@extend %text-center;
 		p, blockquote {
@@ -33,9 +34,6 @@ section {
 			}
 		}
 	}
-	@media (min-width: $bp3) {
-		padding: $margin*2;
-	}
 }
 
 .sidebar {
@@ -52,10 +50,17 @@ section {
 }
 
 
-// fondos
+// Modulos
 .layout-contenido-estrecho {
 	h1 {
 		@extend %text-right;
+	}
+}
+.gallery {
+	@media (min-width: $bp3) {
+		li {
+			@include rejilla(4);
+		}
 	}
 }
 .bg1, .bg2 {

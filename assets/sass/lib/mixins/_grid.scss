@@ -88,6 +88,21 @@
   @include size($size, $size);
 }
 
+//ohh la la grid coooool!!!
+// http://css-tricks.com/video-screencasts/132-quick-useful-case-sass-math-mixins/
+@mixin rejilla($numPerRow) {
+  width: ((100% - (($numPerRow - 1) * $gutterwidth)) / $numPerRow);
+  &:nth-child(n) {
+    margin-bottom: $gutterwidth;
+    margin-right: $gutterwidth;
+  }
+  &:nth-child(#{$numPerRow}n) {
+    margin-right: 0;
+    margin-bottom: 0;
+  }
+  float: left;
+  // border: 1px solid black;
+}
 
 // .rejilla {
 //     @include rejilla(1);

@@ -34,32 +34,34 @@ data-top-bottom="background-position: 100% 100%"
 
 <?php //while (have_posts()) : the_post(); ?>
   <?php //get_template_part('templates/page', 'header'); ?>
-  <?php get_template_part('templates/content', 'homeproductos'); ?>
+  <?php get_template_part('templates/content', 'page-template'); ?>
   <?php get_template_part('templates/content', 'page'); ?>
 <?php //endwhile; ?>
 
 
-	<?php 
-		$this_post = $post->ID;
-		$loop = new WP_Query( array( 
-								'post_type' => 'cpt',
-								'post__not_in' => array($this_post),
-								'category_name' => '' 
-								)); 
-		?>	
+	<div class="row">
 
-	<dl>
-		<dt>Listado de <?php the_title() ?></dt>
-				
-		<?php while ($loop->have_posts()) : $loop->the_post(); ?>
+	<?php 
+			$this_post = $post->ID;
+			$loop = new WP_Query( array( 
+									'post_type' => 'cpt',
+									'post__not_in' => array($this_post),
+									'category_name' => '' 
+									)); 
+			?>	
 	
-		<dd class="icon-tick">
-		<a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>">
-		<?php the_title(); ?></a>
-		</dd>
-				
-		<?php endwhile; ?>
-		<?php wp_reset_postdata(); ?>
-	</dl>
+		<dl>					
+			<?php while ($loop->have_posts()) : $loop->the_post(); ?>
+		
+			<dd class="icon-tick">
+			<a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>">
+			<?php the_title(); ?></a>
+			</dd>
+					
+			<?php endwhile; ?>
+			<?php wp_reset_postdata(); ?>
+		</dl>
+
+	</div>
 	
 </section>

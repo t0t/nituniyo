@@ -5,15 +5,43 @@ Template Name: CPT
 ?>
 
 <?php get_template_part('templates/page', 'header'); ?>
-<h2><?php the_field('h3'); ?></h2>
 
 
 <?php //while (have_posts()) : the_post(); ?>
   <?php //get_template_part('templates/page', 'header'); ?>
-  <?php get_template_part('templates/content', 'page'); ?>
-<?php get_template_part('templates/content', 'home-cpt'); ?>
+	<section>
+	<?php get_template_part('templates/content', 'page'); ?>
+	<?php get_template_part('templates/content', 'page-template'); ?>
+	</section>
 <?php //endwhile; ?>
 
+
+<section>
+
+	<?php 
+		$this_post = $post->ID;
+		$loop = new WP_Query( array( 
+								'post_type' => 'cpt',
+								'post__not_in' => array($this_post),
+								'category_name' => '' 
+								)); 
+		?>	
+
+	<dl>
+		<dt>Listado de <?php the_title() ?></dt>
+				
+		<?php while ($loop->have_posts()) : $loop->the_post(); ?>
+	
+		<dd class="icon-tick">
+		<a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>">
+		<?php the_title(); ?></a>
+		</dd>
+				
+		<?php endwhile; ?>
+		<?php wp_reset_postdata(); ?>
+	</dl>
+	
+</section>
 
 
 <section>
@@ -62,29 +90,3 @@ Template Name: CPT
 
 
 
-<section>
-
-	<?php 
-		$this_post = $post->ID;
-		$loop = new WP_Query( array( 
-								'post_type' => 'cpt',
-								'post__not_in' => array($this_post),
-								'category_name' => '' 
-								)); 
-		?>	
-
-	<dl>
-		<dt>Listado de <?php the_title() ?></dt>
-				
-		<?php while ($loop->have_posts()) : $loop->the_post(); ?>
-	
-		<dd class="icon-tick">
-		<a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>">
-		<?php the_title(); ?></a>
-		</dd>
-				
-		<?php endwhile; ?>
-		<?php wp_reset_postdata(); ?>
-	</dl>
-	
-</section>

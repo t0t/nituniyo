@@ -28,39 +28,36 @@
 
         <?php elseif(get_row_layout() == "list"): // Layout lista ?>
                 
-<div class="row">
+    <div class="row">
 
-<?php
+        <?php
 
-// check if the repeater field has rows of data
-if( have_rows('lista') ):
+        // check if the repeater field has rows of data
+        if( have_rows('lista') ):
 
-    // loop through the rows of data
-    while ( have_rows('lista') ) : the_row();
+            // loop through the rows of data
+            while ( have_rows('lista') ) : the_row();
+                ?>
+                <dl class="col__4">
+                    <dt><?php the_sub_field('titulo'); ?></dt>
+                    <?php while(has_sub_field('item_repeater')): ?>  
+                             
+                    <dd><i class="icon-tick"></i> <?php the_sub_field('item'); ?></dd>
+                                            
+                    <?php endwhile; ?>
+                    </dl>
+                <?
+            endwhile;
+
+        else :
+
+            // no rows found
+
+        endif;
+
         ?>
-        <dl class="col__4">
-            <dt><?php the_sub_field('titulo'); ?></dt>
-            <?php while(has_sub_field('item_repeater')): ?>  
-                     
-            <dd><i class="icon-tick"></i> <?php the_sub_field('item'); ?></dd>
-                                    
-            <?php endwhile; ?>
-            </dl>
-        <?
-    endwhile;
-
-else :
-
-    // no rows found
-
-endif;
-
-?>
-
-
-
-                
-</div>
+                    
+    </div>
      
  
 
