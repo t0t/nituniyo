@@ -10,12 +10,11 @@ body {
 .wrap { 
 	@include max-width ($bp1);
 	@extend %clearfix;
-	padding-top: $baselineheight*3;
+	padding-top: $baselineheight;
 	.main {
 		h2 {
 			@include padding($gutterwidth*2);
 			background-color: $lightergrey;
-			// color: $white;
 		}
 	}
 }

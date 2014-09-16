@@ -4,7 +4,7 @@ Template Name: Home
 */
 ?>
 
-
+xxx
 <section class="cover" data-top="background-position: 100% 0%" data-top-bottom="background-position: 100% 100%">
 	<div class="row">
 		<div class="col__12">

@@ -8,7 +8,7 @@ $bp5 : 320px;
 
 $break-wide: $bp1;
 $break-desktop: $bp2;
-$break-tablet: $bp3 + 100px;
+$break-tablet: $bp3 + 110px;
 $break-mobile: $bp5;
 
 
@@ -52,12 +52,12 @@ $push: 0 !default;
     $FONT-FACE
 \*------------------------------------*/
 // $basefont 					: "Lato", sans-serif;
-$basefont 					: "Open Sans", Helvetica, Arial, sans-serif;
+$basefont 					: Helvetica, Arial, sans-serif;
 $altfont 					: "Courier New", serif;
 $codefont 					: "Courier New", monospace;
 $googlefont 				: "http://fonts.googleapis.com/css?family=Open+Sans";
 $baseheadingfont 			: $basefont;
-$baseheadingfontweight 		: inherit;
+$baseheadingfontweight 		: 900;
 
 $altlineheight : 1.35em;
 // $icons	: icomoon;
@@ -76,7 +76,7 @@ $baseletterspacing 	: 1px;
 /**
  * Brand stuff
  */
-$color-base      	: rgb(255,255,255);
+$color-base      	: rgb(255,76,0);
 $color-base-invert 	: complement($color-base); //invierte
 $color-base-light	: lighten($color-base, 3%);
 $color-base-lighten	: lighten($color-base, 5%);
@@ -92,7 +92,6 @@ $color-cinco     	: red; //rojo menu
 $bordercolor    	: $color-base-darken;
 $bordercolorhover   : $color-base-darken;
 $compcolor      	: rgb(206,240,227);
-$baseheadingfontcolor 		: $color-dos;
 
 /**
  * Escala de grises
@@ -108,7 +107,8 @@ $white 				: rgb(255,255,255);
 $white-alpha 		: rgba(255,255,255,0.95);
 
 // Web
-$background			: 	$color-base;
+$baseheadingfontcolor 		: $black;
+$background			: 	$white;
 $textcolor			: 	$darkgrey;
 $textcolor-strong	:	$black;
 

@@ -2,32 +2,25 @@ header {
 	&.banner {
 		@include max-width($bp1);
 		z-index: 9000;
-		position: fixed;
-		top: 0;
+		// position: fixed;
+		// top: 0;
 		// background-color: $white-alpha;
-		@media (min-width: $bp1) {
-			right: 0;
-			left: 0;
+		.logo {
+			@include grid(4);
 		}
+		.slogan {
+			@include grid(4);
+		}
+		.sello {
+			@include grid(4);
+		}
+		@media (min-width: $bp1) {
+			// right: 0;
+			// left: 0;
+		}
+		height: 150px;
 	}
 
-	h1 {
-		&.brand {
-			margin-bottom: 0;
-			@include padding(1%);
-			text-align: left;
-			.icon-logo-t0theme {
-			vertical-align: middle;
-			// font-size: 172%;
-			color: $color-base;
-			@media (min-width: $bp2) {
-				font-size: 172%;
-			}
-			@media (min-width: $bp1) {
-				padding-left: 0;
-			}
-			}
-		}
-	}
+	h1 {}
 }
 

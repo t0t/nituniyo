@@ -26,17 +26,17 @@
         @if $fold == left {
                 margin-right: $margin;
                 
-                        &:last-child {
-                                margin-right: 0;
-                        }
+                &:last-child {
+                    margin-right: 0;
+                }
         }
        
         @if $fold == right {
                 margin-left: $margin;
 
-                         &:last-child {
-                         margin-left: 0;
-                        }
+                &:last-child {
+                    margin-left: 0;
+                }
         }
       
         &:hover {
@@ -103,88 +103,3 @@
   float: left;
   // border: 1px solid black;
 }
-
-// .rejilla {
-//     @include rejilla(1);
-//     background: red;
-//     .col1-5 {
-//         @include rejilla(1.80);
-//         background: #ccc;
-//     }
-//     .col2 {
-//         @include rejilla(2);
-//         background: yellow;
-//     }
-//     .col3 {
-//         @include rejilla(3);
-//         background: #ccc;
-//     }
-//     .col4 {
-//         @include rejilla(4);
-//         background: green;
-//     }
-//     .col3-5 {
-//         @include rejilla(3.35);
-//         background: green;
-//     }
-//     .col5 {
-//         @include rejilla(5);
-//         background: white;
-//     }
-//     .col6 {
-//         @include rejilla(6);
-//         background: black;
-//     }
-//     .col8 {
-//         @include rejilla(8);
-//         background: olive;
-//     }
-//     .col9 {
-//         @include rejilla(9);
-//         background: black;
-//     }
-//     .col10 {
-//         @include rejilla(10);
-//         background: white;
-//     }
-//     .col12 {
-//         @include rejilla(12);
-//         background: #f3f3f3;
-//     }
-// }
-
-// Este mixin es de Wakkos, mola mucho! peeeero tengo que estudiar el tema de los margenes...
-    
-// .grid {
-//     .grid__item {
-//         width:100%;
-//         float: left;
-//         margin-bottom: 1em;
-//         background-color: orange;
-//         @media all and (min-width: 37em) {  
-//                 width:49.5%;
-//                 &:nth-of-type(odd) {
-//                     margin-right:2%;
-//                 }
-            
-//         }
-//     }
-// }
-
-//     .grid__item {
-//         > [class*="ancho-"] {
-//             height: 100px;
-//             float:left;
-//             border: 1px solid grey;
-//             background-color:white;
-//         }
-//     }
-    
-//     // Cantidad de elementos en el grid
-//     $huecos : 4;
-//     @for $i from 1 through $huecos {
-//         .ancho-#{$i} {
-//             width:((100 / $huecos) * $i) *1%;
-//         }
-//     }
-

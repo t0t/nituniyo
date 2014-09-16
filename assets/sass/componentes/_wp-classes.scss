@@ -18,8 +18,14 @@ figure.alignnone {
   float: left;
   max-width: 100%;
 }
-// Captions
-
+// Edit link
+.post-edit-link {
+  @include padding($paddingbase);
+  background-color: $lightergrey;
+  display: block;
+  @extend %clearfix;
+  @include square(80px);
+}
 
 // Gallery shortcode
 .gallery-row {
