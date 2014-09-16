@@ -12,7 +12,7 @@ module.exports = function(grunt) {
     // 'assets/vendor/lightbox/js/lightbox.min.js',
     // 'assets/js/plugins/lightbox.js',
     'assets/vendor/lightbox/js/lightbox.js',
-    'assets/vendor/fitvids/jquery.fitvids.js',
+    // 'assets/vendor/fitvids/jquery.fitvids.js',
     // 'assets/vendor/three.js/three.min.js',
     // 'assets/vendor/paper/dist/paper-full.min.js',
     // 'assets/vendor/fabric/dist/fabric.min.js',
