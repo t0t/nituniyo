@@ -1,0 +1,8 @@
+<?php
+/*
+Template Name: Productos
+*/
+?>
+
+<?php get_template_part('templates/page', 'header'); ?>
+<?php get_template_part('templates/content', 'page-home-products'); ?>

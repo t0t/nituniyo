@@ -1,0 +1,1 @@
+<?php echo do_shortcode("[sibling-pages exclude='6,304,77,41,10,8,12,17,151,23,219,275'] "); ?>

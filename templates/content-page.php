@@ -1,4 +1,19 @@
-<?php if( get_field('content_pages') ): ?>
+<?php echo do_shortcode('[child-pages depth="1"]' ); ?>
+
+    <?php if( get_field('ficha_tecnica') ): ?>
+    <a href="<?php the_field('ficha_tecnica'); ?>" class="btn" target="_blank">
+    Ficha técnica
+    </a>
+    <?php endif; ?>
+
+    <?php if( get_field('datos_seguridad') ): ?>
+    <a href="<?php the_field('datos_seguridad'); ?>" class="btn" target="_blank">
+    Ficha datos de seguridad
+    </a>
+    <?php endif; ?>
+
+
+    <?php if( get_field('content_pages') ): ?>
     <?php while( has_sub_field("content_pages") ): ?>
 
 
