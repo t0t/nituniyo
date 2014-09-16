@@ -28,7 +28,7 @@
 	    }
 	}
 	.cover {
-		background: url(../img/home_bg.jpg) no-repeat 0px top $darkgrey;
+		background: url(../img/t0theme-10.jpg) no-repeat 0px top $darkgrey;
 		background-size: cover;
 		// background-attachment: fixed;
 		height: 500px;
@@ -41,7 +41,7 @@
 			}
 		.well {
 			h1 {
-				color: $color-base-darken;
+				color: $white;
 				@extend %inline-block;
 				@extend %clearfix;
 				@include margin-bottom();

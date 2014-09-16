@@ -13,13 +13,17 @@ Template Name: Blog
 <?php endif; ?>
 
 
-<?php //while (have_posts()) : the_post(); ?>
-  <?php //get_template_part('templates/page', 'header'); ?>
-  <section>
-	<?php get_template_part('templates/content', 'page'); ?>
-  </section>
-  <?php get_template_part('templates/content', 'page-template'); ?>
-<?php //endwhile; ?>
+	<?php //while (have_posts()) : the_post(); ?>
+	<?php //get_template_part('templates/page', 'header'); ?>
+
+	<section>
+
+  		<?php get_template_part('templates/content', 'page-template'); ?>
+		<?php get_template_part('templates/content', 'page'); ?>
+
+	</section>
+
+	<?php //endwhile; ?>
 
 
 <section>
@@ -43,7 +47,7 @@ Template Name: Blog
 				<? if ( has_post_thumbnail() ) { ?>
 					
 				<a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>">
-						<?php the_post_thumbnail('thumbnail'); ?>
+					<?php the_post_thumbnail('thumbnail'); ?>
 				</a>
 					
 				<?}else {?>
@@ -75,7 +79,6 @@ Template Name: Blog
 
 
 <section>
-
 
 	<?php 
 	$this_post = $post->ID;

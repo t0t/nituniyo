@@ -11,6 +11,13 @@ body {
 	@include max-width ($bp1);
 	@extend %clearfix;
 	padding-top: $baselineheight*3;
+	.main {
+		h2 {
+			@include padding($gutterwidth*2);
+			background-color: $lightergrey;
+			// color: $white;
+		}
+	}
 }
 section {
 	@extend %clearfix;
@@ -26,6 +33,11 @@ section {
 			}
 		}
 		.col__9 {
+			@include grid(9);
+			@include break(tablet, 12);
+			h3 {
+				@extend %text-left;
+			}
 			ul {
 				list-style-type: circle;
 				li {
@@ -54,6 +66,15 @@ section {
 .layout-contenido-estrecho {
 	h1 {
 		@extend %text-right;
+	}
+	.gallery {
+		@media (min-width: $bp3) {
+			li {
+				@include grid(6);
+				@include break(tablet, 6);
+				width: 100%;
+			}
+		}
 	}
 }
 .gallery {
@@ -110,11 +131,6 @@ section {
 
 	.col__6 {
 		@include grid(6);
-		@include break(tablet, 12);
-	}
-
-	.col__9 {
-		@include grid(9);
 		@include break(tablet, 12);
 	}
 

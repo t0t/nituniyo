@@ -22,7 +22,7 @@ h6 {
 		
 		&.altheader {
 			// color:$grey;
-			// font-weight: 600;
+			//font-weight: 600;
 			// text-transform: uppercase;
 		}
 }
@@ -36,7 +36,7 @@ h3 small {
 }
 
 @each $header, $margin-bot, $font-size, $line-height in 
-	(h1, 2, 40, 1.2)
+	(h1, 0, 70, 1.2)
 	(h2, 3, 20, 1)
 	(h3, 1.3, 20, 1.4)
 	(h4, 7, 20, 1)
@@ -47,7 +47,7 @@ h3 small {
   	@include font-size($font-size);
   	line-height 	: $line-height;
   	letter-spacing  : $baseletterspacing;
-  	text-transform: uppercase;
+  	// text-transform: uppercase;
   	@extend %text-center;
   }
 }
@@ -60,6 +60,7 @@ address {
 	margin-bottom : $baselineheight;
 	line-height : $baselineheight;
 	letter-spacing: $baseletterspacing;
+	word-spacing: $altlineheight/10;
 	small {
 		font-style: normal;
 		line-height: $baselineheight / 4;

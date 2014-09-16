@@ -22,9 +22,7 @@
         <?php while(has_sub_field('repeater_parrafos')): ?>  
 
             <?php if (get_sub_field("1parrafo")): ?>
-                
             <h1><?php the_sub_field("1parrafo"); ?></h1>
-            
             <?php endif ?>
 
             <?php if (get_sub_field("2parrafos")): ?>
@@ -104,13 +102,6 @@
     ?>
                 
 </div>
-
-
-
-
-<?php elseif(get_row_layout() == "sub_heading"): // Layout lista ?>
-    
-    <h3><?php the_sub_field('subheading'); ?> </h3>
 
 
 
@@ -202,24 +193,55 @@
 
 
 
- <?php elseif(get_row_layout() == "layout_content_estrecho"): //Layout Content centrado estrecho ?>
+    <?php elseif(get_row_layout() == "layout_content_estrecho"): //Layout Content centrado estrecho?>
 
     <div class="row layout-contenido-estrecho">
+
         <div class="col__3">
+
+            
+             <h3 class="h1"><?php the_sub_field("title"); ?></h3>
+                <h3><?php the_sub_field("description"); ?></h3>
+            
+                <?php
+                $images = get_sub_field('gallery');
+             
+                if( $images ): ?>
+            
+                    <ul class="gallery">
+                        <?php foreach( $images as $image ): ?>
+                            <li>
+                                <figure>
+                                <a href="<?php echo $image['url']; ?>" data-lightbox="serie" data-title="<?php echo $image['description']; ?>">
+                                    <img src="<?php echo $image['sizes']['thumbnail']; ?>" alt="<?php echo $image['alt']; ?>" class="img--circle" />
+                                </a>
+                                <figcaption><?php echo $image['caption']; ?></figcaption>
+                                </figure>
+                            </li>
+                        <?php endforeach; ?>
+                    </ul>
+            
+                <?php endif; ?>
+
+
             <?php while(has_sub_field('repeater')): ?>  
-
-            <?php if (get_sub_field("destacado")): ?>
-            <h1><?php the_sub_field("destacado"); ?></h1>
-            <?php endif ?>
-
             <?php if (get_sub_field("imagen")): ?>
             <img src="<?php the_sub_field("imagen"); ?>" alt="">
             <?php endif ?>
+            <?php if (get_sub_field("destacado")): ?>
+            <small><?php the_sub_field("destacado"); ?></small>
+            <?php endif ?>
+            <?php endwhile; ?>
     
-        <?php endwhile; ?>
         </div>
+
         <div class="col__9">
+
+        <?php if (get_sub_field("encabezado")): ?>
+            <h3><?php the_sub_field("encabezado"); ?></h3>
+        <?php endif ?>
             <?php the_sub_field("content"); ?>
+
         </div>
     </div>
 

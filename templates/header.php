@@ -1,6 +1,6 @@
 <header class="banner" role="banner">
 
-    <h1 class="brand">
+    <h1 class="brand h2">
         <i class="icon-logo-t0theme"></i>
         <a href="<?php echo esc_url(home_url('/')); ?>/"><?php bloginfo('name'); ?></a>
     </h1>

@@ -19,10 +19,10 @@
 			
 			</figure>
 
-				<h1>
+				<h2>
 					<a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>"><? the_title(); ?>
 					</a>
-				</h1>
+				</h2>
 				
 			<a href="<?php the_permalink(); ?>" class="btn btn--primary">Look! <i class="icon-arrow-right"></i></a>
 

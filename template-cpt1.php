@@ -56,12 +56,13 @@ Template Name: CPT
 	?>
 	
 	<div class="jcarousel">
+
 		<ul>
 			<?php while ($loop->have_posts()) : $loop->the_post(); ?>
 			<li>
 				<? if ( has_post_thumbnail() ) { ?>
 				<a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>">
-				<?php the_post_thumbnail('thumbnail'); ?>
+				<?php the_post_thumbnail('medium'); ?>
 				</a>
 				<?}else {?>
 				<img src="<?php echo get_template_directory_uri(); ?>/assets/img/logo.svg" alt="Alt" class="logo-img">
@@ -85,8 +86,3 @@ Template Name: CPT
 	<i class="icon-arrow-right"></i></a>
 
 </section>
-
-		
-
-
-
