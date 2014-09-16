@@ -89,7 +89,7 @@ $color-dos      	: rgb(72,224,164);
 $color-tres			: rgb(41,0,164);
 $color-cuatro     	: rgb(41,0,164); //ocre
 $color-cinco     	: red; //rojo menu
-$bordercolor    	: $color-base-darken;
+$bordercolor    	: $color-base;
 $bordercolorhover   : $color-base-darken;
 $compcolor      	: rgb(206,240,227);
 
@@ -221,5 +221,5 @@ $navitempadding        : $gutterwidth / 2;
 $navtabsbordercolor    : $bordercolor;
 
 // Bordes
-$borde				: 3px double $bordercolor;
+$borde				: 2px solid $bordercolor;
 $bordehover			: 3px double $bordercolorhover;

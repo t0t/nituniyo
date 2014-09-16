@@ -19,13 +19,7 @@ figure.alignnone {
   max-width: 100%;
 }
 // Edit link
-.post-edit-link {
-  @include padding($paddingbase);
-  background-color: $lightergrey;
-  display: block;
-  @extend %clearfix;
-  @include square(80px);
-}
+.post-edit-link {}
 
 // Gallery shortcode
 .gallery-row {

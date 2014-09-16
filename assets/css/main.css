@@ -490,10 +490,10 @@ footer .main-footer, .home .cover .well h1 {
 * Clear floats.
 * http://bit.ly/1e3YaBH
 */
-.wrap, section, .sidebar figure > a, .home .cover .well h1, .post-edit-link, .btn--primary, .brand, .container, ul.gallery li a {
+.wrap, section, .sidebar figure > a, .home .cover .well h1, .btn--primary, .brand, ul.gallery li a {
   clear: both;
 }
-.wrap:after, section:after, .sidebar figure > a:after, .home .cover .well h1:after, .post-edit-link:after, .btn--primary:after, .brand:after, .container:after, ul.gallery li a:after {
+.wrap:after, section:after, .sidebar figure > a:after, .home .cover .well h1:after, .btn--primary:after, .brand:after, ul.gallery li a:after {
   content: "";
   display: table;
   clear: both;
@@ -886,6 +886,13 @@ header.banner .sello {
 header.banner .sello:last-child {
   margin-right: 0;
 }
+header.banner .sello p {
+  border: 2px solid #ff4c00;
+  padding: 3%;
+  max-width: 175px;
+  text-transform: uppercase;
+  color: #ff4c00;
+}
 
 .home .wrap {
   padding-top: 0;
@@ -994,7 +1001,7 @@ header.banner .sello:last-child {
 }
 
 .post {
-  border-bottom: 3px double #330f00;
+  border-bottom: 2px solid #ff4c00;
 }
 .post:last-child {
   border-bottom: none;
@@ -1045,14 +1052,6 @@ figure.alignnone {
 .wp-caption {
   float: left;
   max-width: 100%;
-}
-
-.post-edit-link {
-  padding: 20px;
-  background-color: #f0f0f0;
-  display: block;
-  width: 80px;
-  height: 80px;
 }
 
 .gallery-row {
@@ -1799,7 +1798,7 @@ input[type="submit"].btn:hover {
   font-size: 23px;
   font-size: 1rem;
   background-color: none;
-  border: 3px double #330f00;
+  border: 2px solid #ff4c00;
   -webkit-transition: all 0.2s;
   -o-transition: all 0.2s;
      transition: all 0.2s;
@@ -1913,7 +1912,7 @@ hr {
   padding: 0;
   height: 1px;
   border: 0;
-  border-top: 1px dotted #330f00;
+  border-top: 1px dotted #ff4c00;
 }
 
 canvas {
@@ -1940,7 +1939,7 @@ img {
 .img--polaroid {
   padding: 1.5%;
   background-color: white;
-  border: 1px solid #330f00;
+  border: 1px solid #ff4c00;
   -webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
           box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
 }
@@ -2092,7 +2091,7 @@ ul {
 blockquote {
   margin: 0 0 2em 0;
   padding-left: 3%;
-  border-left: 5px solid #330f00;
+  border-left: 5px solid #ff4c00;
   font-family: "Courier New", serif;
   font-style: normal;
   line-height: 2em;
@@ -2141,7 +2140,7 @@ dt {
 }
 
 abbr[title] {
-  border-bottom: 1px dotted #330f00;
+  border-bottom: 1px dotted #ff4c00;
   cursor: help;
 }
 
@@ -2853,32 +2852,6 @@ body {
           background-size: contain;
   background-repeat: repeat-x;
   background-attachment: fixed;
-}
-
-.container {
-  margin-left: auto;
-  margin-right: auto;
-  max-width: 1400px;
-  width: 100%;
-}
-
-.main {
-  float: left;
-  margin-left: auto;
-  margin-right: auto;
-  max-width: 70%;
-  width: 100%;
-}
-@media (max-width: 715px) {
-  .main {
-    margin-left: auto;
-    margin-right: auto;
-    max-width: 100%;
-    width: 100%;
-  }
-}
-.main img, .main p img {
-  margin-right: 5.4%;
 }
 
 ul {

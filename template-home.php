@@ -11,7 +11,7 @@ Template Name: Home
 				<div class="col__12">
 
 				<h1 data-top="opacity: 0" data-16p-top="opacity: 1">
-				<?php bloginfo('name'); ?>,
+				<?php //bloginfo('name'); ?>
 				<?php bloginfo('description'); ?>
 				</h1>
 
@@ -32,16 +32,12 @@ Template Name: Home
   <?php get_template_part('templates/content', 'page'); ?>
 <?php //endwhile; ?>
 	
-</section>
 
-
-<section>
-
-	<h3 class="h1">Extractos y reflexiones sobre arte, desarrollo web y conciencia</h3>
+	<h3 class="h1">Productos</h3>
 	<?php 
 	$this_post = $post->ID;
 	$loop = new WP_Query( array( 
-							'post_type' => 'post',
+							'post_type' => 'page',
 							'posts_per_page' => '',
 							'post__not_in' => array($this_post),
 							'category_name' => '' 

@@ -77,24 +77,8 @@ body {
 	background-repeat: repeat-x;
 	background-attachment:fixed;
 }
-.container {
-	@include max-width ($bp1);
-	@extend %clearfix;
-  	// @include padding();
-	@media (max-width: 1220px) { 
-  	}
 
-}
-.main {
-	float: left;
-	@include max-width (70%);
-	@media (max-width: $bp3) { //padding horizontal en resoluciones decrecientes
-  		@include max-width (100%);
-  	}
-  	img, p img {
-		margin-right: $gutterwidth * 1.8;
-  	}
-}
+
 ul {
 	list-style: none;
 }

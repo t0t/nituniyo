@@ -13,6 +13,13 @@ header {
 		}
 		.sello {
 			@include grid(4);
+			p {
+				border: $borde;
+				@include padding();
+				max-width: 175px;
+				text-transform: uppercase;
+				color: $bordercolor;
+			}
 		}
 		@media (min-width: $bp1) {
 			// right: 0;

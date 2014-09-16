@@ -6,7 +6,7 @@
     </a>
 
     <h2 class="slogan"><?php bloginfo('description'); ?></h2>
-    <div class="sello">Exclusivo profesionales</div>
+    <div class="sello"><p>Exclusivo profesionales</p></div>
   
 </header>
 
