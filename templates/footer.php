@@ -9,13 +9,12 @@
 				</div>
 			
 				<div class="col__4">
-					<h6><a class="url" href="#">
-					<i class="icon-logo-t0theme"></i> <?php bloginfo('name'); ?></a></h6>
+					<h6><a class="url" href="/">
+					<i class="icon-logo-t0theme"></i> <?php bloginfo('name'); ?> S.L.</a></h6>
 					<address>
-						<small>Calle número 13
-						La Provincia, 
-						12980 Spain
-						+44 (0)345 345345</small>
+C/Morella Km 0,7 12500 Vinaròs Castellón
+T. (+34) 964 40 18 64
+F. (+34) 964 40 08 46
 					</address>
 				</div>
 			
@@ -32,11 +31,12 @@
 		</div>
 			<aside class="creditos" rel="author"> 
 				<small>
-					<a href="http://sergiofores.net" target="_blank"><i class="icon-logo-mazizo"></i> Sergio Forés</a> &sdot; <?php bloginfo('name'); ?>
+					 <?php bloginfo('name'); ?>
 					 <?php echo date('Y'); ?>
 				</small>
 				 <?php edit_post_link('&oplus; Editar ') ?>&sdot;
 				 <?php wp_loginout(); ?>
+				 &sdot; <a href="http://sergiofores.net" target="_blank"><i class="icon-logo-mazizo"></i></a>
 			</aside>
 </footer>
 

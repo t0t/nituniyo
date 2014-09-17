@@ -842,12 +842,24 @@ footer .main-footer {
   width: 100%;
 }
 
+.nav {
+  width: 600px;
+  height: 60px;
+  position: fixed;
+  top: 150px;
+  left: 0;
+  z-index: 9001;
+}
+
 header.banner {
   margin-left: auto;
   margin-right: auto;
   max-width: 1400px;
   width: 100%;
   z-index: 9000;
+  position: fixed;
+  top: 0;
+  background-color: white;
   height: 150px;
 }
 header.banner .logo {
@@ -882,6 +894,8 @@ header.banner .sello {
   padding: 20px;
   width: 32%;
   margin-right: 2%;
+  position: fixed;
+  right: 0;
 }
 header.banner .sello:last-child {
   margin-right: 0;
@@ -895,7 +909,7 @@ header.banner .sello p {
 }
 
 .home .wrap {
-  padding-top: 0;
+  padding-top: 150px;
 }
 .home .main h1:first-child {
   padding-top: 0;
@@ -2003,6 +2017,7 @@ h1, .h1 {
   font-size: 3.04348rem;
   line-height: 1.2;
   letter-spacing: 1px;
+  text-transform: uppercase;
 }
 
 h2, .h2 {
@@ -2011,6 +2026,7 @@ h2, .h2 {
   font-size: 0.86957rem;
   line-height: 1;
   letter-spacing: 1px;
+  text-transform: uppercase;
 }
 
 h3, .h3 {
@@ -2019,6 +2035,7 @@ h3, .h3 {
   font-size: 0.86957rem;
   line-height: 1.4;
   letter-spacing: 1px;
+  text-transform: uppercase;
 }
 
 h4, .h4 {
@@ -2027,6 +2044,7 @@ h4, .h4 {
   font-size: 0.86957rem;
   line-height: 1;
   letter-spacing: 1px;
+  text-transform: uppercase;
 }
 
 h5, .h5 {
@@ -2035,6 +2053,7 @@ h5, .h5 {
   font-size: 0.82609rem;
   line-height: 2;
   letter-spacing: 1px;
+  text-transform: uppercase;
 }
 
 h6, .h6 {
@@ -2043,6 +2062,7 @@ h6, .h6 {
   font-size: 0.82609rem;
   line-height: 1;
   letter-spacing: 1px;
+  text-transform: uppercase;
 }
 
 p,
@@ -2847,11 +2867,6 @@ input:required:focus:valid {
 
 body {
   font-family: Helvetica, Arial, sans-serif;
-  background-image: url(../img/bg.jpg);
-  -webkit-background-size: contain;
-          background-size: contain;
-  background-repeat: repeat-x;
-  background-attachment: fixed;
 }
 
 ul {
@@ -3060,6 +3075,12 @@ p {
 
 .content-info {
   padding: 40px;
+  background-image: url(../img/bg.jpg);
+  -webkit-background-size: contain;
+          background-size: contain;
+  background-repeat: repeat-x;
+  background-attachment: fixed;
+  background-position: 0 bottom;
 }
 
 /*** ESSENTIAL STYLES ***/
