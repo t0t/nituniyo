@@ -2,7 +2,7 @@
 // home
 .home {
 	.wrap {
-		padding-top: 150px;
+		// padding-top: 150px;
 	}
 	.main {
 		h1:first-child {
@@ -39,23 +39,8 @@
 			@media (min-width: $bp1) {
 				height: 100%;
 			}
-		.well {
-			h1 {
-				color: $white;
-				@extend %inline-block;
-				@extend %clearfix;
-				@include margin-bottom();
-				@include max-width ($bp2);
-				@include animation(load-in-slow, initial, 3s, ease-in, 1);
-
-				@media (min-width: $bp3) {
-					font-size: 300%;
-				}
-				@media (min-width: $bp2) {
-					font-size: 550%;
-				}
-			}
-		}
+		
+		
 		.banner {
 			background-color: transparent;
 			.brand {

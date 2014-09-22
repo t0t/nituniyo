@@ -54,8 +54,8 @@ function roots_display_sidebar() {
      */
     array(
       'is_404',
-      'is_front_page',
-      'is_page'
+      'is_front_page'
+      // 'is_page'
       // array( 'is_singular', array('cpt') )
       // array( 'is_post_type_archive', array('cpt') )
     ),

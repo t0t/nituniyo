@@ -1,10 +1,11 @@
 /*------------------------------------*\
     $BREAKPOINTS
 \*------------------------------------*/
-$bp1 : 1400px;
+$bp1 : 1280px;
 $bp2 : 1024px;
 $bp3 : 715px;
-$bp5 : 320px;
+$bp4 : 200px;
+$bp5 : 150px;
 
 $break-wide: $bp1;
 $break-desktop: $bp2;
@@ -108,7 +109,7 @@ $white-alpha 		: rgba(255,255,255,0.95);
 
 // Web
 $baseheadingfontcolor 		: $black;
-$background			: 	$white;
+$background			: 	lighten($color-base, 47%);
 $textcolor			: 	$darkgrey;
 $textcolor-strong	:	$black;
 

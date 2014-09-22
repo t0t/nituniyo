@@ -1,46 +1,68 @@
 		.nav {
-		  ul {
-		  }
-		  width: 600px;
-		  height: 60px;
-		  position: fixed;
-		  top: 150px;
-		  left: 0;
-		  z-index: 9001;
+			ul {
+				display: flex;
+		    	flex-wrap: wrap;
+		    	// width: 100%;
+				// position: fixed;
+				// z-index: 9001;
+				// background-color: $color-base;
+		  	}
+		  
+			li {
+			  	padding: 0 20px;
+			}
+			  
+			a {
+				// display: flex;
+	    		// align-items: flex-end;
+	    		// max-width: 100px;
+			}
+
 		}
+
 header {
+	
 	&.banner {
+		.logo{
+			.logo-img {
+			// @include padding-vertical($gutterwidth*2);
+			}
+		}
+		
+		display: flex;
+		justify-content: space-around; //between,
+		// flex-direction: column; //row,column,column-reverse,row-reverse... se comportan como columnas
+		// flex-wrap: wrap;
+		// align-items: stretch;
 		@include max-width($bp1);
+		@include padding-vertical();
 		z-index: 9000;
 		position: fixed;
 		top: 0;
+		right: 0;
+		left: 0;
 		background-color: $white;
 		// background-color: $white-alpha;
-		.logo {
-			@include grid(4);
-		}
-		.slogan {
-			@include grid(4);
-		}
-		.sello {
-			@include grid(4);
-			position: fixed;
-			right: 0;
-			p {
-				border: $borde;
-				@include padding();
-				max-width: 175px;
-				text-transform: uppercase;
-				color: $bordercolor;
-			}
-		}
+		
 		@media (min-width: $bp1) {
 			// right: 0;
 			// left: 0;
 		}
-		height: 150px;
+		.sello {
+			position: fixed;
+			top: $paddingbase*16;
+			left: $gutterwidth;
+			p {
+				border: $borde;
+				@include padding();
+				min-width: 300px;
+				text-transform: uppercase;
+				color: $white;
+				background-color: $bordercolor;
+			}
+		}
+		// height: 150px;
 	}
 
-	h1 {}
 }
 

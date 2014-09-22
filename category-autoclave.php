@@ -1,14 +1,18 @@
-<?php //echo do_shortcode("[sibling-pages exclude='6,304,77,41,10,8,12,17,151,23,219,275'] "); ?>
+<?php get_template_part('templates/page', 'header'); ?>
+
 
 <section>
 
-  <?php 
-  $loop5 = new WP_Query( array( 
-              'post_type' => 'cpt',
-              'category_name' => '' 
-              )); 
-  ?>
+<?php
 
+
+
+$loop5 = new WP_Query( array( 
+              'post_type' => 'cpt',
+              'category_name' => 'autoclave' 
+              )); 
+
+?>
 
   <div class="jcarousel">
     <ul>

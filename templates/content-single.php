@@ -223,9 +223,9 @@ endif;
 
     <nav class="post--nav">  
     
-       <ul class="pager row">
+       <ul>
         
-            <li class="previous col__4">
+            <li class=">
 
             <?php 
                 
@@ -239,14 +239,8 @@ endif;
             ?>
             </li>
 
-             <li class="col__4">
-                <a href="/blog/">
-                <i class="icon-house"></i>
-                <?php //$post_type = get_post_type_object( get_post_type($post) ); echo $post_type->label; ?>
-                </a>
-            </li>
 
-            <li class="col__4">
+            <li>
             
             <?php
 

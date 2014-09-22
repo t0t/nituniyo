@@ -13,6 +13,8 @@
 @import "lib/mixins/sombras.scss";
 @import "lib/mixins/formularios.scss";
 @import "lib/mixins/scroll.scss";
+@import "lib/mixins/shapes.scss";
+@import "lib/mixins/flex.scss";
 @import "componentes/reset.scss";
 
 @import "layouts/general.scss";
@@ -41,7 +43,7 @@
 @import "componentes/sliders.scss";
 
 // Clases propias del theme
-@import "t0t.scss";
+// @import "t0t.scss";
 @import "componentes/superfish.scss";
 
 // Clases propias de t0theme

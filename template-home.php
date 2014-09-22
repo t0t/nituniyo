@@ -4,27 +4,14 @@ Template Name: Home
 */
 ?>
 
-<section class="cover" data-top="background-position: 100% 0%" data-top-bottom="background-position: 100% 100%">
-	<div class="row">
-		<div class="col__12">
-			<div class="well well--large">
-				<div class="col__12">
-
-				<h1 data-top="opacity: 0" data-16p-top="opacity: 1">
-				<?php //bloginfo('name'); ?>
-				<?php bloginfo('description'); ?>
-				</h1>
-
-				<!-- <a href="/video/" class="btn btn--primary">Look! <i class="icon-arrow-right"></i></a> -->
-
-			</div>
-		</div>
-	</div>
-</section>
-
-
 
 <section>
+
+
+<h1>
+	<?php //bloginfo('name'); ?>
+	<?php bloginfo('description'); ?>
+</h1>
 
 <?php //while (have_posts()) : the_post(); ?>
   <?php //get_template_part('templates/page', 'header'); ?>
@@ -33,11 +20,11 @@ Template Name: Home
 <?php //endwhile; ?>
 	
 
-	<h3 class="h1">Productos</h3>
+	<h2>Productos</h2>
 	<?php 
 	$this_post = $post->ID;
 	$loop = new WP_Query( array( 
-							'post_type' => 'page',
+							'post_type' => 'cpt',
 							'posts_per_page' => '',
 							'post__not_in' => array($this_post),
 							'category_name' => '' 
@@ -59,8 +46,9 @@ Template Name: Home
 					
 				<?}else {?>
 					
-				<img src="<?php echo get_template_directory_uri(); ?>/assets/img/logo.png" alt="" class="logo-img">
-					<?}?>
+				<img src="<?php echo get_template_directory_uri(); ?>/assets/img/logo.svg" alt="" class="logo-img">
+				
+				<?}?>
 
 					<h3>
 						<a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>"><? the_title(); ?></a>

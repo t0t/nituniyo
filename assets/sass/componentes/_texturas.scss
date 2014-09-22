@@ -5,7 +5,6 @@
 // http://twitter.github.com/bootstrap/components.html#alerts"
 // https://github.com/twitter/bootstrap/blob/master/less/alerts.less"
 
-
 .alert {
 	margin-bottom : $baselineheight;
 	padding : 8px 35px 8px 14px;
@@ -179,6 +178,37 @@
 	.well--small {
 		padding : 6px;
 	}
+
+
+//Exagonos
+.hexagon {
+	@include shape(hexagon, 100px, $color-base-darken);
+	@extend %text-center;
+	// @include padding($gutterwidth*2);
+}
+.exagono {
+	position: relative;
+	min-height: 300px;	
+	.ficha1 {
+		position: absolute;
+		left: 10%;
+		width: 215px;
+		height: 215px;
+		background: url(../img/exagono.svg) no-repeat center;
+		@extend %text-center;
+		@include padding($gutterwidth*2);
+	}
+	.ficha2 {
+		position: absolute;
+		left: 40%;
+		width: 215px;
+		height: 215px;
+		background: url(../img/exagono.svg) no-repeat center;
+		@extend %text-center;
+		@include padding($gutterwidth*2);
+	}
+}
+
 
 // Web Colours
 ::-moz-selection {

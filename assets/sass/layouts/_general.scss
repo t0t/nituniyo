@@ -2,63 +2,93 @@ body {
 	font-family: $basefont;
 	line-height: $baselineheight;
 	color: $textcolor;
-	background-color: $background;
+	// background-color: $background;
 	letter-spacing: $baseletterspacing;
+	// background: url(../img/bg.jpg) repeat-x 0 bottom fixed;
+	// background-position: fixed;
+	padding-top: $baselineheight*3;
 }
 
 // Content wrapper
 .wrap { 
 	@include max-width ($bp1);
-	@extend %clearfix;
-	padding-top: $baselineheight;
+	// @extend %clearfix;
+	display: flex;
+	flex-wrap: wrap; //si no cabe algo baja a la siguiente fila
+	justify-content: space-around; //between,
+	// align-items: stretch; //ajusta todo lo alto
+	// background-color: red;
+
 	.main {
+		display: flex;
+		flex-direction: column; //row,column,column-reverse,row-reverse... se comportan como columnas
+		// flex-flow: row wrap;
+		justify-content: space-around; //between,
+
+		// @include max-width($bp3);
+		.page-header {
+			// flex-wrap: center;
+			// @extend %text-right;
+			// padding-right: $gutterwidth;
+			// background-color: blue;
+			@include padding-vertical(); 
+		}
+		h1 {
+				color: $color-base;
+				// @extend %inline-block;
+				@extend %clearfix;
+				// @include margin-bottom();
+				// @include max-width ($bp2);
+				@include animation(load-in-slow, initial, 3s, ease-in, 1);
+
+				@media (min-width: $bp3) {
+					// font-size: 300%;
+				}
+				@media (min-width: $bp2) {
+					// font-size: 550%;
+				}
+			}
+
+		.layout-contenido-estrecho {
+			
+			display: flex;
+			// flex-grow: 2;
+			justify-content: space-between; //between,
+			ul {
+				&.gallery {
+					width: 73%;
+					padding-left: 0;
+					// align-self: center;
+				}
+			}
+			.parrafo{
+				width: 25%;
+				padding-right: $gutterwidth;
+			}
+		}
+			
+		.image-banner {
+			// background-color: yellow;
+		}
 		h2 {
-			@include padding($gutterwidth*2);
-			background-color: $lightergrey;
+			// @include padding($gutterwidth*2);
 		}
 	}
 }
+
 section {
 	@extend %clearfix;
-	padding: $margin*2;
+	@include padding-vertical();
+
 	.row {
 		@extend %text-center;
 		p, blockquote {
 			@extend %text-left;
 		}
-		.col__3 {
-			h3 {
-				@extend %text-right;
-			}
-		}
-		.col__9 {
-			@include grid(9);
-			@include break(tablet, 12);
-			h3 {
-				@extend %text-left;
-			}
-			ul {
-				list-style-type: circle;
-				li {
-					@extend %text-left;
-				}
-			}
-		}
 	}
 }
 
-.sidebar {
-	figure {
-		> a {
-			float: left;
-			@extend %clearfix;
-		}
-		figcaption {
-			float: right;
-			width: 80%;
-		}
-	}
-}
+
 
 
 // Modulos
@@ -69,29 +99,42 @@ section {
 	.gallery {
 		@media (min-width: $bp3) {
 			li {
-				@include grid(6);
-				@include break(tablet, 6);
+				padding: 0;
+				margin: 0;
+				background-color: $color-base;
 				width: 100%;
+			}
+			figure, img {
+				margin-bottom: 0;
 			}
 		}
 	}
 }
+.muestras {
+		@include background-image(bg,cover);
+		width: 100%;
+		height: 150px;	
+	}
+	.add {
+		@include background-image(add_maderlim,cover);
+		width: 100%;
+		height: 150px;
+	}
+	
 .gallery {
 	@media (min-width: $bp3) {
 		li {
-			@include rejilla(4);
 		}
 	}
 }
 .bg1, .bg2 {
-	@include background-image(bg1,100%);
-	background-color: $color-base-dark;
+	background-color: $color-base;
 }
 .bg1 {
-	background-position: bottom;
+	// @include background-image(bg,cover);
 }
 .bg2 {
-	background-position: center top;
+	// background-position: center top;
 }
 
 
@@ -142,18 +185,4 @@ section {
 @include keyframe(load-in-slow) {
   0% { opacity: 0; }
   100% { opacity: 1; }
-}
-
-// Footer
-footer {
-	@media (min-width: $bp3) {
-		padding: $margin*2;
-	}
-	// position: fixed;
-	.main-footer {
-	@include max-width ($bp1);
-    // background: url('../img/home_bg.jpg') no-repeat center top;
-    // background-color: $color-base;
-    @extend %inline-block;
-  }
 }

@@ -94,34 +94,7 @@ $(function() {
 });
 
 
-/*========================================
-=            off canvas CUSTOM FUNCTIONS 
-http://scotch.io/tutorials/off-canvas-menus-with-css3-transitions-and-transforms           =
-========================================*/
-function toggleNav() {
-    if ($('.nav').hasClass('show-nav')) {
-        // Do things on Nav Close
-        $('.nav').removeClass('show-nav');
-        $('.toggle-nav i').removeClass('icon-cross-circle');
-        $('.toggle-nav i').addClass('icon-collapse');
-    } else {
-        // Do things on Nav Open
-        $('.nav').addClass('show-nav');
-        $('.toggle-nav i').removeClass('icon-collapse');
-        $('.toggle-nav i').addClass('icon-cross-circle');
-    }
 
-    //$('#site-wrapper').toggleClass('show-nav');
-}
-//cierra menu con tecla ESC
-$(document).keyup(function(e) {
-    if (e.keyCode === 27) {
-        if ($('.nav').hasClass('show-nav')) {
-            // Assuming you used the function I made from the demo
-            toggleNav();
-        }
-    }
-});
 
 // $('#site-wrapper').click(function() {
 //   if ($('#site-wrapper').hasClass('show-nav')) {
@@ -141,7 +114,7 @@ $(document).keyup(function(e) {
 
 
     // FitVids
-    $("main").fitVids();
+    // $("main").fitVids();
 
 
     // jcarousel
@@ -170,12 +143,12 @@ $(document).keyup(function(e) {
 
     
     $('nav ul li ul').each(function() {
-        $(this).before('<i class="icon-caret"></i>');
+        // $(this).before('<i class="icon-caret"></i>');
     });
     
     $('nav ul li').click(function() {
         $(this).children('ul').toggleClass('active');
-        $(this).children('.icon-caret').toggleClass('rotate');
+        // $(this).children('.icon-caret').toggleClass('rotate');
     });
 
 

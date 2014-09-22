@@ -23,7 +23,7 @@ Template Name: Contacto
 <section class="bg1">
     <div class="col__6">
     <!-- formularios de contacto -->
-    <?php echo do_shortcode('[contact-form-7 id="46" title="Formulario de contacto 1"]'); ?>
+    <?php echo do_shortcode('[contact-form-7 id="506" title="Muestras ESP"]'); ?>
     </div>
     <div class="col__6">
         <address>

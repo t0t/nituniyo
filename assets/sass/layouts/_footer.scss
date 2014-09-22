@@ -1,16 +1,27 @@
+// Footer
 footer {
 	&.content-info {
+		@include background-image(bg,cover);
 		@extend %text-center;
 		// @include max-width($bp1);
-		.creditos {
-			// @include padding();
-			// @extend %clearfix;
-			@include grid(12);
-			@include break(tablet, 12);
-		}
+			.creditos {
+				// @include padding();
+				// @extend %clearfix;
+			}
+			display: flex;
+			align-items: center;
 	}
 	address, p, form {
 		margin-bottom: 0;
 	}
+	@media (min-width: $bp3) {
+		padding: $margin*2;
+	}
+	// position: fixed;
+	.main-footer {
+		@include max-width ($bp1);
+	    // background: url('../img/home_bg.jpg') no-repeat center top;
+	    // background-color: $color-base;
+	    @extend %inline-block;
+	}
 }
-.content-info { }

@@ -1,19 +1,4 @@
-<?php echo do_shortcode('[child-pages depth="1"]' ); ?>
-
-    <?php if( get_field('ficha_tecnica') ): ?>
-    <a href="<?php the_field('ficha_tecnica'); ?>" class="btn" target="_blank">
-    Ficha técnica
-    </a>
-    <?php endif; ?>
-
-    <?php if( get_field('datos_seguridad') ): ?>
-    <a href="<?php the_field('datos_seguridad'); ?>" class="btn" target="_blank">
-    Ficha datos de seguridad
-    </a>
-    <?php endif; ?>
-
-
-
+<?php //echo do_shortcode('[child-pages depth="1"]' ); ?> 
 
 
 
@@ -23,12 +8,24 @@
 
     <?php if(get_row_layout() == "image"): // Layout imagen ?>
 
-    <div class="row">
+
         <figure>
             <img src="<?php the_sub_field("image"); ?>" alt="<?php the_sub_field("caption"); ?>">
             <figcaption><?php the_sub_field("caption"); ?></figcaption>
         </figure>
-    </div>
+
+
+
+
+
+<?php elseif(get_row_layout() == "image_banner"): // Layout imagen ideal alargado ?>
+
+<figure class="image-banner">
+    <img src="<?php the_sub_field("image"); ?>" alt="imagen">
+</figure>
+
+
+
 
 
 
@@ -65,10 +62,10 @@
 
 
 
-	<?php elseif(get_row_layout() == "video_layout"): // Layout Videos ?>
+    <?php elseif(get_row_layout() == "video_layout"): // Layout Videos ?>
 
     <?php if(get_sub_field('videos')): ?>
-	<?php while(has_sub_field('videos')): ?>  
+    <?php while(has_sub_field('videos')): ?>  
 
     <div class="row">
 
@@ -82,14 +79,14 @@
 
     </div>
     
-	<?php endwhile; ?>
+    <?php endwhile; ?>
     <?php endif; ?> 
 
 
 
-	
+    
 
-	<?php elseif(get_row_layout() == "list"): // Layout lista ?>
+    <?php elseif(get_row_layout() == "list"): // Layout lista ?>
                 
 <div class="row">
 
@@ -141,18 +138,17 @@
 
 
 
-	<?php elseif(get_row_layout() == "img_carrousel"): //Layout Carrusel ?>
+    <?php elseif(get_row_layout() == "img_carrousel"): //Layout Carrusel ?>
 
-    <div class="row">
 
-        <h3 class="h1"><?php the_sub_field("title"); ?></h3>
+        <h2 class="h1"><?php the_sub_field("title"); ?></h2>
         <h3><?php the_sub_field("description"); ?></h3>
     
         <?php
         $images = get_sub_field('gallery');
      
         if( $images ): ?>
-		<div class="jcarousel">
+        <div class="jcarousel">
             <ul>
                 <?php foreach( $images as $image ): ?>
                     <li class="">
@@ -167,14 +163,13 @@
                     </li>
                 <?php endforeach; ?>
             </ul>
-    	</div>
+        </div>
     <!-- Prev/next controls -->
     <a href="#" class="btn btn--slider jcarousel-control-prev">
     <i class="icon-arrow-left"></i></a>
     <a href="#" class="btn btn--slider jcarousel-control-next">
     <i class="icon-arrow-right"></i></a>
         <?php endif; ?>
-    </div>
 
 
 
@@ -211,16 +206,45 @@
 
 
 
+<?php elseif(get_row_layout() == "layout_content"): //Layout Content centrado estrecho?>
 
-    <?php elseif(get_row_layout() == "layout_content_estrecho"): //Layout Content centrado estrecho?>
+    <div id="layout-content" class="layout-content">
+  
+    <?php if (get_sub_field("encabezado")): ?>
+        <h3><?php the_sub_field("encabezado"); ?></h3>
+    <?php endif ?>
+    
+    <?php the_sub_field("content"); ?>
 
-    <div class="row layout-contenido-estrecho">
 
-        <div class="col__3">
-
+  <?php
+                $images = get_sub_field('gallery');
+             
+                if( $images ): ?>
             
-             <h3 class="h1"><?php the_sub_field("title"); ?></h3>
-                <h3><?php the_sub_field("description"); ?></h3>
+                    <ul class="gallery">
+                        <?php foreach( $images as $image ): ?>
+                            <li>
+                                <figure>
+                                <a href="<?php echo $image['url']; ?>" data-lightbox="serie" data-title="<?php echo $image['description']; ?>">
+                                    <img src="<?php echo $image['sizes']['medium']; ?>" alt="<?php echo $image['alt']; ?>" class="" />
+                                </a>
+                                <figcaption><?php echo $image['caption']; ?></figcaption>
+                                </figure>
+                            </li>
+                        <?php endforeach; ?>
+                    </ul>
+            
+                <?php endif; ?>
+
+    </div>
+
+
+
+
+       <?php elseif(get_row_layout() == "layout_content_estrecho"): //Layout Content centrado estrecho?>
+
+    <div id="layout-contenido-estrecho" class="layout-contenido-estrecho">
             
                 <?php
                 $images = get_sub_field('gallery');
@@ -231,9 +255,8 @@
                         <?php foreach( $images as $image ): ?>
                             <li>
                                 <figure>
-                                <a href="<?php echo $image['url']; ?>" data-lightbox="serie" data-title="<?php echo $image['description']; ?>">
-                                    <img src="<?php echo $image['sizes']['thumbnail']; ?>" alt="<?php echo $image['alt']; ?>" class="img--circle" />
-                                </a>
+                                
+                                    <img src="<?php echo $image['sizes']['large']; ?>" alt="<?php echo $image['alt']; ?>" class="" />
                                 <figcaption><?php echo $image['caption']; ?></figcaption>
                                 </figure>
                             </li>
@@ -243,28 +266,42 @@
                 <?php endif; ?>
 
 
-            <?php while(has_sub_field('repeater')): ?>  
-            <?php if (get_sub_field("imagen")): ?>
-            <img src="<?php the_sub_field("imagen"); ?>" alt="">
-            <?php endif ?>
-            <?php if (get_sub_field("destacado")): ?>
-            <small><?php the_sub_field("destacado"); ?></small>
-            <?php endif ?>
-            <?php endwhile; ?>
-    
-        </div>
 
-        <div class="col__9">
+
+    
+
+        <div class="parrafo">
 
         <?php if (get_sub_field("encabezado")): ?>
             <h3><?php the_sub_field("encabezado"); ?></h3>
         <?php endif ?>
             <?php the_sub_field("content"); ?>
 
-        </div>
-    </div>
 
+            <!-- adjuntar archivos -->
+            <aside class="exagono">    
+                <?php if( get_field('ficha_tecnica') ): ?>
+                <a href="<?php the_field('ficha_tecnica'); ?>" target="_blank" class="ficha1" 
+                data-top-bottom="left:0; opacity:0.8;" 
+                data-bottom-top="left:50px; opacity:1;" 
+                >
+                    Ficha técnica
+                    </a>
+                <?php endif; ?>
 
+                <?php if( get_field('datos_seguridad') ): ?>
+                <a href="<?php the_field('datos_seguridad'); ?>" target="_blank" class="ficha2" 
+                data-top="top:290px; left: 0px; opacity:0.8;" 
+                data--100-top="top:290px; left: 50px; opacity:1;" 
+                >
+                    Ficha datos de seguridad
+                    </a>
+                <?php endif; ?>
+            </aside>
+
+        </div> <!-- parrafo -->
+
+</div> <!-- contenido estrecho -->
 
 
 
@@ -302,3 +339,4 @@
     <?php endwhile; ?>
 
 <?php endif; ?>
+

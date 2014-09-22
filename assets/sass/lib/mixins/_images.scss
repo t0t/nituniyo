@@ -1,5 +1,5 @@
 @mixin background-image($name, $size:false){
-    background-image: url(#{$image-path}/#{$name}.svg);
+    background-image: url(#{$image-path}/#{$name}.jpg);
     @if($size){
         background-size: $size;
     }
