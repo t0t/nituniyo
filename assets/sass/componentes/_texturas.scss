@@ -83,70 +83,6 @@
 		}
 	}
 
-// BADGES ====================================================
-
-.badge {
-	padding : 1px 9px 2px;
-	@include font-size(12);
-	font-weight : bold;
-	white-space : nowrap;
-	border-radius: $radius;
-	color : $badgecolor;
-	background-color : $badgebackground;
-	@include transition(background-color .25s 0 linear);
-
-	&:hover {
-		color : $badgecolor;
-		text-decoration : none;
-		cursor : pointer;
-	}
-}
-
-	.badge--error {
-		background-color : $color-error;
-
-
-		&:hover {
-			background-color : darken($color-error, 20%);
-		}
-	}
-
-	.badge--warning {
-		background-color : $color-warning;
-
-
-		&:hover {
-			background-color : darken($color-warning, 20%);
-		}
-	}
-
-	.badge--success {
-		background-color : $color-info;
-
-
-		&:hover {
-			background-color : darken($color-info, 20%);
-		}
-	}
-
-	.badge--info {
-		background-color : $color-info;
-		color : darken($color-info, 50%);
-
-		&:hover {
-			background-color : darken($color-info, 20%);
-		}
-	}
-
-	.badge--inverse {
-		background-color : $color-info;
-		color : $white;
-
-		&:hover {
-			background-color : darken($color-info, 20%);
-			color : $white;
-		}
-	}
 
 // Para más gradientes: https://github.com/twitter/bootstrap/blob/master/less/mixins.less
 
@@ -179,35 +115,6 @@
 		padding : 6px;
 	}
 
-
-//Exagonos
-.hexagon {
-	@include shape(hexagon, 100px, $color-base-darken);
-	@extend %text-center;
-	// @include padding($gutterwidth*2);
-}
-.exagono {
-	position: relative;
-	min-height: 300px;	
-	.ficha1 {
-		position: absolute;
-		left: 10%;
-		width: 215px;
-		height: 215px;
-		background: url(../img/exagono.svg) no-repeat center;
-		@extend %text-center;
-		@include padding($gutterwidth*2);
-	}
-	.ficha2 {
-		position: absolute;
-		left: 40%;
-		width: 215px;
-		height: 215px;
-		background: url(../img/exagono.svg) no-repeat center;
-		@extend %text-center;
-		@include padding($gutterwidth*2);
-	}
-}
 
 
 // Web Colours

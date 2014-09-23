@@ -270,32 +270,26 @@
 
         <div class="parrafo">
 
-        <?php if (get_sub_field("encabezado")): ?>
-            <h3><?php the_sub_field("encabezado"); ?></h3>
-        <?php endif ?>
+            <?php if (get_sub_field("encabezado")): ?>
+                <h3><?php the_sub_field("encabezado"); ?></h3>
+            <?php endif ?>
+            
             <?php the_sub_field("content"); ?>
 
-
             <!-- adjuntar archivos -->
-            <aside class="exagono">    
-                <?php if( get_field('ficha_tecnica') ): ?>
-                <a href="<?php the_field('ficha_tecnica'); ?>" target="_blank" class="ficha1" 
+            <?php if( get_field('ficha_tecnica') ): ?>
+                <a href="<?php the_field('ficha_tecnica'); ?>" target="_blank" class="btn--hexagon" 
                 data-top-bottom="left:0; opacity:0.8;" 
                 data-bottom-top="left:50px; opacity:1;" 
-                >
-                    Ficha técnica
-                    </a>
-                <?php endif; ?>
+                >Ficha técnica</a>
+            <?php endif; ?>
 
-                <?php if( get_field('datos_seguridad') ): ?>
-                <a href="<?php the_field('datos_seguridad'); ?>" target="_blank" class="ficha2" 
+            <?php if( get_field('datos_seguridad') ): ?>
+                <a href="<?php the_field('datos_seguridad'); ?>" target="_blank" class="btn--hexagon" 
                 data-top="top:290px; left: 0px; opacity:0.8;" 
                 data--100-top="top:290px; left: 50px; opacity:1;" 
-                >
-                    Ficha datos de seguridad
-                    </a>
-                <?php endif; ?>
-            </aside>
+                >Ficha datos de seguridad</a>
+            <?php endif; ?>
 
         </div> <!-- parrafo -->
 

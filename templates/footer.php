@@ -3,16 +3,14 @@
 	<?php //dynamic_sidebar('sidebar-footer'); ?>		
 	<?php //get_search_form(); ?>
 
-	<div class="exagono link_de_pagina">
-
-        <div class="muestras ficha1">
-            <a href="/solicitud-de-muestras">Contacto. Solicitud de Información y Muestras</a>
+		<!-- Botones adicionales -->
+        <div class="muestras">
+            <a href="/solicitud-de-muestras" class="btn btn--hexagon">Contacto. Solicitud de Información y Muestras</a>
         </div>
-        <div class="add ficha2">
-            <a href="http://www.maderlim.com" target="_blank">Maderlim</a>
+        <div class="add">
+            <a href="http://www.maderlim.com" target="_blank" class="btn btn--hexagon">Maderlim</a>
         </div>
 
-    </div>
 
 		<aside class="creditos" rel="author"> 
 			<small>

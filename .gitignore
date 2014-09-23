@@ -1,5 +1,6 @@
 # Include your project-specific ignores in this file
 # Read about how to use .gitignore: https://help.github.com/articles/ignoring-files
+<<<<<<< HEAD
 
 # assets/vendor/*
 # assets/js/*scripts*.js
@@ -9,3 +10,10 @@ node_modules
 assets/css/main.css.map
 assets/manifest.json
 .sass-cache
+=======
+node_modules
+.sass-cache
+assets/css/main.min.css.map
+assets/bower_components
+assets/bower_components/*
+>>>>>>> d879b63c17385a0e0b5aea944b64512e24879719

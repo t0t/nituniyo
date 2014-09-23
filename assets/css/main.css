@@ -430,7 +430,7 @@ th {
 /*------------------------------------*\
     $PLACEHOLDERS
 \*------------------------------------*/
-section .row, .home .features .row, footer.content-info, h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6, .well--large, .hexagon, .exagono .ficha1, .exagono .ficha2 {
+section .row, .home .features .row, footer.content-info, h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6, .well--large {
   text-align: center;
 }
 
@@ -661,163 +661,23 @@ section {
 }
 
 .muestras {
-  background-image: url(../img/bg.jpg);
-  -webkit-background-size: cover;
-          background-size: cover;
-  width: 100%;
-  height: 150px;
+  left: 0;
 }
-.no-svg .muestras {
-  background-image: url(../img/bg.png);
-}
-@media only screen and (-moz-min-device-pixel-ratio: 1.5), only screen and (-o-min-device-pixel-ratio: 3 / 2), only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min-device-pixel-ratio: 1.5) {
-  .no-svg .muestras {
-    background-image: url(../img/bg@2x.png);
-  }
+
+.datos-seguridad {
+  left: 0;
 }
 
 .add {
-  background-image: url(../img/add_maderlim.jpg);
-  -webkit-background-size: cover;
-          background-size: cover;
-  width: 100%;
-  height: 150px;
-}
-.no-svg .add {
-  background-image: url(../img/add_maderlim.png);
-}
-@media only screen and (-moz-min-device-pixel-ratio: 1.5), only screen and (-o-min-device-pixel-ratio: 3 / 2), only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min-device-pixel-ratio: 1.5) {
-  .no-svg .add {
-    background-image: url(../img/add_maderlim@2x.png);
-  }
+  right: 0;
 }
 
-.bg1, .bg2 {
-  background-color: #ff4c00;
+.maderlim {
+  right: 0;
 }
 
 .wpcf7 {
   float: left;
-}
-
-.row {
-  width: 100%;
-  margin-bottom: 3%;
-  float: left;
-}
-
-.col__1 {
-  -webkit-transition: all 0.3s;
-  -o-transition: all 0.3s;
-     transition: all 0.3s;
-  float: left;
-  padding: 20px;
-  width: 6.5%;
-  margin-right: 2%;
-}
-.col__1:last-child {
-  margin-right: 0;
-}
-@media only screen and (max-width: 825px) {
-  .col__1 {
-    width: 97%;
-    margin: 1.5%;
-  }
-}
-
-.col__2 {
-  -webkit-transition: all 0.3s;
-  -o-transition: all 0.3s;
-     transition: all 0.3s;
-  float: left;
-  padding: 20px;
-  width: 15.0%;
-  margin-right: 2%;
-}
-.col__2:last-child {
-  margin-right: 0;
-}
-@media only screen and (max-width: 825px) {
-  .col__2 {
-    width: 97%;
-    margin: 1.5%;
-  }
-}
-
-.col__3 {
-  -webkit-transition: all 0.3s;
-  -o-transition: all 0.3s;
-     transition: all 0.3s;
-  float: left;
-  padding: 20px;
-  width: 23.5%;
-  margin-right: 2%;
-}
-.col__3:last-child {
-  margin-right: 0;
-}
-@media only screen and (max-width: 825px) {
-  .col__3 {
-    width: 97%;
-    margin: 1.5%;
-  }
-}
-
-.col__4 {
-  -webkit-transition: all 0.3s;
-  -o-transition: all 0.3s;
-     transition: all 0.3s;
-  float: left;
-  padding: 20px;
-  width: 32%;
-  margin-right: 2%;
-}
-.col__4:last-child {
-  margin-right: 0;
-}
-@media only screen and (max-width: 825px) {
-  .col__4 {
-    width: 97%;
-    margin: 1.5%;
-  }
-}
-
-.col__6 {
-  -webkit-transition: all 0.3s;
-  -o-transition: all 0.3s;
-     transition: all 0.3s;
-  float: left;
-  padding: 20px;
-  width: 49%;
-  margin-right: 2%;
-}
-.col__6:last-child {
-  margin-right: 0;
-}
-@media only screen and (max-width: 825px) {
-  .col__6 {
-    width: 97%;
-    margin: 1.5%;
-  }
-}
-
-.col__12 {
-  -webkit-transition: all 0.3s;
-  -o-transition: all 0.3s;
-     transition: all 0.3s;
-  float: left;
-  padding: 20px;
-  width: 100%;
-  margin-right: 2%;
-}
-.col__12:last-child {
-  margin-right: 0;
-}
-@media only screen and (max-width: 825px) {
-  .col__12 {
-    width: 97%;
-    margin: 1.5%;
-  }
 }
 
 @-o-keyframes load-in-slow {
@@ -1840,6 +1700,36 @@ input[type="submit"].btn:hover {
   color: #48110f;
 }
 
+.btn--hexagon {
+  width: 220px;
+  height: 121.0px;
+  background: #ff4c00;
+  position: relative;
+  position: fixed;
+}
+.btn--hexagon:before {
+  content: "";
+  position: absolute;
+  top: -55px;
+  left: 0;
+  width: 0;
+  height: 0;
+  border-left: 110px solid transparent;
+  border-right: 110px solid transparent;
+  border-bottom: 55px solid #ff4c00;
+}
+.btn--hexagon:after {
+  content: "";
+  position: absolute;
+  bottom: -55px;
+  left: 0;
+  width: 0;
+  height: 0;
+  border-left: 110px solid transparent;
+  border-right: 110px solid transparent;
+  border-top: 55px solid #ff4c00;
+}
+
 .btn--inactive,
 .btn--inactive:hover,
 .btn--inactive:active,
@@ -2352,63 +2242,6 @@ NAVIGATION STYLES
   margin-top: 5px;
 }
 
-.badge {
-  padding: 1px 9px 2px;
-  font-size: 12px;
-  font-size: 0.52174rem;
-  font-weight: bold;
-  white-space: nowrap;
-  border-radius: 5px;
-  color: #4a4a4a;
-  background-color: #ff4c00;
-  -webkit-transition: all background-color 0.25s 0 linear;
-  -o-transition: all background-color 0.25s 0 linear;
-     transition: all background-color 0.25s 0 linear;
-}
-.badge:hover {
-  color: #4a4a4a;
-  text-decoration: none;
-  cursor: pointer;
-}
-
-.badge--error {
-  background-color: #da4f49;
-}
-.badge--error:hover {
-  background-color: #9d2520;
-}
-
-.badge--warning {
-  background-color: #da4f49;
-}
-.badge--warning:hover {
-  background-color: #9d2520;
-}
-
-.badge--success {
-  background-color: #a5dddf;
-}
-.badge--success:hover {
-  background-color: #5ac1c4;
-}
-
-.badge--info {
-  background-color: #a5dddf;
-  color: #236062;
-}
-.badge--info:hover {
-  background-color: #5ac1c4;
-}
-
-.badge--inverse {
-  background-color: #a5dddf;
-  color: white;
-}
-.badge--inverse:hover {
-  background-color: #5ac1c4;
-  color: white;
-}
-
 .well {
   min-height: 20px;
   padding: 10px 20px;
@@ -2434,56 +2267,6 @@ NAVIGATION STYLES
 
 .well--small {
   padding: 6px;
-}
-
-.hexagon {
-  width: 200px;
-  height: 110.0px;
-  background: #330f00;
-  position: relative;
-}
-.hexagon:before {
-  content: "";
-  position: absolute;
-  top: -50px;
-  left: 0;
-  width: 0;
-  height: 0;
-  border-left: 100px solid transparent;
-  border-right: 100px solid transparent;
-  border-bottom: 50px solid #330f00;
-}
-.hexagon:after {
-  content: "";
-  position: absolute;
-  bottom: -50px;
-  left: 0;
-  width: 0;
-  height: 0;
-  border-left: 100px solid transparent;
-  border-right: 100px solid transparent;
-  border-top: 50px solid #330f00;
-}
-
-.exagono {
-  position: relative;
-  min-height: 300px;
-}
-.exagono .ficha1 {
-  position: absolute;
-  left: 10%;
-  width: 215px;
-  height: 215px;
-  background: url(../img/exagono.svg) no-repeat center;
-  padding: 6%;
-}
-.exagono .ficha2 {
-  position: absolute;
-  left: 40%;
-  width: 215px;
-  height: 215px;
-  background: url(../img/exagono.svg) no-repeat center;
-  padding: 6%;
 }
 
 ::-moz-selection {
