@@ -4,11 +4,11 @@
 	<?php //get_search_form(); ?>
 
 		<!-- Botones adicionales -->
-        <div class="muestras">
-            <a href="/solicitud-de-muestras" class="btn btn--hexagon">Contacto. Solicitud de Información y Muestras</a>
+        <div class="absolute-wrap">
+            <a href="/solicitud-de-muestras" class="muestras btn btn--hexagon">Contacto. Solicitud de Información y Muestras</a>
         </div>
-        <div class="add">
-            <a href="http://www.maderlim.com" target="_blank" class="btn btn--hexagon">Maderlim</a>
+        <div class="absolute-wrap">
+            <a href="http://www.maderlim.com" target="_blank" class="add btn btn--hexagon">Maderlim</a>
         </div>
 
 

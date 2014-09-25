@@ -83,7 +83,6 @@ $bgcolor: #3d3d3d;
         width: $size*2;
         height: $size*1.1;
         background: $color;
-        position: relative;
         &:before {
             content: "";
             position: absolute;

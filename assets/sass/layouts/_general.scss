@@ -110,18 +110,25 @@ section {
 		}
 	}
 }
+.absolute-wrap {
+	position: relative;
+}
 .muestras {
-	left: 0;
+	right: 0;
+	bottom: 0;
 }
 .datos-seguridad {
-	left: 0;
+	right: 50px;
+	top: 300px;
 }
 .add {
 // @include background-image(add_maderlim,cover);
-	right: 0;
+	right: 400px;
+	bottom: -300px;
 }
 .maderlim {
-	right: 0;	
+	right: 0;
+	top: 0;	
 }
 
 // Contact Form 7

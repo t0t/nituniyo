@@ -184,7 +184,6 @@ input[type="submit"].btn:hover {
 //Exagonos
 .btn--hexagon {
 	@include shape(hexagon, 110px, $color-base);
-	position: fixed;
 	// background: url(../img/exagono.svg) no-repeat center;
 	// background-size: contain;
 	// @include padding($gutterwidth*2);
