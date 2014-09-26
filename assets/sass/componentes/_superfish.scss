@@ -8,6 +8,10 @@
 	display: none;
 	margin-top: 15px;
 	@extend %text-center;
+	&.active {
+		display: block;
+		background-color:yellow;
+	}
 	@media screen and (min-width: $bp3) {
 		display: flex;
 		justify-content: space-between;

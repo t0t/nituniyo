@@ -136,10 +136,10 @@ $(function() {
     
     // });
 
-    // $('.mobile').on('click', function (e) {
-    //     e.preventDefault();
-    //     $('nav').toggleClass('on');
-    // });
+    $('.responsive-menu-btn').on('click', function (e) {
+        e.preventDefault();
+        $('.sf-menu').toggleClass('active');
+    });
 
     
     $('nav ul li ul').each(function() {
