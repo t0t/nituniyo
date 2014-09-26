@@ -590,9 +590,10 @@ body {
   -webkit-flex-direction: column;
       -ms-flex-direction: column;
           flex-direction: column;
-  -webkit-justify-content: space-around;
-      -ms-flex-pack: distribute;
-          justify-content: space-around;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 .wrap .main .page-header {
   padding: 3% 0;
@@ -684,8 +685,29 @@ section {
   top: 0;
 }
 
+.wrapper {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
 .wpcf7 {
-  float: left;
+  width: 75%;
+  background-color: #d3d3d3;
+}
+
+.contacto {
+  width: 25%;
+  background-color: #f3f3f3;
+}
+
+.page-template-template-contacto-php .sello {
+  display: none;
 }
 
 @-o-keyframes load-in-slow {
@@ -1674,7 +1696,7 @@ input[type="submit"].btn:hover {
   -webkit-transition: all 0.2s;
   -o-transition: all 0.2s;
      transition: all 0.2s;
-  background-color: #cc3d00;
+  background-color: #ff4c00;
   -webkit-box-shadow: 4px 5px 0 #330f00;
           box-shadow: 4px 5px 0 #330f00;
   border: 3px double #330f00;

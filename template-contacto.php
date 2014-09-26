@@ -20,18 +20,30 @@ Template Name: Contacto
   <?php //get_template_part('templates/content', 'page'); ?>
 <?php endwhile; ?>
 
-<section>
-
-    <div>
-    <!-- formularios de contacto -->
+<div class="wrapper">
+    <!-- formulario y muestras -->
     <?php echo do_shortcode('[contact-form-7 id="506" title="Muestras ESP"]'); ?>
-    </div>
     
-</section>
+    <!-- personas de contacto -->
+    <div class="contacto">
+        <dl>
+        <dt>NACIONAL Y EXPORTACION</dt>
+        <dd>JAVIER ROCA</dd>
+        <dd>+ 34 655 813 842</dd>
+        <dd><a href="mailto:info@fkrquimica.com" class="btn btn--primary">info@fkrquimica.com</a></dd>
+        </dl>
 
-    <div>
-    <!-- http://wphostreviews.com/mappress-documentation -->
-    <?php echo do_shortcode('[mappress mapid="1" width="100%"]'); ?>
+        <dl>
+        <dt>PORTUGAL</dt>
+        <dd>ISMAEL CARDONA</dd>
+        <dd>+ 34 655 813 840</dd>
+        <dd><a href="mailto:ismaelcardona52@gmail.com" class="btn btn--primary">ismaelcardona52(a)gmail.com</a></dd>
+        </dl>
+        
     </div>
+</div>
+    
+    
 
-<?php //echo do_shortcode('[child-pages depth="1"]' ); ?>
+    <!-- mapa -->
+    <?php echo do_shortcode('[mappress mapid="1" width="100%"]'); ?>
