@@ -20,22 +20,15 @@ Template Name: Contacto
   <?php //get_template_part('templates/content', 'page'); ?>
 <?php endwhile; ?>
 
-<section class="bg1">
-    <div class="col__6">
+<section>
+
+    <div>
     <!-- formularios de contacto -->
     <?php echo do_shortcode('[contact-form-7 id="506" title="Muestras ESP"]'); ?>
     </div>
-    <div class="col__6">
-        <address>
-            <h3>Company Name</h3>
-            Dirección postal<br>
-            Edificio, Calle 4, Piso 2º<br>
-            08512, Ciudad<br>
-            Spain
-        </address>
-        <a href="" class="btn btn--primary"><i class="icon-location"></i> Más info</a>
-    </div>
+    
 </section>
+
     <div>
     <!-- http://wphostreviews.com/mappress-documentation -->
     <?php echo do_shortcode('[mappress mapid="1" width="100%"]'); ?>
