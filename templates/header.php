@@ -15,9 +15,8 @@
           wp_nav_menu(array('theme_location' => 'primary_navigation', 'menu_class' => 'sf-menu'));
         endif;
       ?>
-<!-- <a class="responsive-menu-btn">
-    <i class="icon-collapse"></i>
-  </a> -->
+      <a href="#" class="responsive-menu-btn"><i class="icon-collapse"></i></a>
+      
   </nav>
 
 

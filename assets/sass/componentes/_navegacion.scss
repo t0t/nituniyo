@@ -1,11 +1,22 @@
 /*********************
 NAVIGATION STYLES
 **********************/
-.nav {
-  ul {
+
+// Menu principal
+.banner {
+  .nav {
+    position: relative;
   }
 }
-
+// botoncillo on/off menu
+.responsive-menu-btn {
+    position: absolute;
+    top: -50px;
+    right: 30px;
+    @media screen and (min-width: $bp3) {
+        display: none;
+    }
+}
 
 /**
 *

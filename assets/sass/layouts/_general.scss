@@ -3,10 +3,13 @@ body {
 	line-height: $baselineheight;
 	color: $textcolor;
 	// background-color: $background;
-	letter-spacing: $baseletterspacing;
+	// letter-spacing: $baseletterspacing;
 	// background: url(../img/bg.jpg) repeat-x 0 bottom fixed;
 	// background-position: fixed;
-	padding-top: $baselineheight*3;
+	padding-top: $baselineheight*2.5;
+	@media screen and (min-width: $bp3) {
+		padding-top: $baselineheight*4;
+	}
 }
 
 // Content wrapper

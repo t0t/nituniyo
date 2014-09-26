@@ -5,11 +5,16 @@
 	list-style: none;
 }
 .sf-menu {
-		// width: 100%;	
-		// margin-bottom: 1em;
-		&:last-child {
-				
-			}
+	display: none;
+	margin-top: 15px;
+	@extend %text-center;
+	@media screen and (min-width: $bp3) {
+		display: flex;
+		justify-content: space-between;
+		// background-color: yellow;
+		width: 575px;
+	}
+
 	ul {
 		// min-width: 12em; /* allow long menu items to determine submenu width */
 		*width: 12em; /* no auto sub width for IE7, see white-space comment below */
@@ -56,12 +61,17 @@
 		*white-space: normal; /* ...unless you support IE7 (let it wrap) */
 		transition: background .2s;
 	}
-	> li {
-		// float: left;
-		@media (max-width: $bp3) { //añadido breakpoint
-			// float: none;
-		}
+
+	> li { //primera linea de items
+	    // width: 100%;
+	    background-color: $color-base;
+	    @media screen and (min-width: $bp3){
+			// display: inline-block;
+	        // width: 15%;
+	        background-color: transparent;
+	    }
 	}
+
 	a {
 		display: block;
 		position: relative;
