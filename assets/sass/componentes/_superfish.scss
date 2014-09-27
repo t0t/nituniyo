@@ -5,13 +5,13 @@
 	list-style: none;
 }
 .sf-menu {
-	display: none;
 	margin-top: 15px;
 	@extend %text-center;
 	&.active {
 		display: block;
 		background-color:yellow;
 	}
+	display: none;
 	@media screen and (min-width: $bp3) {
 		display: flex;
 		@include justify-content(space-between);
