@@ -2,70 +2,53 @@ body {
 	font-family: $basefont;
 	line-height: $baselineheight;
 	color: $textcolor;
+	padding-top: $baselineheight*2.5;
+
+	@media screen and (min-width: $bp3) {
+		padding-top: $baselineheight*4;
+	}
+
 	// background-color: $background;
 	// letter-spacing: $baseletterspacing;
 	// background: url(../img/bg.jpg) repeat-x 0 bottom fixed;
 	// background-position: fixed;
-	padding-top: $baselineheight*2.5;
-	@media screen and (min-width: $bp3) {
-		padding-top: $baselineheight*4;
-	}
 }
 
 // Content wrapper
 .wrap { 
 	@include max-width ($bp1);
-	display: flex;
-	flex-wrap: wrap; //si no cabe algo baja a la siguiente fila
-	justify-content: space-around; //between,
-	// align-items: stretch; //ajusta todo lo alto
+	@extend %flexbox;
+	@include flex-wrap(wrap); //si no cabe algo baja a la siguiente fila
+	@include justify-content(space-around);
 
 	.main {
-		display: flex;
-		flex-direction: column; //row,column,column-reverse,row-reverse... se comportan como columnas
-		// flex-flow: row wrap;
-		justify-content: space-between; //between,
+		@extend %flexbox;
+		@include flex-direction(column);
+		@include justify-content(space-between);
 
-		// @include max-width($bp3);
 		.page-header {
-			// flex-wrap: center;
-			// @extend %text-right;
-			// padding-right: $gutterwidth;
-			// background-color: blue;
 			@include padding-vertical(); 
 		}
 		h1 {
-				color: $color-base;
-				// @extend %inline-block;
-				@extend %clearfix;
-				// @include margin-bottom();
-				// @include max-width ($bp2);
-				@include animation(load-in-slow, initial, 3s, ease-in, 1);
-
-				@media (min-width: $bp3) {
-					// font-size: 300%;
-				}
-				@media (min-width: $bp2) {
-					// font-size: 550%;
-				}
-			}
+			color: $color-base;
+			@extend %clearfix;
+			@include animation(load-in-slow, initial, 3s, ease-in, 1);
+		}
 
 		.layout-contenido-estrecho {
-			display: flex;
-			flex-direction: column;
-			align-items: center;
+			@extend %flexbox;
+			@include flex-direction(column);
+			@include align-items(center);
 			ul {
 				padding: 0;
 			}
 			.parrafo {
 				max-width: 90%;
-				// justify-content: space-around;
 			}
-			// flex-grow: 2;
 			@media screen and (min-width: $bp3) {
-			justify-content: space-between;
-			flex-direction: row;
-			align-items: flex-start; //stretch|center|flex-start|flex-end|baseline|initial|inherit;
+			@include justify-content(space-between);
+			@include flex-direction(row);
+			@include align-items(flex-start);
 				ul {
 					&.gallery {
 						width: 73%;
@@ -157,7 +140,7 @@ section {
 	top: 300px;
 }
 .add {
-// @include background-image(add_maderlim,cover);
+	// @include background-image(add_maderlim,cover);
 	right: 400px;
 	bottom: -300px;
 }
@@ -167,8 +150,8 @@ section {
 }
 
 .wrapper {
-	display: flex;
-	justify-content: space-between; //flex-start | flex-end | center | space-between | space-around
+	@extend %flexbox;
+	@include justify-content(space-between); //flex-start | flex-end | center | space-between | space-around
 }
 // wrap formulario
 .wpcf7 {

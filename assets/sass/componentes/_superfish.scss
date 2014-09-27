@@ -14,7 +14,7 @@
 	}
 	@media screen and (min-width: $bp3) {
 		display: flex;
-		justify-content: space-between;
+		@include justify-content(space-between);
 		// background-color: yellow;
 		width: 575px;
 	}
@@ -79,14 +79,9 @@
 	a {
 		display: block;
 		position: relative;
-		// border-left: darken($color-base,18%);
-		// border-top: $color-base; /* fallback colour must use full shorthand */
-		// border-top: 1px solid $color-base;
-		// padding: $gutterwidth ($gutterwidth*2);
 		text-decoration: none;
 		zoom: 1; /* IE7 */
-		// color: black;
-		justify-content: space-between; 
+		@include justify-content(space-between); 
 	}
 }
 

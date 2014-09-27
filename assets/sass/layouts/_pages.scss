@@ -10,15 +10,7 @@
 			margin-top: 0;
 		}
 	}
-	.col__12 {
-		padding-right: 0;
-		padding-left: 0;
-	}
-	.banner {
-		// background-color: transparent;
-	}
 	.features {
-    // background-color: $white;
     @extend %background-color;
     float: left;
     width: 100%;
@@ -30,7 +22,6 @@
 	.cover {
 		background: url(../img/t0theme-10.jpg) no-repeat 0px top $darkgrey;
 		background-size: cover;
-		// background-attachment: fixed;
 		height: 500px;
 		// @extend %inline-block;
 			@media (min-width: $bp2) {
@@ -39,7 +30,6 @@
 			@media (min-width: $bp1) {
 				height: 100%;
 			}
-		
 		
 		.banner {
 			background-color: transparent;

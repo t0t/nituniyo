@@ -1,3 +1,4 @@
+.h-entry {}
 .h-entry header { }
 .h-entry time { }
 .h-entry .byline { }
@@ -16,16 +17,8 @@
 		right: 45%;
 	}
 }
-.h-entry { 
-	.col__6 {
-		height: 340px;
-	}
-}
-.published, .byline {
-	// margin-bottom: $paddingbase;
-	// float: left;
-}
-.h-entry footer { }
+.published, .byline {}
+.h-entry footer {}
 .post {
 	border-bottom: $borde;
 	&:last-child {
