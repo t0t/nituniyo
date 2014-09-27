@@ -83,16 +83,22 @@ $bgcolor: #3d3d3d;
         width: $size*2;
         height: $size*1.1;
         background: $color;
+        box-shadow:
+        inset 2px 0 0 $color-base-darker,
+        inset -2px 0 0 $color-base-darker,
+        inset 2px 0 0 $color-base-darker,
+        inset -2px 0 0 $color-base-darker;
         &:before {
             content: "";
             position: absolute;
             top: $size/-2;
             left: 0;
             width: 0;
-            height: 0;
-            border-left: $size solid transparent;
+            height: 10px;
+            border-left: $size/2 solid transparent;
             border-right: $size solid transparent;
             border-bottom: $size/2 solid $color;
+            box-shadow: 10px 10px 10px black;
         }
         &:after {
             content: "";

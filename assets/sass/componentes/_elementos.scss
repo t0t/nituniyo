@@ -51,7 +51,9 @@ img {
     $ELEMENTOS-FIGURE
 \*------------------------------------*/
 figure {
-	margin-bottom : $baselineheight;
+	@media screen and (min-width: $bp3) {
+		margin-bottom : $baselineheight; //comprobar si realmente hace falta o no
+	}
 
 	img {
 		margin-bottom : $baselineheight / 4;

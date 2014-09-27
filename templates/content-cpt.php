@@ -278,11 +278,12 @@
 
             <!-- adjuntar archivos -->
             <?php if( get_field('ficha_tecnica') ): ?>
-                <div class="absolute-wrap"><a href="<?php the_field('ficha_tecnica'); ?>" target="_blank" class="btn btn--hexagon">Ficha técnica</a></div>
+                <a href="<?php the_field('ficha_tecnica'); ?>" target="_blank" class="btn btn--primary">
+                <i class="icon-download"> </i>Ficha técnica</a>
             <?php endif; ?>
 
             <?php if( get_field('datos_seguridad') ): ?>
-                <div class="absolute-wrap"><a href="<?php the_field('datos_seguridad'); ?>" target="_blank" class="datos_seguridad btn btn--hexagon">Ficha datos de seguridad</a></div>
+                <a href="<?php the_field('datos_seguridad'); ?>" target="_blank" class="datos_seguridad btn btn--primary"><i class="icon-attachment"> </i>Ficha datos de seguridad</a>
             <?php endif; ?>
 
         </div> <!-- parrafo -->
