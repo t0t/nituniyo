@@ -3,6 +3,21 @@
 	<?php //dynamic_sidebar('sidebar-footer'); ?>		
 	<?php //get_search_form(); ?>
 
+           
+		<!-- Botones adicionales -->
+            <a href="/solicitud-de-muestras" class="btn btn--primary"
+            data-100-bottom="transform: translate(0px,0px);"
+            data-bottom="transform: translate(100px,0px;"
+            >
+            &#x2B22; Contacto. Solicitud de Información y Muestras	
+            </a>
+
+            <a href="http://www.maderlim.com" target="_blank" class="btn btn--primary"
+			data-100-bottom="transform: translate(100px,0px);"
+            data-bottom="transform: translate(0px,-50px;"
+            >
+            &#x2B22; Maderlim	
+            </a>
 
 
 		<aside class="creditos" rel="author"> 
@@ -14,27 +29,7 @@
 			 <?php wp_loginout(); ?> &sdot; <a href="http://sergiofores.net" target="_blank"><i class="icon-logo-mazizo"></i></a>
 		</aside>
 
-		<!-- Botones adicionales -->
-        <div class="absolute-wrap">
-            <a href="/solicitud-de-muestras" class="muestras">
-            <span>
-            &#x2B22;
-			<span>
-			Contacto. Solicitud de Información y Muestras	
-			</span>
-            </span>
-            </a>
-        </div>
-        <div class="absolute-wrap">
-             <a href="http://www.maderlim.com" target="_blank" class="muestras">
-            <span>
-            &#x2B22;
-			<span>
-			Maderlim	
-			</span>
-            </span>
-            </a>
-        </div>
+
 </footer>
 
 <?php wp_footer(); ?>

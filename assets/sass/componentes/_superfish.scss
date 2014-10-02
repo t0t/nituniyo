@@ -7,16 +7,20 @@
 .sf-menu {
 	margin-top: 15px;
 	@extend %text-center;
-	&.active {
-		display: block;
-		background-color:yellow;
+	
+	@media screen and (max-width: $bp3) {
+		display: none;
+		&.active {
+			display: block;
+			background-color: red;
+		}
 	}
-	display: none;
 	@media screen and (min-width: $bp3) {
-		display: flex;
+		.no-flexbox & {}
+		@include flexbox;
 		@include justify-content(space-between);
-		// background-color: yellow;
 		width: 575px;
+		background-color: transparent;
 	}
 
 	ul {

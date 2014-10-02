@@ -1,3 +1,5 @@
+
+
 body {
 	font-family: $basefont;
 	line-height: $baselineheight;
@@ -7,24 +9,33 @@ body {
 	@media screen and (min-width: $bp3) {
 		padding-top: $baselineheight*4;
 	}
-
+	&.no-flexbox { 
+		// clase cuando no soporta flexbox
+	}
 	// background-color: $background;
 	// letter-spacing: $baseletterspacing;
 	// background: url(../img/bg.jpg) repeat-x 0 bottom fixed;
 	// background-position: fixed;
 }
 
+//Firefox viejos
+// .no-flexbox {
+// 	.wrap {
+// 		background-color: red;
+// 	}
+// }
+
 // Content wrapper
 .wrap { 
+	
 	@include max-width ($bp1);
-	@extend %flexbox;
-	@include flex-wrap(wrap); //si no cabe algo baja a la siguiente fila
-	@include justify-content(space-around);
-
+	// @extend %flexbox;
+	// @include justify-content(space-around);
+	// @include flex-direction(column); //row,column,column-reverse,row-reverse... se comportan como columnas
 	.main {
-		@extend %flexbox;
-		@include flex-direction(column);
-		@include justify-content(space-between);
+		// @extend %flexbox;
+		// @include flex-direction(column);
+		// @include justify-content(space-between);
 
 		.page-header {
 			@include padding-vertical(); 
@@ -36,37 +47,37 @@ body {
 		}
 
 		.layout-contenido-estrecho {
-			@extend %flexbox;
-			@include flex-direction(column);
-			@include align-items(center);
+			// @extend %flexbox;
+			// @include flexbox;
+			// @include flex-direction(column);
+			// @include align-items(center);
 			ul {
 				padding: 0;
 			}
 			.parrafo {
-				max-width: 90%;
+				// max-width: 90%;
+					padding: 0 0 0 $gutterwidth*2;
+				p {
+				}
 			}
 			@media screen and (min-width: $bp3) {
-			@include justify-content(space-between);
-			@include flex-direction(row);
-			@include align-items(flex-start);
+				display: table;
 				ul {
 					&.gallery {
 						width: 73%;
 						padding-left: 0;
+						display: table-cell;
 					}
 				}
 				.parrafo{
 					width: 25%;
-					padding-right: $gutterwidth;
+					display: table-cell;
+					vertical-align: top;
+						padding: 0 0 0 $gutterwidth*1.5;
+					p {
+					}
 				}
 			}
-		}
-			
-		.image-banner {
-			// background-color: yellow;
-		}
-		h2 {
-			// @include padding($gutterwidth*2);
 		}
 	}
 }
@@ -74,37 +85,12 @@ body {
 section {
 	@extend %clearfix;
 	@include padding-vertical();
-
-	.row {
-		@extend %text-center;
-		p, blockquote {
-			@extend %text-left;
-		}
-	}
 }
 
 
 
 
-// Modulos
-.layout-contenido-estrecho {
-	h1 {
-		@extend %text-right;
-	}
-	.gallery {
-		@media (min-width: $bp3) {
-			li {
-				padding: 0;
-				margin: 0;
-				background-color: $color-base;
-				width: 100%;
-			}
-			figure, img {
-				margin-bottom: 0;
-			}
-		}
-	}
-}
+
 .absolute-wrap {
 	position: relative;
 	a {
@@ -149,18 +135,22 @@ section {
 	top: 0;	
 }
 
-.wrapper {
-	@extend %flexbox;
-	@include justify-content(space-between); //flex-start | flex-end | center | space-between | space-around
+.formulario {
+	// @extend %flexbox;
+	// @include justify-content(space-between); //flex-start | flex-end | center | space-between | space-around
+	// @include flex-direction(column); //row,column,column-reverse,row-reverse... se comportan como columnas
+	display: table;
 }
-// wrap formulario
+
+.formulario__contacto {
+	// width: 25%;
+	// background-color: #f3f3f3;
+	display: table-cell;
+}
 .wpcf7 {
-	width: 75%;
-	background-color: #d3d3d3;
-}
-.contacto {
-	width: 25%;
-	background-color: #f3f3f3;
+	// width: 75%;
+	// background-color: #d3d3d3;
+	display: table-cell;	
 }
 //oculta sello en contacto
 .page-template-template-contacto-php .sello { display: none; }

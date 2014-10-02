@@ -7,7 +7,7 @@ footer {
 				// @include padding();
 				// @extend %clearfix;
 			}
-		@extend %flexbox;
+		// @extend %flexbox;
 		@include align-items(center);
 	}
 	address, p, form {

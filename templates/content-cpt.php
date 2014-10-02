@@ -246,7 +246,7 @@
 
        <?php elseif(get_row_layout() == "layout_content_estrecho"): //Layout Content centrado estrecho?>
 
-    <div id="layout-contenido-estrecho" class="layout-contenido-estrecho">
+    <div class="layout-contenido-estrecho">
             
                 <?php
                 $images = get_sub_field('gallery');
@@ -255,7 +255,7 @@
             
                     <ul class="gallery">
                         <?php foreach( $images as $image ): ?>
-                            <li>
+                            <li class="gallery__item">
                                 <figure>
                                 
                                     <img src="<?php echo $image['sizes']['large']; ?>" alt="<?php echo $image['alt']; ?>" class="" />

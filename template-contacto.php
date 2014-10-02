@@ -20,12 +20,12 @@ Template Name: Contacto
   <?php //get_template_part('templates/content', 'page'); ?>
 <?php endwhile; ?>
 
-<div class="wrapper">
+<div class="formulario">
     <!-- formulario y muestras -->
     <?php echo do_shortcode('[contact-form-7 id="506" title="Muestras ESP"]'); ?>
     
     <!-- personas de contacto -->
-    <div class="contacto">
+    <div class="formulario__contacto">
         <dl>
         <dt>NACIONAL Y EXPORTACION</dt>
         <dd>JAVIER ROCA</dd>

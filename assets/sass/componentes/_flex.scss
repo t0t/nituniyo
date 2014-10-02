@@ -25,6 +25,8 @@
 	display: -moz-flex;
 	display: -ms-flexbox;
 	display: flex;
+	display: flexbox; //odd unofficial syntax from 2011
+	display: box; //old syntax from 2009
 }
 
 %flexbox { @include flexbox; }

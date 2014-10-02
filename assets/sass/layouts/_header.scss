@@ -1,29 +1,23 @@
 header {
-	
 	&.banner {
-		a {
-			&.logo{
-			width: $bp4 + $bp5 - 70;
-			padding-left: $gutterwidth;
-				@media screen and (min-width: $bp3) {
-					padding-left: 0;
+		display: table;
+		// border-spacing: $gutterwidth;
+			a {
+				&.logo {
+				display: table-cell;
+				width: $bp4 + $bp5 - 70;
+				padding-left: $gutterwidth;
+				padding-right: $gutterwidth*2;
 				}
 			}
-		}
 		@include max-width($bp1);
 		@include padding-vertical();
 		z-index: 9000;
 		position: fixed;
 		top: 0;
-		right: 0;
 		left: 0;
 		background-color: $white;
 		
-		@media screen and (min-width: $bp3) {
-			display: flex;
-			@include justify-content(space-around); //flex-start | flex-end | center | space-between | space-around
-			@include flex-direction(row); //row,column,column-reverse,row-reverse... se comportan como columnas
-		}
 		.sello {
 			display: none;
 			@media screen and (min-width: $bp3) {
@@ -41,6 +35,5 @@ header {
 				}
 			}
 		}
-		// height: 150px;
 	}
 }

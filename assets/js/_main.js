@@ -27,7 +27,17 @@ var Roots = {
 
 
 
-    // cambiame los svg por png si el navegador no los soporta
+// if (Modernizr.no-flexbox){
+//    alert("no hay flexbox");
+// }
+// else{
+//    alert("SI flexbox");
+// }
+
+// Modernizr.testStyles('#modernizr { width: 9px; color: papayawhip; }', function(elem, rule){
+//       Modernizr.addTest('width', elem.offsetWidth === 9);
+//   });
+      // cambiame los svg por png si el navegador no los soporta
     if(!Modernizr.svg) {
         $('img[src$="svg"]').attr('src', function() {
             return $(this).attr('src').replace('.svg', '.png');
