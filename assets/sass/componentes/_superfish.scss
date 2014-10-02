@@ -5,7 +5,7 @@
 	list-style: none;
 }
 .sf-menu {
-	margin-top: 15px;
+	// margin-top: 15px;
 	@extend %text-center;
 	
 	@media screen and (max-width: $bp3) {
@@ -16,10 +16,9 @@
 		}
 	}
 	@media screen and (min-width: $bp3) {
-		.no-flexbox & {}
-		@include flexbox;
-		@include justify-content(space-between);
-		width: 575px;
+		// @include flexbox;
+		// @include justify-content(space-between);
+		// width: 575px;
 		background-color: transparent;
 	}
 
@@ -85,7 +84,7 @@
 		position: relative;
 		text-decoration: none;
 		zoom: 1; /* IE7 */
-		@include justify-content(space-between); 
+		// @include justify-content(space-between); 
 	}
 }
 

@@ -5,9 +5,10 @@ header {
 			a {
 				&.logo {
 				display: table-cell;
-				width: $bp4 + $bp5 - 70;
+				// width: $bp4 + $bp5 - 70;
 				padding-left: $gutterwidth;
-				padding-right: $gutterwidth*2;
+				// padding-right: $gutterwidth*2;
+				vertical-align: 0;
 				}
 			}
 		@include max-width($bp1);

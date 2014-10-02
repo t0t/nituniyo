@@ -62,18 +62,20 @@ body {
 			}
 			@media screen and (min-width: $bp3) {
 				display: table;
+				// border-spacing: 5px;
 				ul {
 					&.gallery {
-						width: 73%;
-						padding-left: 0;
 						display: table-cell;
+						background-color: $color-base;
+						// width: 73%;
+						// padding-left: 0;
 					}
 				}
 				.parrafo{
 					width: 25%;
 					display: table-cell;
 					vertical-align: top;
-						padding: 0 0 0 $gutterwidth*1.5;
+						padding: 0 $gutterwidth 0 $gutterwidth;
 					p {
 					}
 				}

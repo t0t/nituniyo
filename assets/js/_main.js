@@ -86,11 +86,7 @@ enquire.register("screen and (min-width: 715px)", {
     // $('html').addClass('skrollr');
 
 
-// -------------
-/*====================================
-=            off canvas ON DOM READY 
-http://scotch.io/tutorials/off-canvas-menus-with-css3-transitions-and-transforms           =
-====================================*/
+// el toggle collapse button
 $(function() {
   
     // Toggle Nav on Click
