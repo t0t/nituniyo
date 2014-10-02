@@ -1,11 +1,10 @@
 <?php get_template_part('templates/page', 'header'); ?>
 
+<h3><?php echo category_description(); ?></h3>
 
 <section>
 
 <?php
-
-
 
 $loop5 = new WP_Query( array( 
               'post_type' => 'cpt',

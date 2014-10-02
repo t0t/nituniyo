@@ -1,6 +1,8 @@
 <?php get_template_part('templates/page', 'header'); ?>
 
 
+<h3><?php echo category_description(); ?></h3>
+
 <section>
 
 <?php

@@ -1,8 +1,6 @@
-<?php if( get_field('content_template_page') ): ?>
+<?php if( get_field('content_template_pages') ): ?>
 
-     <?php while( has_sub_field("content_template_page") ): ?>
-
-
+     <?php while( has_sub_field("content_template_pages") ): ?>
 
 
 
@@ -30,9 +28,65 @@
 
 
 
+
+
+ <?php elseif(get_row_layout() == "layout_content_estrecho"): //Layout Content centrado estrecho?>
+
+    <div class="layout-contenido-estrecho">
+            
+                <?php
+                $images = get_sub_field('gallery');
+             
+                if( $images ): ?>
+            
+                    <ul class="gallery">
+                        <?php foreach( $images as $image ): ?>
+                            <li class="gallery__item">
+                                <figure>
+                                
+                                    <img src="<?php echo $image['sizes']['large']; ?>" alt="<?php echo $image['alt']; ?>" class="" />
+                                <figcaption><?php echo $image['caption']; ?></figcaption>
+                                </figure>
+                            </li>
+                        <?php endforeach; ?>
+                    </ul>
+            
+                <?php endif; ?>
+    
+
+        <div class="parrafo">
+
+            <?php if (get_sub_field("encabezado")): ?>
+                <h3><?php the_sub_field("encabezado"); ?></h3>
+            <?php endif ?>
+            
+            <?php the_sub_field("content"); ?>
+
+            <!-- adjuntar archivos -->
+            <?php if( get_field('ficha_tecnica') ): ?>
+                <a href="<?php the_field('ficha_tecnica'); ?>" target="_blank" class="btn btn--primary">
+                <i class="icon-download"> </i>Ficha técnica</a>
+            <?php endif; ?>
+
+            <?php if( get_field('datos_seguridad') ): ?>
+                <a href="<?php the_field('datos_seguridad'); ?>" target="_blank" class="datos_seguridad btn btn--primary"><i class="icon-attachment"> </i>Ficha datos de seguridad</a>
+            <?php endif; ?>
+
+        </div> <!-- parrafo -->
+
+
+</div> <!-- contenido estrecho -->
+
+
+
+
+
+
+
+
     <?php elseif(get_row_layout() == "sub_heading"): // Layout lista ?>
     
-    <h3><?php the_sub_field('subheading'); ?> </h3>
+    <h3><?php the_sub_field('subheading'); ?>subheading</h3>
 
 
 
