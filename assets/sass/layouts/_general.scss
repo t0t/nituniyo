@@ -1,5 +1,3 @@
-
-
 body {
 	font-family: $basefont;
 	line-height: $baselineheight;
@@ -7,15 +5,8 @@ body {
 	padding-top: $baselineheight*2.5;
 
 	@media screen and (min-width: $bp3) {
-		padding-top: $baselineheight*4;
+		padding-top: $baselineheight*2.7;
 	}
-	&.no-flexbox { 
-		// clase cuando no soporta flexbox
-	}
-	// background-color: $background;
-	// letter-spacing: $baseletterspacing;
-	// background: url(../img/bg.jpg) repeat-x 0 bottom fixed;
-	// background-position: fixed;
 }
 
 //Firefox viejos
@@ -27,30 +18,23 @@ body {
 
 // Content wrapper
 .wrap { 
-	
 	@include max-width ($bp1);
-	// @extend %flexbox;
-	// @include justify-content(space-around);
-	// @include flex-direction(column); //row,column,column-reverse,row-reverse... se comportan como columnas
 	.main {
 		// @extend %flexbox;
 		// @include flex-direction(column);
 		// @include justify-content(space-between);
-
 		.page-header {
 			@include padding-vertical(); 
-		}
-		h1 {
 			color: $color-base;
 			@extend %clearfix;
 			@include animation(load-in-slow, initial, 3s, ease-in, 1);
+			@media screen and (min-width: $bp3) {
+				font-size: 3rem;
+			}
 		}
 
+
 		.layout-contenido-estrecho {
-			// @extend %flexbox;
-			// @include flexbox;
-			// @include flex-direction(column);
-			// @include align-items(center);
 			ul {
 				padding: 0;
 			}
@@ -138,9 +122,6 @@ section {
 }
 
 .formulario {
-	// @extend %flexbox;
-	// @include justify-content(space-between); //flex-start | flex-end | center | space-between | space-around
-	// @include flex-direction(column); //row,column,column-reverse,row-reverse... se comportan como columnas
 	display: table;
 }
 

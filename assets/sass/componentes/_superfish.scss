@@ -7,14 +7,6 @@
 .sf-menu {
 	// margin-top: 15px;
 	@extend %text-center;
-	
-	@media screen and (max-width: $bp3) {
-		display: none;
-		&.active {
-			display: block;
-			background-color: red;
-		}
-	}
 	@media screen and (min-width: $bp3) {
 		// @include flexbox;
 		// @include justify-content(space-between);

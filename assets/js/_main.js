@@ -86,18 +86,7 @@ enquire.register("screen and (min-width: 715px)", {
     // $('html').addClass('skrollr');
 
 
-// el toggle collapse button
-$(function() {
-  
-    // Toggle Nav on Click
-    $('.toggle-nav').click(function(e) {
-        // Calling a function in case you want to expand upon this.
-        toggleNav();
-        e.preventDefault();
-    });
 
-  
-});
 
 
 
@@ -144,7 +133,7 @@ $(function() {
 
     $('.responsive-menu-btn').on('click', function (e) {
         e.preventDefault();
-        $('.sf-menu').toggleClass('active');
+        $('.navbar').toggleClass('active');
     });
 
     
