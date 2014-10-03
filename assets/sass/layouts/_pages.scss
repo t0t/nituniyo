@@ -1,23 +1,24 @@
 
 // home
 .home {
-	.wrap {
-		// padding-top: 150px;
-	}
 	.main {
-		h1:first-child {
-			padding-top: 0;
-			margin-top: 0;
+			.page-header {
+				@media screen and (min-width: $bp3) {
+				font-size: 6em;
+				position: fixed;
+				top: 15%;
+				left: 0;
+				right: 0;
+				color: $white;
+				}
+				@media screen and (min-width: $bp2) {
+					font-size: 8rem;
+				}
 		}
 	}
 	.features {
     @extend %background-color;
-    float: left;
     width: 100%;
-	    .row {
-	      @include max-width($bp1);
-	      @extend %text-center;
-	    }
 	}
 	.cover {
 		background: url(../img/t0theme-10.jpg) no-repeat 0px top $darkgrey;

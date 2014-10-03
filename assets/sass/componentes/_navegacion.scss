@@ -29,14 +29,16 @@ NAVIGATION STYLES
 *
 */
 .nav--fit{
-    display:table;
     width:100%;
+    
+    @media screen and (min-width: $bp3) {
+      display:table;
+      > li{
+          display:table-cell;
 
-    > li{
-        display:table-cell;
-
-        > a{
-            display:block;
-        }
+          > a{
+              display:block;
+          }
+      }
     }
 }

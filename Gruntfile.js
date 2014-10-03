@@ -12,7 +12,7 @@ module.exports = function(grunt) {
     'assets/js/plugins/superfish.min.js',
     // 'assets/vendor/lightbox/js/lightbox.min.js',
     // 'assets/js/plugins/lightbox.js',
-    'assets/vendor/lightbox/js/lightbox.js',
+    // 'assets/vendor/lightbox/js/lightbox.js',
     // 'assets/vendor/fitvids/jquery.fitvids.js',
     // 'assets/vendor/three.js/three.min.js',
     // 'assets/vendor/paper/dist/paper-full.min.js',

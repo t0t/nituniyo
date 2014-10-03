@@ -8,7 +8,7 @@ Template Name: Home
 <section>
 
 
-<h1>
+<h1 class="page-header" data--50-top="opacity:1" data--100-top="opacity:0">
 	<?php //bloginfo('name'); ?>
 	<?php bloginfo('description'); ?>
 </h1>
