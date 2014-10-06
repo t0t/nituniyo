@@ -1,6 +1,12 @@
 /*------------------------------------*\
     $PLACEHOLDERS
 \*------------------------------------*/
+%no-padding {
+  padding: 0;
+}
+%full-width {
+  width: 100%;
+}
 %icon {
   transition: background-color ease .2s;
   margin: 0 .5em;

@@ -12,10 +12,10 @@
 	.navbar {
 		display: none;
 		// margin: $gutterwidth 0;
-		vertical-align: middle;
 		
 		@media screen and (min-width: $bp3){
 			display: table-cell;
+			vertical-align: middle;
 			width: 75%;
 		}
 
@@ -24,9 +24,6 @@
 			@include opacity(0);
 
 			&.active {
-				body & {
-					overflow-x: hidden; //?? no funciona porque?
-				}
 				@include opacity(1);
 				// padding-top: $gutterwidth*5;
 				display: block;

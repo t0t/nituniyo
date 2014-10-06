@@ -2,7 +2,7 @@
 .jcarousel {
 	position: relative;
 	overflow: hidden;
-	width: 100%;
+	@extend %full-width; //width:100%
 	// border: $borde;
 
 	ul {
@@ -12,12 +12,15 @@
 
 	li {
 		float: left;
-		width: $bp3 / 2;
 		height: 100%;
+		background-color: #f3f3f3;
 		// padding: $paddingbase;
 	}
-
+	
+	// Responsive-friendly and scale nicely to the parent element
 	img {
-		// width: 100%;
+		display: block;
+		max-width: 100%;
+		height: auto !important;
 	}
 }

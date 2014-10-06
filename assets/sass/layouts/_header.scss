@@ -5,7 +5,7 @@ header {
 				&.logo {
 				display: table-cell;
 				padding: $gutterwidth*2;
-				@include background-image(logo,85%);
+				@include background-image(logo,85%,svg);
 				background-repeat: no-repeat;
 				background-position: center;
 				width: 50%;

@@ -29,8 +29,9 @@ NAVIGATION STYLES
 *
 */
 .nav--fit{
-    width:100%;
-    
+    @extend %full-width; //width:100%
+    @extend %no-padding;
+    margin-bottom: 0; //me resetea el margin asignado a los ul
     @media screen and (min-width: $bp3) {
       display:table;
       > li{

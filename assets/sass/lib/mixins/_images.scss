@@ -1,7 +1,12 @@
-@mixin background-image($name, $size:false){
-    background-image: url(#{$image-path}/#{$name}.svg);
+@mixin background-image($name, $size:false, $svg:false, $jpg:false){
     @if($size){
         background-size: $size;
+    }
+    @if($jpg){
+        background-image: url(#{$image-path}/#{$name}.#{$jpg});
+    }
+    @if($svg){
+        background-image: url(#{$image-path}/#{$name}.#{$svg});
     }
     .no-svg &{
         background-image: url(#{$image-path}/#{$name}.#{$fallback-extension});

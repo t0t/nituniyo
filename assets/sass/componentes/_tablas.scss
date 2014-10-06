@@ -8,7 +8,7 @@
 \*------------------------------------*/
 
 table {
-	width : 100%;
+	@extend %full-width; //width:100%
 	max-width : 100%;
 	margin-bottom : $baselineheight;
 	border-collapse : collapse;

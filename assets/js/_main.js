@@ -113,10 +113,35 @@ enquire.register("screen and (min-width: 715px)", {
 
 
     // jcarousel
-    $('.jcarousel').jcarousel({
+$('.jcarousel')
+    .on('jcarousel:create jcarousel:reload', function() {
+        var element = $(this),
+            width = element.innerWidth();
+
+        if (width > 900) {
+            width = width / 4;
+        } else if (width > 500) {
+            width = width / 2;
+        } else if (width < 500) {
+            width = width;
+        }
+
+
+        element.jcarousel('items').css('width', width + 'px');
+    })
+    .jcarousel({
+        // Your configurations options
         wrap: 'circular',
-        });
+    });
     $('.jcarousel').jcarouselAutoscroll();
+
+
+
+
+
+
+
+
 
 
     // Fanybox / Lightbox

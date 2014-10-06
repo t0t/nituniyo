@@ -1,18 +1,10 @@
 /*** ESSENTIAL STYLES ***/
 .sf-menu, .sf-menu * {
-	margin: 0;
-	padding: 0;
+	@extend %no-padding;
 	list-style: none;
 }
 .sf-menu {
-	// margin-top: 15px;
 	@extend %text-center;
-	@media screen and (min-width: $bp3) {
-		// @include flexbox;
-		// @include justify-content(space-between);
-		// width: 575px;
-		background-color: transparent;
-	}
 
 	ul {
 		// min-width: 12em; /* allow long menu items to determine submenu width */
@@ -38,6 +30,7 @@
 
 			li {
 				background: $color-base-lighten;
+				
 				@media (max-width: $bp3) { //añadido breakpoint
 				position: relative;
 				width: 100%;

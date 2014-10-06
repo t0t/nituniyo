@@ -18,7 +18,7 @@ form {
 
 	legend {
 		display : block;
-		width : 100%;
+		@extend %full-width; //width:100%
 		margin-bottom : $baselineheight * 2;
 		padding : 0;
 		color : $textcolor;
@@ -85,7 +85,7 @@ input,
 textarea,
 select {
 	display : inline-block;
-	width : 100%;
+	@extend %full-width; //width:100%
 	padding : $paddingbase / 2;
 	margin-bottom : $baselineheight / 4;
 	background-color : $inputbackground;
