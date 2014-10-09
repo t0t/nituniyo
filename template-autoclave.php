@@ -1,29 +1,21 @@
 <?php
 /*
-Template Name: Home
+Template Name: Autoclave
 */
 ?>
 
-
+<?php get_template_part('templates/page', 'header'); ?>
 <section>
 
-<h1 class="page-header" data-top="display:block" data--50-top=" display:none"><?php bloginfo('description'); ?></h1>
-
-<?php //while (have_posts()) : the_post(); ?>
-  <?php //get_template_part('templates/page', 'header'); ?>
-  <?php get_template_part('templates/content', 'page-template'); ?>
-  <?php get_template_part('templates/content', 'page'); ?>
-<?php //endwhile; ?>
+  <?php get_template_part('templates/content', 'cpt'); ?>
 	
-
-	<h2>Productos</h2>
 	<?php 
 	$this_post = $post->ID;
 	$loop = new WP_Query( array( 
 							'post_type' => 'cpt',
 							'posts_per_page' => '',
 							'post__not_in' => array($this_post),
-							'category_name' => '' 
+							'category_name' => 'autoclave' 
 							)); 
 	?>
 
@@ -49,7 +41,6 @@ Template Name: Home
 					<h3>
 						<a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>"><? the_title(); ?></a>
 					</h3>
-					<p><?php //the_excerpt(); ?></p>
 
 				</li>
 					

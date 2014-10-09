@@ -3,6 +3,9 @@
 
 <h3><?php echo category_description(); ?></h3>
 
+<?php get_template_part('templates/content', 'cpt'); ?>
+
+
 <section>
 
 <?php
@@ -12,8 +15,7 @@
 $loop5 = new WP_Query( array( 
               'post_type' => 'cpt',
               'category_name' => 'autoclave' 
-              )); 
-
+              ));
 ?>
 
   <div class="jcarousel">

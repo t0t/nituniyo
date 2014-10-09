@@ -208,36 +208,39 @@
 
 
 
-<?php elseif(get_row_layout() == "layout_content"): //Layout Content centrado estrecho?>
+<?php elseif(get_row_layout() == "layout_content"): //Layout Content ?>
 
     <div id="layout-content" class="layout-content">
-  
-    <?php if (get_sub_field("encabezado")): ?>
-        <h3><?php the_sub_field("encabezado"); ?></h3>
-    <?php endif ?>
     
-    <?php the_sub_field("content"); ?>
+    <?php if (get_sub_field("encabezado")): ?>
+        <h2><?php the_sub_field("encabezado"); ?></h2>
+    <?php endif ?>
 
+    <?php
 
-  <?php
-                $images = get_sub_field('gallery');
-             
-                if( $images ): ?>
+    // check if the repeater field has rows of data
+    if( have_rows('content') ):
+
+        // loop through the rows of data
+        while ( have_rows('content') ) : the_row();
+
+            // display a sub field value
+            ?>
             
-                    <ul class="gallery">
-                        <?php foreach( $images as $image ): ?>
-                            <li>
-                                <figure>
-                                <a href="<?php echo $image['url']; ?>" data-lightbox="serie" data-title="<?php echo $image['description']; ?>">
-                                    <img src="<?php echo $image['sizes']['medium']; ?>" alt="<?php echo $image['alt']; ?>" class="" />
-                                </a>
-                                <figcaption><?php echo $image['caption']; ?></figcaption>
-                                </figure>
-                            </li>
-                        <?php endforeach; ?>
-                    </ul>
-            
-                <?php endif; ?>
+            <h3><?php the_sub_field('encabezado'); ?></h3>
+            <?php the_sub_field('content'); ?>
+
+            <?
+
+        endwhile;
+
+    else :
+
+        // no rows found
+
+    endif;
+
+    ?>
 
     </div>
 
