@@ -28,6 +28,7 @@ body {
 			@include padding-vertical(); 
 			color: $color-base;
 			@extend %clearfix;
+			text-transform: uppercase;
 			@include animation(load-in-slow, initial, 3s, ease-in, 1);
 			
 			@media screen and (min-width: $bp3) {
