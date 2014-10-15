@@ -2,21 +2,23 @@
            
 	<aside>
 		<ul class="info-adicional">
-			<li class="info-adicional__item muestras">
-				<a href="/solicitud-de-muestras" class="muestras">
-				&#x2B22; Contacto. Solicitud de Información y Muestras	
-				</a>
+			<li class="info-adicional__item">
+				<a href="/solicitud-de-muestras" class="contacto h1">
+				<i class="icon-call37"></i> Contacto</a>
 			</li>
-			<li class="info-adicional__item add">
-			   <a href="http://www.maderlim.com" target="_blank" class="muestras">
-			   &#x2B22; Maderlim</a>
+			<li class="info-adicional__item">
+			   <a href="http://www.maderlim.com" target="_blank" class="muestras" alt="Lasures Maderlim" title="Lasures Maderlim"></a>
 			</li>
 		</ul>
 	</aside>
 
-	<footer class="content-info" rel="author"> 
+	<footer rel="author"> 
 		<small>
 			<?php bloginfo('name'); ?>
+
+Ctra. Morella, km. 0,7
+12500 Vinaroz, Castellón, España
+
 			<?php echo date('Y'); ?>
 		</small>
 	<?php edit_post_link('&oplus; Editar ') ?>&sdot;

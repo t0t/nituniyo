@@ -8,6 +8,8 @@
     @if($svg){
         background-image: url(#{$image-path}/#{$name}.#{$svg});
     }
+    background-repeat: no-repeat;
+    background-position: center;
     .no-svg &{
         background-image: url(#{$image-path}/#{$name}.#{$fallback-extension});
 

@@ -6,14 +6,15 @@
 // https://github.com/twitter/bootstrap/blob/master/less/alerts.less"
 
 .alert {
-	margin-bottom : $baselineheight;
+	// margin-bottom : $baselineheight;
 	padding : 8px 35px 8px 14px;
-	background-color : $color-alert;
-	border : $alertborderwidth $alertborderstyle $alertbordercolor;
-	font-family : $basefont;
-	@include font-size(14);
-	color : $alerttext;
-	border-radius: $radius;
+	// background-color : $color-base;
+	// border : $alertborderwidth $alertborderstyle $alertbordercolor;
+	// font-family : $basefont;
+	// @include font-size(14);
+	color: $alerttext;
+	// border-radius: $radius;
+	// @extend %full-width;
 
 	.alert--heading {
 		color : inherit;
@@ -50,8 +51,9 @@
 	}
 
 	.alert--info {
-		background-color 	: $alertinfocolor;
-		border-color 		: $alertinfoborder;
+		background-color: rgba($lightergrey, 0.95);
+		// background-color 	: $alertinfocolor;
+		// border-color 		: $alertinfoborder;
 		color 			: $alertinfotext;
 	}
 
@@ -64,8 +66,12 @@
 // alert block
 
 	.alert--block {
-		padding-top : 14px;
-		padding-bottom : 14px;
+		// padding-top : 14px;
+		// padding-bottom : 14px;
+		padding: 0 $gutterwidth 0;
+		display: table;
+		@extend %full-width;
+		@extend %text-right;
 
 		.alert--heading {
 			margin-bottom : $baselineheight / 8;

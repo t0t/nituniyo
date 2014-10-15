@@ -1,25 +1,35 @@
 header {
 	&.banner { //encabezado principal
 		display: table;
+		.brand {
+			position: relative;
+			display: table;
+			width: 100%;
+			.brand__description {
+				display: table-row;
+				@extend %text-center;
+				position: absolute;
+				top: 51%;
+				left: 49%;
+			}
 			a {
-				&.logo {
-				display: table-cell;
-				padding: $gutterwidth*2;
+				&.brand__logo {
+				// padding: $gutterwidth*2;
 				@include background-image(logo,85%,svg);
-				background-repeat: no-repeat;
-				background-position: center;
-				width: 50%;
+				width: 100%;
+				height: 84px;
+				@extend %display-block;
+				}
 					
 				@media screen and (min-width:$bp3) {
 					// background-position: center left;
-					padding: ($gutterwidth+1) 0;
+					// padding: ($gutterwidth+1) 0;
 					background-size: 85%;
 					width: 25%;
 					// padding: $gutterwidth 0 0 0;
 				}
-
-				}
 			}
+		}
 		@include max-width($bp1);
 		// @include padding-vertical();
 		z-index: 9000;

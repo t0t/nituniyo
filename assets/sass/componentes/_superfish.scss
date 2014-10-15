@@ -65,7 +65,7 @@
 	}
 
 	a {
-		display: block;
+		@extend %display-block;
 		position: relative;
 		text-decoration: none;
 		zoom: 1; /* IE7 */
@@ -76,7 +76,7 @@
 
 .sf-menu li:hover > ul,
 .sf-menu li.sfHover > ul {
-	display: block;
+	@extend %display-block;
 }
 
 

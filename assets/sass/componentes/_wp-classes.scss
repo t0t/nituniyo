@@ -2,7 +2,7 @@
 // http://codex.wordpress.org/CSS#WordPress_Generated_Classes
 
 .aligncenter {
-  display: block;
+  @extend %display-block;
   margin: ($line-height-computed / 2) auto;
 }
 .alignleft,

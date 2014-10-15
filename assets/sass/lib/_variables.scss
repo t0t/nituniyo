@@ -97,20 +97,20 @@ $compcolor      	: rgb(206,240,227);
 /**
  * Escala de grises
  */
-$black 				: rgb(10,10,10);
+$black 				: rgb(0,0,0);
 $superdark  		: lighten($black, 10%);
 $darkergrey 		: lighten($black, 15%);
 $darkgrey 			: lighten($black, 25%);
 $grey 				: lighten($black, 50%);
 $lightgrey 			: lighten($black, 75%);
-$lightergrey 		: lighten($black, 90%);
+$lightergrey 		: lighten($black, 80%);
 $white 				: rgb(255,255,255);
 $white-alpha 		: rgba(255,255,255,0.95);
 
 // Web
 $baseheadingfontcolor 		: $black;
 $background			: 	lighten($color-base, 47%);
-$textcolor			: 	$darkgrey;
+$textcolor			: 	$black;
 $textcolor-strong	:	$black;
 
 // Links  //////////////////////
@@ -121,7 +121,7 @@ $linkcolorfocus 	: $linkcolorvisited;
 
 $color-alert 		: rgb(252,228,207);
 $color-error 		: rgb(218,79,73);
-$color-info 		: rgb(165,221,223);
+$color-info 		: $lightergrey;
 $color-inverse 	: invert($color-base);
 $color-success 	: rgb(91,183,91);
 $color-warning 	: $color-error;

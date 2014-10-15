@@ -3,18 +3,10 @@ body {
 	line-height: $baselineheight;
 	color: $textcolor;
 	padding-top: $baselineheight*2.5;
-
 	@media screen and (min-width: $bp3) {
-		padding-top: $baselineheight*3.40;
+		padding-top: $baselineheight*2.70;
 	}
 }
-
-//Firefox viejos
-// .no-flexbox {
-// 	.wrap {
-// 		background-color: red;
-// 	}
-// }
 
 // Content wrapper
 .wrap { 
@@ -46,7 +38,6 @@ body {
 			.parrafo {
 				// max-width: 90%;
 					padding: 0 0 0 $gutterwidth*2;
-					@include animation(load-in-slow, initial, 3s, ease-in, 1);
 				p {
 				}
 			}
@@ -96,6 +87,7 @@ body {
 
 .formulario {
 	display: table;
+	@extend %padding-horizontal;
 }
 
 .formulario__contacto {

@@ -31,7 +31,7 @@ h1 small,
 h2 small,
 h3 small {
 	font-weight : normal;
-	display: block;
+	@extend %display-block;
 	color : $grey;
 }
 

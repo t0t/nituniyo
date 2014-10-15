@@ -29,7 +29,7 @@ body {
 }
 
 .lightbox .lb-image {
-  display: block;
+  @extend %display-block;
   height: auto;
   max-width: inherit;
   -webkit-border-radius: 3px;
@@ -78,7 +78,7 @@ body {
 }
 
 .lb-cancel {
-  display: block;
+  @extend %display-block;
   width: 32px;
   height: 32px;
   margin: 0 auto;
@@ -106,7 +106,7 @@ body {
 .lb-prev, .lb-next {
   height: 100%;
   cursor: pointer;
-  display: block;
+  @extend %display-block;
 }
 
 .lb-nav a.lb-prev {
@@ -183,7 +183,7 @@ body {
 }
 
 .lb-data .lb-number {
-  display: block;
+  @extend %display-block;
   clear: left;
   padding-bottom: 1em;
   font-size: 12px;
@@ -191,7 +191,7 @@ body {
 }
 
 .lb-data .lb-close {
-  display: block;
+  @extend %display-block;
   float: right;
   width: 30px;
   height: 30px;

@@ -26,19 +26,17 @@
 			&.active {
 				@include opacity(1);
 				// padding-top: $gutterwidth*5;
-				display: block;
+				display: table;
 				position: fixed;
-				width: 100%;
+				width: 50%;
 				height: 100vh;
 				// top: $gutterwidth*3;
 				top: 0;
 				left: 0;
 				background-color: rgba($color-base, 0.95);
-
 				> ul {
 					> li {
-						height: 20vh; //magia
-						font-size: 2rem;
+						height: 10vh; //magia
 					}
 				}
 			}

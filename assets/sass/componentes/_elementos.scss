@@ -2,7 +2,7 @@
 
 hr {
 	clear : both;
-	display : block;
+	@extend %display-block;
 	margin : $baselineheight 0;
 	padding : 0;
 	height : 1px;
@@ -59,7 +59,7 @@ figure {
 	}
 
 	figcaption {
-		display : block;
+		@extend %display-block;
 		font-weight : normal;
 		line-height: $baselineheight / 1.5;
 		@include font-size($basefontsize/1.2);

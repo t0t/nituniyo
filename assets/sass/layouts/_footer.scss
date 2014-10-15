@@ -1,8 +1,11 @@
 // Footer
 .content-info {
-	@include background-image(bg,cover);
+	@include background-image(bg,cover,jpg);
+	background-repeat: no-repeat;
 	@extend %text-center;
 	@include align-items(center);
+	@include max-width ($bp1);
+	padding: 3%;
 }
 
 address, p, form {
@@ -33,7 +36,15 @@ address, p, form {
 		}
 	}
 }
-	.muestras {}	
-	.add {
+	.muestras, .contacto {	
+		display: table;
+		// width: 100%;
+		max-width: 100%;
+		height: 100px;
+	}
+	.contacto {
+		padding-top: 5%;
+	}
+	.muestras {
 		@include background-image(add_maderlim,cover,jpg);
 	}

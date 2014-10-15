@@ -4,6 +4,13 @@
 %no-padding {
   padding: 0;
 }
+%padding-horizontal {
+  padding-left: $paddingbase;
+  padding-right: $paddingbase;
+}
+%display-block {
+  display: block;
+}
 %full-width {
   width: 100%;
 }
@@ -11,7 +18,6 @@
   transition: background-color ease .2s;
   margin: 0 .5em;
 }
-
 %text-center {
   text-align: center;
 }
@@ -21,10 +27,9 @@
 %text-left {
   text-align: left;
 }
-
 %inline-block {
   display: inline-block;
-  margin-bottom: $paddingbase / -2; //fix para el inline-block 
+  margin-bottom: $paddingbase / -2; //fix para el inline-block
 }
 %list-inline {
   display: inline-block;
@@ -40,7 +45,6 @@
 	text-overflow : ellipsis;
 	white-space : nowrap;
 }
-
   /**
   * The ghost, nudged to maintain perfect centering
   */
@@ -52,16 +56,14 @@
 		vertical-align: middle;
 	}
 }
-
-  /**
-  * Escondemos el texto solo VISUALMENTE
-  */
+/**
+* Escondemos el texto solo VISUALMENTE
+*/
 %hide-text {
 	text-indent: 100%;
 	white-space: nowrap;
 	overflow: hidden;
 }
-
   /**
   * Escondemos el texto de VISUALMENTE y SCREENREADERS
   */

@@ -1,8 +1,4 @@
 
-
-
-
-
 /*------------------------------------*\
     $FORMULARIOS
 \*------------------------------------*/
@@ -17,7 +13,7 @@ form {
 	}
 
 	legend {
-		display : block;
+		@extend %display-block;
 		@extend %full-width; //width:100%
 		margin-bottom : $baselineheight * 2;
 		padding : 0;
@@ -68,7 +64,7 @@ textarea {
 }
 
 label {
-	display : block;
+	@extend %display-block;
 	margin-bottom : $baseline / 8;
 	font-weight : bold;
 	color : $textcolor;
@@ -88,7 +84,7 @@ select {
 	@extend %full-width; //width:100%
 	padding : $paddingbase / 2;
 	margin-bottom : $baselineheight / 4;
-	background-color : $inputbackground;
+	// background-color : $inputbackground;
 	border : $inputborderwidth $inputborderstyle $inputborder;
 	color : $textcolor;
 
@@ -158,8 +154,8 @@ input[type="file"] {
 }
 
 select {
-	background-color : $inputbackground;
-	@include font-size(13);
+	// background-color : $inputbackground;
+	// @include font-size(13);
 }
 
 select[multiple],
@@ -247,7 +243,7 @@ input:-moz-placeholder {
 }
 
 .help-block {
-	display : block;
+	@extend %display-block;
 	margin-bottom : $baselineheight / 2;
 }
 
@@ -354,14 +350,4 @@ input {
 	.wpcf7-response-output {}
 	.wpcf7-display-none {}
 }
-
-
-
-
-
-
-
-
-
-
 

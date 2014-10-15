@@ -32,13 +32,17 @@ NAVIGATION STYLES
     @extend %full-width; //width:100%
     @extend %no-padding;
     margin-bottom: 0; //me resetea el margin asignado a los ul
+      li {
+        a {
+        }
+      }
     @media screen and (min-width: $bp3) {
       display:table;
       > li{
           display:table-cell;
-
           > a{
               display:block;
+          padding: $gutterwidth*4;
           }
       }
     }
