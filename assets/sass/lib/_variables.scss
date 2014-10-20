@@ -90,8 +90,6 @@ $color-dos      	: rgb(72,224,164);
 $color-tres			: rgb(41,0,164);
 $color-cuatro     	: rgb(41,0,164); //ocre
 $color-cinco     	: red; //rojo menu
-$bordercolor    	: $color-base;
-$bordercolorhover   : $color-base-darken;
 $compcolor      	: rgb(206,240,227);
 
 /**
@@ -107,6 +105,9 @@ $lightergrey 		: lighten($black, 80%);
 $white 				: rgb(255,255,255);
 $white-alpha 		: rgba(255,255,255,0.95);
 
+// Bordes
+$bordercolor    	: $black;
+$bordercolorhover   : $color-base;
 // Web
 $baseheadingfontcolor 		: $black;
 $background			: 	lighten($color-base, 47%);
@@ -223,4 +224,4 @@ $navtabsbordercolor    : $bordercolor;
 
 // Bordes
 $borde				: 2px solid $bordercolor;
-$bordehover			: 3px double $bordercolorhover;
+$bordehover			: 2px solid $bordercolorhover;

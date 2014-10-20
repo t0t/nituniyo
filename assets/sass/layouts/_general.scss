@@ -2,23 +2,27 @@ body {
 	font-family: $basefont;
 	line-height: $baselineheight;
 	color: $textcolor;
-	padding-top: $baselineheight*2.5;
+	padding-top: $baselineheight*3.5;
+	@include background-image(bg,cover,jpg);
+	// background-color: $color-base;
 	@media screen and (min-width: $bp3) {
-		padding-top: $baselineheight*2.70;
+		padding-top: $baselineheight*3;
 	}
 }
 
 // Content wrapper
 .wrap { 
 	@include max-width ($bp1);
-	@include padding-bottom();
+	// @include padding-bottom();
+	background-color: $white;
 	.main {
 		// @extend %flexbox;
 		// @include flex-direction(column);
 		// @include justify-content(space-between);
 		.page-header {
-			@include padding-vertical(); 
-			color: $color-base;
+			padding-top: $gutterwidth*2; 
+			padding-bottom: $gutterwidth; 
+			color: $black;
 			@extend %clearfix;
 			text-transform: uppercase;
 			@include animation(load-in-slow, initial, 3s, ease-in, 1);
@@ -33,12 +37,27 @@ body {
 
 		.layout-contenido-estrecho {
 			ul {
+				&.gallery {
+					margin-bottom: 0;
+				}
 				padding: 0;
 			}
 			.parrafo {
 				// max-width: 90%;
-					padding: 0 0 0 $gutterwidth*2;
-				p {
+				padding: $gutterwidth*2;
+				display: table;
+				width: 100%;
+				// background-color: #fff7f4;
+
+				// background-color: $color-base;
+				.parrafo__btn {
+					display: table;
+					@extend %full-width;
+					a {
+						// display: table-row;
+						margin-right: $gutterwidth;
+						margin-bottom: $gutterwidth*2;
+					}
 				}
 			}
 			@media screen and (min-width: $bp3) {
@@ -47,18 +66,15 @@ body {
 				ul {
 					&.gallery {
 						display: table-cell;
-						background-color: $color-base;
+						// background-color: $color-base;
 						// width: 73%;
 						// padding-left: 0;
 					}
 				}
 				.parrafo{
-					width: 25%;
+					width: 50%;
 					display: table-cell;
 					vertical-align: top;
-						padding: 0 $gutterwidth 0 $gutterwidth;
-					p {
-					}
 				}
 			}
 		}

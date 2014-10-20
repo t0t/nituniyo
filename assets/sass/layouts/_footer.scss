@@ -1,11 +1,16 @@
 // Footer
 .content-info {
-	@include background-image(bg,cover,jpg);
-	background-repeat: no-repeat;
+	// @include background-image(bg,cover,jpg);
+	.home & {
+		position: absolute;
+		bottom: 0;
+		right: 0;
+		left: 0;
+	}
 	@extend %text-center;
 	@include align-items(center);
 	@include max-width ($bp1);
-	padding: 3%;
+	// @include padding();
 }
 
 address, p, form {

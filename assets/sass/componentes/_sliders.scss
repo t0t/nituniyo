@@ -21,6 +21,8 @@
 		height: 195px;
 		@extend %display-block;
 		@include background-image(hexagono_productos,40%,svg);
+		background-repeat: no-repeat;
+    	background-position: center;
 		// border: solid 1px black;
 	}
 	h2 {

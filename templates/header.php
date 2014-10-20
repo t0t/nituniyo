@@ -1,5 +1,6 @@
 <aside class="alert alert--info alert--block">
-	<small>Exclusivo profesionales</small>
+	<small>ES / EN </small>
+  <small>EXCLUSIVO PROFESIONALES</small>
 </aside>
 
 <header class="banner" role="banner" id="header">

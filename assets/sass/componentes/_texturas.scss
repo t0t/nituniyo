@@ -51,8 +51,8 @@
 	}
 
 	.alert--info {
-		background-color: rgba($lightergrey, 0.95);
-		// background-color 	: $alertinfocolor;
+		// background-color: rgba($lightergrey, 0.95);
+		// background-color 	: $color-base;
 		// border-color 		: $alertinfoborder;
 		color 			: $alertinfotext;
 	}
@@ -70,9 +70,14 @@
 		// padding-bottom : 14px;
 		padding: 0 $gutterwidth 0;
 		display: table;
+		@include max-width($bp1);
 		@extend %full-width;
 		@extend %text-right;
-
+		// @include max-width($bp1);
+		position: fixed;
+		top: 0;
+		right: 0;
+		left: 0;
 		.alert--heading {
 			margin-bottom : $baselineheight / 8;
 			font-size : inherit;

@@ -133,18 +133,15 @@ input[type="submit"].btn:hover {
 */
 
 .btn--primary {
-	@include font-size;
-	background-color: none;
+	// @include font-size;
 	border: $borde;
 	// height: 100%;
 	@extend %clearfix;
 	&:hover {
 		color: $color-base-darker;
-		@include translateX(5px);
-		@include transition(.2s);
 		// background-color: $color-inverse;
 		background-color: $color-base;
-		box-shadow: 4px 5px 0 $color-base-darken;
+		// box-shadow: 4px 5px 0 $color-base-darken;
 		border: $bordehover;
 	}
 	@include transition(.2s);
