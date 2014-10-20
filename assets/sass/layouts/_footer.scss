@@ -6,7 +6,11 @@
 		bottom: 0;
 		right: 0;
 		left: 0;
+		small {
+			color: $white;
+		}
 	}
+
 	@extend %text-center;
 	@include align-items(center);
 	@include max-width ($bp1);
