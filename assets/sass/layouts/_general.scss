@@ -3,7 +3,7 @@ body {
 	line-height: $baselineheight;
 	color: $textcolor;
 	padding-top: $baselineheight*3.5;
-	@include background-image(bg,cover,jpg);
+	// @include background-image(bg,cover,jpg);
 	// background-color: $color-base;
 	@media screen and (min-width: $bp3) {
 		padding-top: $baselineheight*3;
@@ -14,7 +14,7 @@ body {
 .wrap { 
 	@include max-width ($bp1);
 	// @include padding-bottom();
-	background-color: $white;
+	// background-color: $white;
 	.main {
 		// @extend %flexbox;
 		// @include flex-direction(column);
@@ -22,7 +22,7 @@ body {
 		.page-header {
 			padding-top: $gutterwidth*2; 
 			padding-bottom: $gutterwidth; 
-			color: $black;
+			color: $white;
 			@extend %clearfix;
 			text-transform: uppercase;
 			@include animation(load-in-slow, initial, 3s, ease-in, 1);
@@ -81,7 +81,14 @@ body {
 	}
 }
 
-
+.layout-content {
+	background-color: $white;
+	box-shadow: 0 0 10px $black;
+	clip-path: polygon( 50% 0, 100% 25%, 100% 75%, 50% 100%, 0 75%, 0 25% );
+	padding: 5%;
+	width: 50%;
+	margin-left: 25%;
+}
 
 
 

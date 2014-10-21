@@ -29,6 +29,9 @@
 
 
 
+
+
+
     <?php elseif(get_row_layout() == "parrafos"): // Layout parrafos ?>
 
     <?php if(get_sub_field('repeater_parrafos')): ?>
@@ -340,3 +343,7 @@
 
 <?php endif; ?>
 
+
+
+<!-- Vegas -->
+<?php the_field("content_editor"); ?>

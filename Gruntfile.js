@@ -6,21 +6,12 @@ module.exports = function(grunt) {
   require('time-grunt')(grunt);
 
   var jsFileList = [
-    // 'assets/vendor/bootstrap-sass-official/assets/javascripts/bootstrap/transition.js',
     'assets/js/plugins/jcarousel/jquery.jcarousel.min.js',
     'assets/js/plugins/jcarousel/jcarousel.skeleton.js',
     'assets/js/plugins/superfish.min.js',
-    // 'assets/vendor/lightbox/js/lightbox.min.js',
-    // 'assets/js/plugins/lightbox.js',
-    // 'assets/vendor/lightbox/js/lightbox.js',
-    // 'assets/vendor/fitvids/jquery.fitvids.js',
-    // 'assets/vendor/three.js/three.min.js',
-    // 'assets/vendor/paper/dist/paper-full.min.js',
-    // 'assets/vendor/fabric/dist/fabric.min.js',
-    // 'assets/vendor/jquery.stellar/src/jquery.stellar.js',
-    // 'assets/vendor/skrollr-stylesheets/src/skrollr.stylesheets.js',
     'assets/vendor/enquire/dist/enquire.min.js',
     'assets/vendor/skrollr/src/skrollr.js',
+    // 'assets/vendor/vegas/dist/jquery.vegas.js',
     'assets/js/plugins/*.js',
     'assets/js/*.min.js',
     'assets/js/_*.js'
@@ -35,12 +26,11 @@ module.exports = function(grunt) {
         'Gruntfile.js',
         'assets/js/*.js',
         '!assets/js/scripts.js',
+        // '!assets/vendor/vegas/dist/jquery.vegas.js',
         '!assets/js/plugins/jcarousel/jquery.jcarousel.min.js',
         '!assets/js/plugins/jcarousel/jcarousel.skeleton.js',
         '!assets/js/plugins/superfish.min.js',
         '!assets/vendor/skrollr/src/skrollr.js',
-    // '!assets/vendor/three.js/three.min.js',
-        // '!assets/vendor/lightbox/js/lightbox.min.js',
         '!assets/**/*.min.*'
       ]
     },

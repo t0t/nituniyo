@@ -47,15 +47,15 @@ img {
 \*------------------------------------*/
 figure {
 	@media screen and (min-width: $bp3) {
+		
 		// margin-bottom : $baselineheight; //comprobar si realmente hace falta o no
 	}
 
 	img {
 		// margin-bottom : $baselineheight / 4;
-		box-shadow: 0 0 0 10px pink inset;
-		clip-path: polygon( 50% 0, 100% 25%, 100% 75%, 50% 100%, 0 75%, 0 25% );
+		
 		&:hover {
-			box-shadow: 0 0 0 1px pink inset;
+			// box-shadow: 0 0 0 1px pink inset;
 		}
 	}
 

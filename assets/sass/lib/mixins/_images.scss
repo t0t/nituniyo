@@ -1,9 +1,13 @@
-@mixin background-image($name, $size:false, $svg:false, $jpg:false){
+@mixin background-image($name, $size:false, $svg:false, $jpg:false, $gif:false){
+
     @if($size){
         background-size: $size;
     }
     @if($jpg){
-        background-image: url(#{$image-path}/#{$name}.#{$jpg});
+        background-image:url(#{$image-path}/#{$name}.#{$jpg});
+    }
+    @if($gif){
+        background-image:url(#{$image-path}/#{$name}.#{$gif});
     }
     @if($svg){
         background-image: url(#{$image-path}/#{$name}.#{$svg});
