@@ -6,6 +6,7 @@ Template Name: Autoclave
 
 <?php get_template_part('templates/page', 'header'); ?>
 <section>
+<?php echo do_shortcode( '[vegas id=1106 fade="2500" delay ="4500" overlay="/wp-content/themes/fkrquimica/assets/img/overlays/04.png" arrows="yes" autoplay="yes" poster="yes" random="yes"]' ); ?>
 
   <?php get_template_part('templates/content', 'cpt'); ?>
 	

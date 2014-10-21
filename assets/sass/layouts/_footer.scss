@@ -10,7 +10,6 @@
 			color: $white;
 		}
 	}
-
 	@extend %text-center;
 	@include align-items(center);
 	@include max-width ($bp1);

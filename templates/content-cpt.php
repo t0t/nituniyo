@@ -229,6 +229,15 @@
             
             <h3><?php the_sub_field('encabezado'); ?></h3>
             <?php the_sub_field('content'); ?>
+            <div class="parrafo__btn"><!-- adjuntar archivos -->
+                        <?php if( get_field('ficha_tecnica') ): ?>
+                            <a href="<?php the_field('ficha_tecnica'); ?>" target="_blank" class="btn btn--primary">
+                            <i class="icon-download"> </i>Ficha técnica</a>
+                        <?php endif; ?>
+            
+                        <?php if( get_field('datos_seguridad') ): ?>
+                            <a href="<?php the_field('datos_seguridad'); ?>" target="_blank" class="datos_seguridad btn btn--primary"><i class="icon-download"> </i>Ficha datos de seguridad</a>
+                        <?php endif; ?></div>
 
             <?
 
@@ -344,3 +353,7 @@
     <?php endwhile; ?>
 
 <?php endif; ?>
+
+
+<!-- Vegas -->
+<?php the_field("content_editor"); ?>

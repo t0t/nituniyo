@@ -41,4 +41,16 @@
 		max-width: 100%;
 		height: auto !important;
 	}
+	.jcarousel-control-prev, .jcarousel-control-next {
+		position: absolute;
+		bottom: 0;
+	}
+	.jcarousel-control-prev {
+		// left: $gutterwidth;
+		left: 45%;
+	}
+	.jcarousel-control-next {
+		// right: $gutterwidth;
+		right: 45%;
+	}
 }

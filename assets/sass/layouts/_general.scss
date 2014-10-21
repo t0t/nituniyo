@@ -4,7 +4,7 @@ body {
 	color: $textcolor;
 	padding-top: $baselineheight*3.5;
 	// @include background-image(bg,cover,jpg);
-	// background-color: $color-base;
+	background-color: $color-base;
 	@media screen and (min-width: $bp3) {
 		padding-top: $baselineheight*3;
 	}
@@ -19,6 +19,7 @@ body {
 		// @extend %flexbox;
 		// @include flex-direction(column);
 		// @include justify-content(space-between);
+		@include margin-bottom($gutterwidth*2);
 		.page-header {
 			padding-top: $gutterwidth*2; 
 			padding-bottom: $gutterwidth; 
@@ -82,12 +83,15 @@ body {
 }
 
 .layout-content {
-	background-color: $white;
-	box-shadow: 0 0 10px $black;
-	clip-path: polygon( 50% 0, 100% 25%, 100% 75%, 50% 100%, 0 75%, 0 25% );
-	padding: 5%;
-	width: 50%;
-	margin-left: 25%;
+	// background-color: rgba(255,255,255,1);
+	// box-shadow: 0 10px 10px $black;
+	// clip-path: polygon( 50% 0, 100% 25%, 100% 75%, 50% 100%, 0 75%, 0 25% );
+	// padding: $gutterwidth;
+	width: 75%;
+	margin-left: 15%;
+	color: $white;
+	font-size: 150%;
+	// text-shadow : 0 0 20px $black;
 }
 
 

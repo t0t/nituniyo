@@ -130,13 +130,13 @@
 
 // Web Colours
 ::-moz-selection {
-	background-color : $lightergrey;
-	color : $color-base-darken;
+	background-color : $color-base;
+	color : $black;
 	text-shadow : none;
 }
 
 ::selection {
-	background-color : $color-base-darker;
-	color : $white;
+	background-color : $color-base;
+	color : $black;
 	text-shadow : none;
 }

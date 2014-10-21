@@ -106,7 +106,7 @@ $white 				: rgb(255,255,255);
 $white-alpha 		: rgba(255,255,255,0.95);
 
 // Bordes
-$bordercolor    	: $black;
+$bordercolor    	: $white;
 $bordercolorhover   : $color-base;
 // Web
 $baseheadingfontcolor 		: $black;
@@ -115,7 +115,7 @@ $textcolor			: 	$black;
 $textcolor-strong	:	$black;
 
 // Links  //////////////////////
-$linkcolor 			: darken($color-cuatro,50%);
+$linkcolor 			: $white;
 $linkcolorhover 	: lighten($linkcolor, 10%);
 $linkcolorvisited   : $linkcolor;
 $linkcolorfocus 	: $linkcolorvisited;
