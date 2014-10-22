@@ -24,15 +24,19 @@
 
 // Alerts
 .alert {
-	margin : $baselineheight/2;
-	padding : 8px 35px 8px 14px;
-	background-color : $color-base;
-	border : $alertborderwidth $alertborderstyle $alertbordercolor;
-	font-family : $basefont;
-	@include font-size(18);
-	color: $alerttext;
-	// border-radius: $radius;
-	// @extend %full-width;
+	display: none;
+	@media screen and (min-width: $bp3) {
+		display: block;
+		margin : $baselineheight/2;
+		padding : 8px 35px 8px 14px;
+		background-color : $color-base;
+		border : $alertborderwidth $alertborderstyle $alertbordercolor;
+		font-family : $basefont;
+		@include font-size(18);
+		color: $alerttext;
+		// border-radius: $radius;
+		// @extend %full-width;
+	}
 
 	.alert--heading {
 		color : inherit;

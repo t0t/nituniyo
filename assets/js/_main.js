@@ -118,13 +118,13 @@ $('.jcarousel')
         var element = $(this),
             width = element.innerWidth();
 
-        if (width > 900) {
-            width = width / 2;
-        } else if (width > 500) {
-            width = width / 1.5;
-        } else if (width < 500) {
-            width = width;
-        }
+        // if (width > 900) {
+        //     width = width / 2;
+        // } else if (width > 500) {
+        //     width = width / 1.5;
+        // } else if (width < 500) {
+        //     width = width;
+        // }
 
 
         element.jcarousel('items').css('width', width + 'px');
