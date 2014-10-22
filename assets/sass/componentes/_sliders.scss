@@ -3,15 +3,19 @@
 	position: relative;
 	overflow: hidden;
 	@extend %full-width; //width:100%
-	// border: $borde;
+	border: $borde;
 
 	ul {
 		width: 20000em;
     	position: relative;
+    	@extend %no-padding;
+    	@extend %no-margin;
 	}
 
 	li {
 		float: left;
+		width: 250px;
+		border: $borde;
 		// height: 100%;
 		position: relative;
 		// padding: $paddingbase;

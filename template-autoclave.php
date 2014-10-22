@@ -43,13 +43,13 @@ Template Name: Autoclave
 
 
   <!-- Prev/next controls -->
-    <a href="#" class="jcarousel-control-prev btn btn--primary">
+    <!-- <a href="#" class="jcarousel-control-prev btn btn--primary">
     <span class="icon-arrow-left"></span>
     </a>
     
     <a href="#" class="jcarousel-control-next btn btn--primary">
     <span class="icon-arrow-right"></span>
-    </a>
+    </a> -->
 
   </div>
 

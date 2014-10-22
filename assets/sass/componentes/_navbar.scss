@@ -18,6 +18,13 @@
 			vertical-align: middle;
 			width: 75%;
 			text-transform: uppercase;
+			li {
+				&.active {
+					> a {
+						color: $color-base;
+					}
+				}
+			}
 		}
 
 		@media screen and (max-width: $bp3) {

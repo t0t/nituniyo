@@ -109,10 +109,10 @@ $white-alpha 		: rgba(255,255,255,0.95);
 $bordercolor    	: $white;
 $bordercolorhover   : $color-base;
 // Web
-$baseheadingfontcolor 		: $black;
+$baseheadingfontcolor 		: $white;
 $background			: 	lighten($color-base, 47%);
-$textcolor			: 	$black;
-$textcolor-strong	:	$black;
+$textcolor			: 	$white;
+$textcolor-strong	:	$white;
 
 // Links  //////////////////////
 $linkcolor 			: $white;

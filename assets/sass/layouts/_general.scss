@@ -26,7 +26,7 @@ body {
 			color: $white;
 			@extend %clearfix;
 			text-transform: uppercase;
-			@include animation(load-in-slow, initial, 3s, ease-in, 1);
+			// @include animation(load-in-slow, initial, 3s, ease-in, 1);
 			
 			@media screen and (min-width: $bp3) {
 				font-size: 3rem;
@@ -41,25 +41,14 @@ body {
 				&.gallery {
 					margin-bottom: 0;
 				}
-				padding: 0;
+				@extend %no-padding;
 			}
 			.parrafo {
 				// max-width: 90%;
+				// background-color: $color-base;
 				padding: $gutterwidth*2;
 				display: table;
 				width: 100%;
-				// background-color: #fff7f4;
-
-				// background-color: $color-base;
-				.parrafo__btn {
-					display: table;
-					@extend %full-width;
-					a {
-						// display: table-row;
-						margin-right: $gutterwidth;
-						margin-bottom: $gutterwidth*2;
-					}
-				}
 			}
 			@media screen and (min-width: $bp3) {
 				display: table;
@@ -82,18 +71,33 @@ body {
 	}
 }
 
+
 .layout-content {
 	// background-color: rgba(255,255,255,1);
 	// box-shadow: 0 10px 10px $black;
-	// clip-path: polygon( 50% 0, 100% 25%, 100% 75%, 50% 100%, 0 75%, 0 25% );
 	// padding: $gutterwidth;
-	width: 75%;
-	margin-left: 15%;
-	color: $white;
-	font-size: 150%;
+	img {
+		clip-path: polygon( 50% 0, 100% 25%, 100% 75%, 50% 100%, 0 75%, 0 25% );
+	}
+	p {
+		margin-left: 10%;
+		@extend %text-center;
+		font-size: 150%;
+		max-width: 80%;
+	}
 	// text-shadow : 0 0 20px $black;
 }
 
+.parrafo__btn {
+	display: table;
+	@extend %text-center;
+	@extend %full-width;
+		a {
+			// display: table-row;
+			// margin-bottom: $gutterwidth*2;
+			margin-right: $gutterwidth;
+		}
+}
 
 
 .absolute-wrap {
@@ -130,6 +134,9 @@ body {
 	@media screen and (max-width: $bp3) {
 		display: table-row;
 	}
+}
+.mapp-iw {
+	color: $black;
 }
 //oculta sello en contacto
 .page-template-template-contacto-php .sello { display: none; }

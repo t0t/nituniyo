@@ -214,7 +214,7 @@
     <div id="layout-content" class="layout-content">
   
     <?php if (get_sub_field("encabezado")): ?>
-        <h3><?php the_sub_field("encabezado"); ?></h3>
+        <h2><?php the_sub_field("encabezado"); ?></h2>
     <?php endif ?>
     
     <?php the_sub_field("content"); ?>
