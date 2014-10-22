@@ -2180,6 +2180,7 @@ sub {
     display: table-cell;
     vertical-align: middle;
     width: 75%;
+    text-transform: uppercase;
   }
 }
 @media screen and (max-width: 885px) {
