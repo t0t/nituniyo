@@ -1,17 +1,35 @@
 /*------------------------------------*\
-    $TEXTURAS
+    $WIDGETS
 \*------------------------------------*/
-// Más estilos adicionales:
-// http://twitter.github.com/bootstrap/components.html#alerts"
-// https://github.com/twitter/bootstrap/blob/master/less/alerts.less"
 
-.alert {
-	// margin-bottom : $baselineheight;
+
+// Idiomas
+.idiomas {
+	margin : $baselineheight/2;
+	display: table;
+	display: none;
+	width: 90px;
+	float: right;
 	padding : 8px 35px 8px 14px;
-	// background-color : $color-base;
-	// border : $alertborderwidth $alertborderstyle $alertbordercolor;
-	// font-family : $basefont;
-	// @include font-size(14);
+	line-height: 1;
+	@extend %text-center;
+	background-color: $alertinfobg;
+
+	li {
+		display: table-cell;
+		@include font-size(18);
+	}
+	.idiomas__item {}
+}
+
+// Alerts
+.alert {
+	margin : $baselineheight/2;
+	padding : 8px 35px 8px 14px;
+	background-color : $color-base;
+	border : $alertborderwidth $alertborderstyle $alertbordercolor;
+	font-family : $basefont;
+	@include font-size(18);
 	color: $alerttext;
 	// border-radius: $radius;
 	// @extend %full-width;
@@ -51,10 +69,16 @@
 	}
 
 	.alert--info {
-		// background-color: rgba($lightergrey, 0.95);
-		// background-color 	: $color-base;
-		// border-color 		: $alertinfoborder;
+		@extend %text-center;
+		width: 196px;
+		padding: 6px 0;
+		line-height: 1;
+		float: right;
+		border: none;
+		background-color: $alertinfobg;
+		// border-color 	: $alertinfoborder;
 		color 			: $alertinfotext;
+
 	}
 
 	.alert--inverse {
@@ -66,22 +90,22 @@
 // alert block
 
 	.alert--block {
-		// padding-top : 14px;
-		// padding-bottom : 14px;
-		padding: 0 $gutterwidth 0;
-		display: table;
-		@include max-width($bp1);
+		display: none;
 		@extend %full-width;
 		@extend %text-right;
-		// @include max-width($bp1);
-		position: fixed;
-		top: 0;
-		right: 0;
-		left: 0;
-		.alert--heading {
-			margin-bottom : $baselineheight / 8;
-			font-size : inherit;
-			font-weight : bold;
+		@media screen and (min-width: $bp3) {
+			padding: 0 $gutterwidth 0;
+			display: table;
+			@include max-width($bp1);
+			position: fixed;
+			top: 0;
+			right: 0;
+			left: 0;
+			.alert--heading {
+				margin-bottom : $baselineheight / 8;
+				font-size : inherit;
+				font-weight : bold;
+			}
 		}
 
 		> p,

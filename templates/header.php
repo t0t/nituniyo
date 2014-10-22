@@ -1,6 +1,15 @@
-<aside class="alert alert--info alert--block">
-	<small>ES / EN </small>
-  <small>EXCLUSIVO PROFESIONALES</small>
+<aside>
+    <div class="alert alert--info">
+        EXCLUSIVO PROFESIONALES
+    </div>
+    <ul class="idiomas">
+        <li class="idiomas__item">
+            <a href="#">ES</a>
+        </li>
+        <li class="idiomas__item">
+            <a href="#">EN</a>
+        </li>
+    </ul>
 </aside>
 
 <header class="banner" role="banner" id="header">

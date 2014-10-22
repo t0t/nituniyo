@@ -33,33 +33,18 @@ header {
 			}
 		}
 		@include max-width($bp1);
-		// @include padding-vertical();
+		display: table;
 		z-index: 9000;
 		position: fixed;
-		top: 33px;
+		top: 0;
 		left: 0;
 		right: 0;
+		@media screen and (min-width: $bp3) {
+			top: 33px;
+		}
+		// @include padding-vertical();
 		// background-color: $white;
 		// background-color: rgba($white, 0.95);
-		display: table;
-		.sello {
-			display: none;
-			@extend %text-center;
-			@media screen and (min-width: $bp3) {
-				display: block;
-				position: fixed;
-				top: 50%;
-				left: 10%;
-				@include rotate(-45deg);
-				p {
-					border: $borde;
-					@include padding();
-					max-width: 200px;
-					text-transform: uppercase;
-					color: $color-base;
-					// background-color: $white;
-				}
-			}
-		}
+		// @include rotate(-45deg);
 	}
 }

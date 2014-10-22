@@ -129,7 +129,7 @@ $color-warning 	: $color-error;
 
 // Texturas de popups
 $alertbordercolor	: darken($color-alert, 20%);
-$alertborderwidth 	: 1px;
+$alertborderwidth 	: 2px;
 $alertborderstyle 	: solid;
 $alerttext		: darken($color-alert, 60%);
 
@@ -141,7 +141,8 @@ $alerterrortext 	: $color-error;
 // Info
 $alertinfocolor 	: lighten($color-info, 10%);
 $alertinfoborder  	: darken($color-info, 10%);
-$alertinfotext 	: darken($color-info, 50%);
+$alertinfotext 	: $black;
+$alertinfobg 	: rgba(255,255,255,0.2);
 
 // Inverso
 $alertinversecolor 	: $color-inverse;
