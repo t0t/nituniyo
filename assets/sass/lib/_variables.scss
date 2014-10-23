@@ -103,7 +103,7 @@ $grey 				: lighten($black, 50%);
 $lightgrey 			: lighten($black, 75%);
 $lightergrey 		: lighten($black, 80%);
 $white 				: rgb(255,255,255);
-$white-alpha 		: rgba(255,255,255,0.95);
+$white-alpha 		: rgba(255,255,255,0.5);
 
 // Bordes
 $bordercolor    	: $white;

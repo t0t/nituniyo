@@ -209,36 +209,58 @@
 
 
 
-<?php elseif(get_row_layout() == "layout_content"): //Layout Content centrado estrecho?>
+<?php elseif(get_row_layout() == "layout_content"): //Layout Content ?>
 
     <div id="layout-content" class="layout-content">
-  
+    
     <?php if (get_sub_field("encabezado")): ?>
         <h2><?php the_sub_field("encabezado"); ?></h2>
     <?php endif ?>
-    
-    <?php the_sub_field("content"); ?>
+
+    <?php
+
+    // check if the repeater field has rows of data
+    if( have_rows('content') ):
+        // loop through the rows of data
+        while ( have_rows('content') ) : the_row();
+            // display a sub field value
+            ?>
+            
+            
+            <?php if (get_sub_field("content")): ?>
+                <div class="layout-content--p">
+                    <?php if (get_sub_field("encabezado")): ?>
+                        <h3><?php the_sub_field('encabezado'); ?></h3>
+                    <?php endif ?>
+                    <?php the_sub_field("content"); ?>
+                </div>
+            <?php endif ?>
 
 
-  <?php
-                $images = get_sub_field('gallery');
-             
-                if( $images ): ?>
-            
-                    <ul class="gallery">
-                        <?php foreach( $images as $image ): ?>
-                            <li>
-                                <figure>
-                                <a href="<?php echo $image['url']; ?>" data-lightbox="serie" data-title="<?php echo $image['description']; ?>">
-                                    <img src="<?php echo $image['sizes']['medium']; ?>" alt="<?php echo $image['alt']; ?>" class="" />
-                                </a>
-                                <figcaption><?php echo $image['caption']; ?></figcaption>
-                                </figure>
-                            </li>
-                        <?php endforeach; ?>
-                    </ul>
-            
-                <?php endif; ?>
+            <?
+
+        endwhile;
+
+    else :
+
+        // no rows found
+
+    endif;
+
+    ?>
+
+
+    <?php if( get_field('ficha_tecnica') ): ?>
+            <div class="parrafo__btn">
+                <a href="<?php the_field('ficha_tecnica'); ?>" target="_blank" class="btn btn--primary">
+                    <i class="icon-download"> </i>Ficha técnica</a>
+                
+            <?php if( get_field('datos_seguridad') ): ?>
+                <a href="<?php the_field('datos_seguridad'); ?>" target="_blank" class="datos_seguridad btn btn--primary"><i class="icon-download"> </i>Ficha datos de seguridad</a>
+            <?php endif; ?>
+            </div>
+    <?php endif; ?>
+
 
     </div>
 

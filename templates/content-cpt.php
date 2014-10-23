@@ -220,24 +220,21 @@
 
     // check if the repeater field has rows of data
     if( have_rows('content') ):
-
         // loop through the rows of data
         while ( have_rows('content') ) : the_row();
-
             // display a sub field value
             ?>
             
-            <h3><?php the_sub_field('encabezado'); ?></h3>
-            <?php the_sub_field('content'); ?>
-            <div class="parrafo__btn"><!-- adjuntar archivos -->
-                        <?php if( get_field('ficha_tecnica') ): ?>
-                            <a href="<?php the_field('ficha_tecnica'); ?>" target="_blank" class="btn btn--primary">
-                            <i class="icon-download"> </i>Ficha técnica</a>
-                        <?php endif; ?>
             
-                        <?php if( get_field('datos_seguridad') ): ?>
-                            <a href="<?php the_field('datos_seguridad'); ?>" target="_blank" class="datos_seguridad btn btn--primary"><i class="icon-download"> </i>Ficha datos de seguridad</a>
-                        <?php endif; ?></div>
+            <?php if (get_sub_field("content")): ?>
+                <div class="layout-content--p">
+                    <?php if (get_sub_field("encabezado")): ?>
+                        <h3><?php the_sub_field('encabezado'); ?></h3>
+                    <?php endif ?>
+                    <?php the_sub_field("content"); ?>
+                </div>
+            <?php endif ?>
+
 
             <?
 
@@ -250,6 +247,19 @@
     endif;
 
     ?>
+
+
+    <?php if( get_field('ficha_tecnica') ): ?>
+            <div class="parrafo__btn">
+                <a href="<?php the_field('ficha_tecnica'); ?>" target="_blank" class="btn btn--primary">
+                    <i class="icon-download"> </i>Ficha técnica</a>
+                
+            <?php if( get_field('datos_seguridad') ): ?>
+                <a href="<?php the_field('datos_seguridad'); ?>" target="_blank" class="datos_seguridad btn btn--primary"><i class="icon-download"> </i>Ficha datos de seguridad</a>
+            <?php endif; ?>
+            </div>
+    <?php endif; ?>
+
 
     </div>
 

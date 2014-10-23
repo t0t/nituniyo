@@ -78,8 +78,8 @@ body {
 	// background-color: rgba(255,255,255,1);
 	// box-shadow: 0 10px 10px $black;
 	// padding: $gutterwidth;
-	@extend %text-center;
 	h2 {
+		@extend %text-center;
 		max-width: 95%;
 		margin-left: $gutterwidth;
 		@media screen and (min-width: $bp3) {
@@ -87,21 +87,37 @@ body {
 			margin-left: 12%;
 		}
 	}
+	h3 {
+		@extend %text-left;
+		margin-bottom: $gutterwidth/2;
+		color: $black;
+	}
 	img {
 		clip-path: polygon( 50% 0, 100% 25%, 100% 75%, 50% 100%, 0 75%, 0 25% );
 	}
+	
 	p {
+		margin-bottom: 0;
+	}
+	.layout-content--p {
 		margin-left: $gutterwidth;
+		margin-bottom: $gutterwidth;
+		padding: $gutterwidth;
 		max-width: 93%;
 		// margin-left: 10%;
+		color: $black;
+		background-color: $white-alpha;
+
 		@media screen and (min-width: $bp3) {
 			margin-left: 10%;
-			font-size: 150%;
+			// font-size: 150%;
 			max-width: 80%;
 		}
 	}
 	// text-shadow : 0 0 20px $black;
 }
+
+
 
 .parrafo__btn {
 	display: table;
