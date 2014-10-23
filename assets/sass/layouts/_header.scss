@@ -3,8 +3,8 @@ header {
 		
 		.brand {
 			position: relative;
-			display: table;
-			width: 100%;
+			display: table-cell;
+			width: 30%;
 			.brand__description {
 				display: table-row;
 				@extend %text-center;

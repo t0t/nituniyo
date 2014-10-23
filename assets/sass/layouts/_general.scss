@@ -29,6 +29,8 @@ body {
 			// @include animation(load-in-slow, initial, 3s, ease-in, 1);
 			
 			@media screen and (min-width: $bp3) {
+				padding-top: $gutterwidth*3;
+				padding-bottom: $gutterwidth; 
 				font-size: 3rem;
 				@include max-width($bp3);
 			}
