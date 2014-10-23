@@ -86,7 +86,7 @@ select {
 	margin-bottom : $baselineheight / 4;
 	// background-color : $inputbackground;
 	border : $inputborderwidth $inputborderstyle $inputborder;
-	color : $textcolor;
+	color : $black;
 
 	&:hover {
 		border-color : $inputhover;

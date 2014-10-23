@@ -1,16 +1,22 @@
 <footer class="content-info" role="contentinfo">
            
 	<aside>
+
 		<ul class="info-adicional">
+
 			<li class="info-adicional__item">
-				<a href="/solicitud-de-muestras" class="contacto h1">
+				<a href="/solicitud-de-muestras" class="contacto">
 				<i class="icon-call37"></i> Contacto</a>
 			</li>
-			<li class="info-adicional__item">
-			   <a href="http://www.maderlim.com" target="_blank" class="muestras" alt="Lasures Maderlim" title="Lasures Maderlim"></a>
+
+			<li class="info-adicional__item muestras">
+			   <a href="http://www.maderlim.com" target="_blank" class="" alt="Lasures Maderlim" title="Lasures Maderlim"></a>
 			</li>
+
 		</ul>
+
 	</aside>
+
 
 	<footer rel="author"> 
 		<small>
