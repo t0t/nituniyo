@@ -1,9 +1,7 @@
 // Footer
 .content-info {
 	@include max-width ($bp1);
-	@include align-items(center);
 	@extend %text-center;
-
 	.home & {
 		position: absolute;
 		bottom: 0;
@@ -15,7 +13,6 @@
 	}
 
 }
-
 
 address, p, form {
 	margin-bottom: 0;

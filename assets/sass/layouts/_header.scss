@@ -1,9 +1,11 @@
 header {
 	&.banner { //encabezado principal
-		
+		display: table;
 		.brand {
+
 			line-height: 1;
 			position: relative;
+			display: table-cell;
 			@media all and (min-width: $bp3) {}
 				.brand__description {
 					position: absolute;
@@ -23,7 +25,6 @@ header {
 		}
 		@include max-width($bp1);
 		display: table;
-		z-index: 9000;
 		position: fixed;
 		top: 0;
 		left: 0;

@@ -1,33 +1,105 @@
 /*********************
-NAVIGATION STYLES
+Main navbar
 **********************/
 
-// botoncillo on/off menu
-.responsive-menu-btn {
-    display: table-cell;
-    // @include padding();
-    vertical-align: middle;
-    width: 50%;
-    @extend %text-center;
-    @media screen and (min-width: $bp3) {
-        display: none;
+.navbar {
+    display: table;
+    overflow: hidden;
+
+  * {
+    // border: solid 1px yellow;
+    transition: all .2s ease-in;
+  }
+  
+  a {
+    padding: 4px 8px;
+    display: block;
+    text-transform: uppercase;
+    &:hover {
+        background-color: $color-base-dark;
     }
+  }
+
+  label {
+    &:hover:after {
+        background-color: $black-alpha;
+    }
+  }
+  label::after {
+    position: fixed;
+    top: 15px;
+    right: 15px;
+    width: 50px;
+    content: "☰";
+    font-size: 150%;
+    padding: 5px;
+    text-align: center;
+    @media all and (min-width: $bp3) {
+        top: 40px;
+    }
+  }
+
+  > ul { //el overlay
+    @include translate(100%,0);
+    overflow: hidden;
+    width: 100%;
+    height: 0;
+    position: fixed;
+    right: 0;
+    background-color: $color-base;
+    text-align: center;
+    font-size: 60%;
+    @media all and (min-width: $bp3) {
+        width: 75%;
+        @include translate(150%,0);
+        font-size: inherit;
+    }
+
+    > li { //1st level
+      text-decoration: uppercase;
+      border-bottom: double 3px $color-base-dark;
+
+        ul {
+          padding: 0;
+
+          > li {
+            display: table-cell;
+
+                li {
+                  background-color: $color-base-dark;
+                  display: table-row;
+                }
+            }
+        }
+    }
+
+    li {
+      &:last-child {
+          border-bottom: none;
+      }
+    }
+  }
+
+  input[type="checkbox"]:checked ~ ul {
+    height: auto;
+    @include translate(0,0);
+    transition: all .2s ease-in;
+  }
+
+  input[type="checkbox"] {
+    display:none;
+  }
+  input[type="checkbox"]:checked + label::after {
+   content:"X";
+  }
+
 }
 
-/**
-*
-* .nav--fit extiende a .nav y alarga la navegación
-* para que ocupe el 100% de su contenedor
 
-     <ul class="nav nav--fit">
-      <li><a href="index.html">Home</a></li>
-      <li><a href="about.html">About us</a></li>
-      <li><a href="products.html">Products</a></li>
-      <li><a href="services.html">Services</a></li>
-      <li><a href="contact.html">Contact us</a></li>
-    </ul>
-*
-*/
+
+
+
+
 .nav--fit{
     @extend %full-width; //width:100%
     @extend %no-padding;

@@ -1999,20 +1999,20 @@ $('.jcarousel')
     
     // });
 
-    $('.responsive-menu-btn').on('click', function (e) {
-        e.preventDefault();
-        $('.navbar').toggleClass('active');
-    });
+    // $('.responsive-menu-btn').on('click', function (e) {
+    //     e.preventDefault();
+    //     $('.navbar').toggleClass('active');
+    // });
 
     
-    $('nav ul li ul').each(function() {
+    // $('nav ul li ul').each(function() {
         // $(this).before('<i class="icon-caret"></i>');
-    });
+    // });
     
-    $('nav ul li').click(function() {
-        $(this).children('ul').toggleClass('active');
+    // $('nav ul li').click(function() {
+        // $(this).children('ul').toggleClass('active');
         // $(this).children('.icon-caret').toggleClass('rotate');
-    });
+    // });
 
 
     //efectos scroll

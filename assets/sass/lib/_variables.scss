@@ -96,6 +96,7 @@ $compcolor      	: rgb(206,240,227);
  * Escala de grises
  */
 $black 				: rgb(0,0,0);
+$black-alpha 		: rgba(0,0,0,0.2);
 $superdark  		: lighten($black, 10%);
 $darkergrey 		: lighten($black, 15%);
 $darkgrey 			: lighten($black, 25%);

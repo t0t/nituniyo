@@ -430,7 +430,7 @@ th {
 /*------------------------------------*\
     $PLACEHOLDERS
 \*------------------------------------*/
-.wrap .main .layout-contenido-estrecho ul, .info-adicional, .nav--fit, .jcarousel ul, .sf-menu, .sf-menu * {
+.wrap .main .layout-contenido-estrecho ul, .info-adicional, .nav--fit, .jcarousel ul {
   padding: 0;
 }
 
@@ -443,10 +443,9 @@ th {
   padding-right: 20px;
 }
 
-header.banner .brand a.brand__logo, .aligncenter, .lightbox .lb-image, .lb-cancel, .lb-prev, .lb-next, .lb-data .lb-number, .lb-data .lb-close, hr, figure figcaption, h1 small,
+header.banner .brand a.brand__logo, .aligncenter, hr, figure figcaption, h1 small,
 h2 small,
-h3 small, form legend, label, .help-block, .jcarousel .jcarousel__producto, .sf-menu a, .sf-menu li:hover > ul,
-.sf-menu li.sfHover > ul, .color-base:before, .color-base-invert::before, .color-base-light::before, .color-base-lighter::before, .color-base-lighten::before, .color-base-dark::before, .color-base-darken::before, .color-base-darker::before {
+h3 small, form legend, label, .help-block, .jcarousel .jcarousel__producto, .color-base:before, .color-base-invert::before, .color-base-light::before, .color-base-lighter::before, .color-base-lighten::before, .color-base-dark::before, .color-base-darken::before, .color-base-darker::before {
   display: block;
 }
 
@@ -456,7 +455,7 @@ select, .jcarousel {
   width: 100%;
 }
 
-.layout-content h2, .parrafo__btn, .content-info, h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6, .responsive-menu-btn, .idiomas, .alert--info, .well--large, .jcarousel h2, .sf-menu {
+.layout-content h2, .parrafo__btn, .content-info, h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6, .idiomas, .alert--info, .well--large, .jcarousel h2 {
   text-align: center;
 }
 
@@ -593,6 +592,14 @@ body {
   body {
     padding-top: 0;
   }
+}
+
+input[type="checkbox"]:checked ~ ul, .brand, .content-info, .jcarousel {
+  z-index: -1;
+}
+
+input[type="checkbox"]:checked + label::after {
+  z-index: 5;
 }
 
 .wrap {
@@ -779,12 +786,12 @@ body {
   }
 }
 header.banner {
+  display: table;
   margin-left: auto;
   margin-right: auto;
   max-width: 1280px;
   width: 100%;
   display: table;
-  z-index: 9000;
   position: fixed;
   top: 0;
   left: 0;
@@ -793,6 +800,7 @@ header.banner {
 header.banner .brand {
   line-height: 1;
   position: relative;
+  display: table-cell;
 }
 header.banner .brand .brand__description {
   position: absolute;
@@ -887,11 +895,6 @@ header.banner .brand a.brand__logo {
   margin-right: auto;
   max-width: 1280px;
   width: 100%;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  -webkit-align-items: center;
-  -moz-align-items: center;
-  align-items: center;
 }
 .home .content-info {
   position: absolute;
@@ -1401,199 +1404,6 @@ a:hover, a:active {
 .main p a:hover {
   text-decoration: none;
   border-bottom: solid 3px white;
-}
-
-/* Preload images */
-body:after {
-  content: url(../img/close.png) url(../img/loading.gif) url(../img/prev.png) url(../img/next.png);
-  display: none;
-}
-
-.lightboxOverlay {
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: 9999;
-  background-color: black;
-  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=80);
-  opacity: 0.8;
-  display: none;
-}
-
-.lightbox {
-  position: absolute;
-  left: 0;
-  width: 100%;
-  z-index: 10000;
-  text-align: center;
-  line-height: 0;
-  font-weight: normal;
-}
-
-.lightbox .lb-image {
-  height: auto;
-  max-width: inherit;
-  -o-border-radius: 3px;
-  border-radius: 3px;
-}
-
-.lightbox a img {
-  border: none;
-}
-
-.lb-outerContainer {
-  position: relative;
-  background-color: white;
-  *zoom: 1;
-  width: 250px;
-  height: 250px;
-  margin: 0 auto;
-  -o-border-radius: 4px;
-  border-radius: 4px;
-}
-
-.lb-outerContainer:after {
-  content: "";
-  display: table;
-  clear: both;
-}
-
-.lb-container {
-  padding: 4px;
-}
-
-.lb-loader {
-  position: absolute;
-  top: 43%;
-  left: 0;
-  height: 25%;
-  width: 100%;
-  text-align: center;
-  line-height: 0;
-}
-
-.lb-cancel {
-  width: 32px;
-  height: 32px;
-  margin: 0 auto;
-  background: url(../img/loading.gif) no-repeat;
-}
-
-.lb-nav {
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: 100%;
-  width: 100%;
-  z-index: 10;
-}
-
-.lb-container > .nav {
-  left: 0;
-}
-
-.lb-nav a {
-  outline: none;
-  background-image: url("data:image/gif;base64,R0lGODlhAQABAPAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==");
-}
-
-.lb-prev, .lb-next {
-  height: 100%;
-  cursor: pointer;
-}
-
-.lb-nav a.lb-prev {
-  width: 34%;
-  left: 0;
-  float: left;
-  background: url(../img/prev.png) left 48% no-repeat;
-  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
-  opacity: 0;
-  -webkit-transition: opacity 0.6s;
-  -o-transition: opacity 0.6s;
-  transition: opacity 0.6s;
-}
-
-.lb-nav a.lb-prev:hover {
-  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
-  opacity: 1;
-}
-
-.lb-nav a.lb-next {
-  width: 64%;
-  right: 0;
-  float: right;
-  background: url(../img/next.png) right 48% no-repeat;
-  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
-  opacity: 0;
-  -webkit-transition: opacity 0.6s;
-  -o-transition: opacity 0.6s;
-  transition: opacity 0.6s;
-}
-
-.lb-nav a.lb-next:hover {
-  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
-  opacity: 1;
-}
-
-.lb-dataContainer {
-  margin: 0 auto;
-  padding-top: 5px;
-  *zoom: 1;
-  width: 100%;
-  border-bottom-left-radius: 4px;
-  border-bottom-right-radius: 4px;
-}
-
-.lb-dataContainer:after {
-  content: "";
-  display: table;
-  clear: both;
-}
-
-.lb-data {
-  padding: 0 4px;
-  color: #ccc;
-}
-
-.lb-data .lb-details {
-  width: 85%;
-  float: left;
-  text-align: left;
-  line-height: 1.1em;
-}
-
-.lb-data .lb-caption {
-  font-size: 13px;
-  font-weight: bold;
-  line-height: 1em;
-}
-
-.lb-data .lb-number {
-  clear: left;
-  padding-bottom: 1em;
-  font-size: 12px;
-  color: #999999;
-}
-
-.lb-data .lb-close {
-  float: right;
-  width: 30px;
-  height: 30px;
-  background: url(../img/close.png) top right no-repeat;
-  text-align: right;
-  outline: none;
-  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=70);
-  opacity: 0.7;
-  -webkit-transition: opacity 0.2s;
-  -o-transition: opacity 0.2s;
-  transition: opacity 0.2s;
-}
-
-.lb-data .lb-close:hover {
-  cursor: pointer;
-  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
-  opacity: 1;
 }
 
 /*------------------------------------*\
@@ -2178,71 +1988,102 @@ sub {
   content: "\00A0" "\00BB";
 }
 
+/*********************
+Main navbar
+**********************/
 .navbar {
+  display: table;
+  overflow: hidden;
+}
+.navbar * {
+  -webkit-transition: all .2s ease-in;
+       -o-transition: all .2s ease-in;
+          transition: all .2s ease-in;
+}
+.navbar a {
+  padding: 4px 8px;
+  display: block;
+  text-transform: uppercase;
+}
+.navbar a:hover {
+  background-color: #cc3d00;
+}
+.navbar label:hover:after {
+  background-color: rgba(0, 0, 0, 0.2);
+}
+.navbar label::after {
+  position: fixed;
+  top: 15px;
+  right: 15px;
+  width: 50px;
+  content: "☰";
+  font-size: 150%;
+  padding: 5px;
+  text-align: center;
+}
+@media all and (min-width: 885px) {
+  .navbar label::after {
+    top: 40px;
+  }
+}
+.navbar > ul {
+  -webkit-transform: translate(100%, 0);
+  -ms-transform: translate(100%, 0);
+  -o-transform: translate(100%, 0);
+     transform: translate(100%, 0);
+  overflow: hidden;
+  width: 100%;
+  height: 0;
+  position: fixed;
+  right: 0;
+  background-color: #ff4c00;
+  text-align: center;
+  font-size: 60%;
+}
+@media all and (min-width: 885px) {
+  .navbar > ul {
+    width: 75%;
+    -webkit-transform: translate(150%, 0);
+    -ms-transform: translate(150%, 0);
+    -o-transform: translate(150%, 0);
+       transform: translate(150%, 0);
+    font-size: inherit;
+  }
+}
+.navbar > ul > li {
+  text-decoration: uppercase;
+  border-bottom: double 3px #cc3d00;
+}
+.navbar > ul > li ul {
+  padding: 0;
+}
+.navbar > ul > li ul > li {
+  display: table-cell;
+}
+.navbar > ul > li ul > li li {
+  background-color: #cc3d00;
+  display: table-row;
+}
+.navbar > ul li:last-child {
+  border-bottom: none;
+}
+.navbar input[type="checkbox"]:checked ~ ul {
+  height: auto;
+  -webkit-transform: translate(0, 0);
+  -ms-transform: translate(0, 0);
+  -o-transform: translate(0, 0);
+     transform: translate(0, 0);
+  -webkit-transition: all .2s ease-in;
+       -o-transition: all .2s ease-in;
+          transition: all .2s ease-in;
+}
+.navbar input[type="checkbox"] {
   display: none;
 }
-@media screen and (min-width: 885px) {
-  .navbar {
-    display: table-cell;
-    vertical-align: middle;
-    width: 75%;
-    text-transform: uppercase;
-  }
-  .navbar li.active > a {
-    color: #ff4c00;
-  }
-}
-@media screen and (max-width: 885px) {
-  .navbar {
-    -webkit-opacity: 0;
-    -moz-opacity: 0;
-    opacity: 0;
-  }
-  .navbar.active {
-    -webkit-opacity: 1;
-    -moz-opacity: 1;
-    opacity: 1;
-    display: table;
-    position: fixed;
-    width: 50%;
-    height: 100vh;
-    top: 0;
-    left: 0;
-    background-color: rgba(255, 76, 0, 0.95);
-  }
-  .navbar.active > ul > li {
-    height: 10vh;
-  }
+.navbar input[type="checkbox"]:checked + label::after {
+  content: "X";
 }
 
-/*********************
-NAVIGATION STYLES
-**********************/
-.responsive-menu-btn {
-  display: table-cell;
-  vertical-align: middle;
-  width: 50%;
-}
-@media screen and (min-width: 885px) {
-  .responsive-menu-btn {
-    display: none;
-  }
-}
-
-/**
-*
-* .nav--fit extiende a .nav y alarga la navegación
-* para que ocupe el 100% de su contenedor
-
-     <ul class="nav nav--fit">
-      <li><a href="index.html">Home</a></li>
-      <li><a href="about.html">About us</a></li>
-      <li><a href="products.html">Products</a></li>
-      <li><a href="services.html">Services</a></li>
-      <li><a href="contact.html">Contact us</a></li>
-    </ul>
-*
-*/
 .nav--fit {
   margin-bottom: 0;
 }
@@ -2806,124 +2647,6 @@ input:required:focus:valid {
   .jcarousel .jcarousel-control-next {
     right: 44%;
   }
-}
-
-/*** ESSENTIAL STYLES ***/
-.sf-menu, .sf-menu * {
-  list-style: none;
-}
-
-.sf-menu ul {
-  *width: 12em;
-  /* no auto sub width for IE7, see white-space comment below */
-  position: absolute;
-  display: none;
-  top: 100%;
-  left: 0;
-  z-index: 99;
-}
-@media (max-width: 885px) {
-  .sf-menu ul {
-    height: auto;
-    width: 100%;
-  }
-}
-.sf-menu ul ul {
-  top: 0;
-  left: 100%;
-}
-@media (max-width: 885px) {
-  .sf-menu ul ul {
-    position: relative;
-    height: auto;
-  }
-}
-.sf-menu ul ul li {
-  background: #ff5e1a;
-}
-@media (max-width: 885px) {
-  .sf-menu ul ul li {
-    position: relative;
-    width: 100%;
-    left: -100%;
-  }
-}
-@media (max-width: 885px) {
-  .sf-menu ul li {
-    position: relative;
-  }
-}
-.sf-menu li {
-  position: relative;
-  white-space: nowrap;
-  /* no need for Supersubs plugin */
-  *white-space: normal;
-  /* ...unless you support IE7 (let it wrap) */
-  -webkit-transition: background .2s;
-       -o-transition: background .2s;
-          transition: background .2s;
-}
-@media screen and (min-width: 885px) {
-  .sf-menu > li {
-    background-color: transparent;
-  }
-}
-.sf-menu a {
-  position: relative;
-  text-decoration: none;
-  zoom: 1;
-  /* IE7 */
-}
-
-.sf-menu li:hover,
-.sf-menu li.sfHover {
-  /* only transition out, not in */
-}
-
-/*** arrows (for all except IE7) **/
-.sf-arrows .sf-with-ul {
-  padding-right: 2.5em;
-  *padding-right: 1em;
-  /* no CSS arrows for IE7 (lack pseudo-elements) */
-}
-
-/* styling for both css and generated arrows */
-.sf-arrows .sf-with-ul:after {
-  content: '';
-  position: absolute;
-  top: 50%;
-  right: 1em;
-  margin-top: -3px;
-  height: 0;
-  width: 0;
-  /* order of following 3 rules important for fallbacks to work */
-  border: 5px solid transparent;
-  border-top-color: #8a2900;
-  /* edit this to suit design (no rgba in IE8) */
-  border-top-color: #8a2900;
-}
-
-.sf-arrows > li > .sf-with-ul:focus:after,
-.sf-arrows > li:hover > .sf-with-ul:after,
-.sf-arrows > .sfHover > .sf-with-ul:after {
-  border-top-color: #eb4600;
-  /* IE8 fallback colour */
-}
-
-/* styling for right-facing arrows */
-.sf-arrows ul .sf-with-ul:after {
-  margin-top: -5px;
-  margin-right: -3px;
-  border-color: transparent;
-  border-left-color: #e64400;
-  /* edit this to suit design (no rgba in IE8) */
-  border-left-color: rgba(255, 255, 255, 0.5);
-}
-
-.sf-arrows ul li > .sf-with-ul:focus:after,
-.sf-arrows ul li:hover > .sf-with-ul:after,
-.sf-arrows ul .sfHover > .sf-with-ul:after {
-  border-left-color: white;
 }
 
 .galeria__item {
