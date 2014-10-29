@@ -22,28 +22,15 @@ Template Name: Contacto
 
 <div class="formulario">
     <!-- formulario y muestras -->
-    <?php echo do_shortcode('[contact-form-7 id="506" title="Muestras ESP"]'); ?>
+    <?php echo do_shortcode('[contact-form-7 id="80" title="Contact form 1"]'); ?>
     
     <!-- personas de contacto -->
     <div class="formulario__contacto">
         <dl>
-        <dt>NACIONAL Y EXPORTACION</dt>
-        <dd>JAVIER ROCA</dd>
-        <dd>+ 34 655 813 842</dd>
-        <dd><a href="mailto:info@fkrquimica.com" class="btn btn--primary">info@fkrquimica.com</a></dd>
-        </dl>
-
-        <dl>
-        <dt>PORTUGAL</dt>
-        <dd>ISMAEL CARDONA</dd>
-        <dd>+ 34 655 813 840</dd>
-        <dd><a href="mailto:ismaelcardona52@gmail.com" class="btn btn--primary">ismaelcardona52(a)gmail.com</a></dd>
+        <dt>Noelia Requena</dt>
+        <dd>+ 34 607471777</dd>
+        <dd><a href="mailto:noeliarequena@gmail.com" class="btn btn--primary">noeliarequena@gmail.com</a></dd>
         </dl>
         
     </div>
 </div>
-    
-    <?php echo do_shortcode( '[vegas id=1076 fade="2500" delay ="4500" overlay="/wp-content/themes/fkrquimica/assets/img/overlays/04.png" arrows="yes" autoplay="yes" poster="yes" random="yes"]' ); ?>
-
-    <!-- mapa -->
-    <?php echo do_shortcode('[mappress mapid="1" width="100%"]'); ?>

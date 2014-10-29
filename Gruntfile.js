@@ -57,7 +57,7 @@ module.exports = function(grunt) {
           // SASS source map
           // To disable, set sourcemap to false
           // https://github.com/gruntjs/grunt-contrib-sass#sourcemap
-          sourcemap: false
+          sourcemap: true
         },
         files: {
           'assets/css/main.min.css': [

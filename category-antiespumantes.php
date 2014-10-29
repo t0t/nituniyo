@@ -1,7 +1,7 @@
 <?php get_template_part('templates/page', 'header'); ?>
 
 <h3><?php echo category_description(); ?></h3>
-<?php echo do_shortcode( '[vegas id=1076 fade="2500" delay ="4500" overlay="/wp-content/themes/fkrquimica/assets/img/overlays/04.png" arrows="yes" autoplay="yes" poster="yes" random="yes"]' ); ?>
+
 <section>
 
 <?php
