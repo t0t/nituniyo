@@ -1,7 +1,4 @@
 <aside>
-    <div class="alert alert--info">
-        EXCLUSIVO PROFESIONALES
-    </div>
     <ul class="idiomas">
         <li class="idiomas__item">
             <a href="#">ES</a>
@@ -27,7 +24,7 @@
 
     <?php
       if (has_nav_menu('primary_navigation')) :
-          wp_nav_menu(array('theme_location' => 'primary_navigation', 'menu_class' => 'sf-menu nav--fit'));
+          wp_nav_menu(array('theme_location' => 'primary_navigation', 'menu_class' => ''));
         endif;
       ?>
 </nav>

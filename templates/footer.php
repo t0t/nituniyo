@@ -2,18 +2,6 @@
            
 	<aside>
 
-		<ul class="info-adicional">
-
-			<li class="info-adicional__item">
-				<a href="/solicitud-de-muestras" class="contacto">
-				<i class="icon-call37"></i> Contacto</a>
-			</li>
-
-			<li class="info-adicional__item muestras">
-			   <a href="http://www.maderlim.com" target="_blank" class="" alt="Lasures Maderlim" title="Lasures Maderlim"></a>
-			</li>
-
-		</ul>
 
 	</aside>
 
@@ -21,9 +9,6 @@
 	<footer rel="author"> 
 		<small>
 			<?php bloginfo('name'); ?>
-
-Ctra. Morella, km. 0,7
-12500 Vinaroz, Castellón, España
 
 			<?php echo date('Y'); ?>
 		</small>

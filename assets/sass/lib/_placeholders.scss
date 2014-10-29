@@ -7,6 +7,9 @@
 %no-margin {
   margin: 0;
 }
+%padding {
+  padding: $paddingbase/2;
+}
 %padding-horizontal {
   padding-left: $paddingbase;
   padding-right: $paddingbase;

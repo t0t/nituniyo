@@ -8,9 +8,10 @@ module.exports = function(grunt) {
   var jsFileList = [
     'assets/js/plugins/jcarousel/jquery.jcarousel.min.js',
     'assets/js/plugins/jcarousel/jcarousel.skeleton.js',
-    'assets/js/plugins/superfish.min.js',
+    // 'assets/js/plugins/superfish.min.js',
     'assets/vendor/enquire/dist/enquire.min.js',
     'assets/vendor/skrollr/src/skrollr.js',
+    'assets/vendor/lightbox/js/lightbox.js',
     // 'assets/vendor/vegas/dist/jquery.vegas.js',
     'assets/js/plugins/*.js',
     'assets/js/*.min.js',
@@ -26,10 +27,10 @@ module.exports = function(grunt) {
         'Gruntfile.js',
         'assets/js/*.js',
         '!assets/js/scripts.js',
-        // '!assets/vendor/vegas/dist/jquery.vegas.js',
+        //'!assets/vendor/vegas/dist/jquery.vegas.js',
         '!assets/js/plugins/jcarousel/jquery.jcarousel.min.js',
         '!assets/js/plugins/jcarousel/jcarousel.skeleton.js',
-        '!assets/js/plugins/superfish.min.js',
+        //'!assets/js/plugins/superfish.min.js',
         '!assets/vendor/skrollr/src/skrollr.js',
         '!assets/**/*.min.*'
       ]

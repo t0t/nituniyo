@@ -40,7 +40,7 @@ add_filter( 'wpcf7_load_css', '__return_false' );
 add_filter('show_admin_bar', '__return_false');
 
 // wpautop
-remove_filter( 'the_content', 'wpautop' );
+//remove_filter( 'the_content', 'wpautop' );
 remove_filter( 'the_excerpt', 'wpautop' );
 
 // CPT's

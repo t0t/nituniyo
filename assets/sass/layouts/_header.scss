@@ -15,7 +15,7 @@ header {
 			a {
 				&.brand__logo {
 					width: 16em;
-					height: 4em;
+					height: 5.5em;
 					@extend %display-block;
 					@include background-image(logo,90%,svg);
 					background-repeat: no-repeat;

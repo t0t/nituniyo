@@ -1,0 +1,15 @@
+/*------------------------------------*\
+    $GALERIA
+\*------------------------------------*/
+
+.gallery--wrap {
+  @include max-width($bp1);
+  @extend %clearfix;
+  // padding: 10%;
+  // background-color: blue;
+}
+.gallery__item {
+  float: left;
+  @extend %padding; 
+  // background-color: $white-alpha;
+}

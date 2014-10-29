@@ -14,6 +14,7 @@
 @import "lib/mixins/formularios.scss";
 @import "lib/mixins/scroll.scss";
 @import "lib/mixins/shapes.scss";
+@import "componentes/gallery.scss";
 // @import "lib/mixins/flex.scss";
 @import "componentes/reset.scss";
 
@@ -28,7 +29,7 @@
 @import "componentes/wp-classes.scss"; // Clases de Wordpress
 @import "componentes/fuentes.scss";
 @import "componentes/links.scss";
-// @import "componentes/lightbox.scss"; // REVISAR css del lightbox a traves de Bower
+@import "componentes/lightbox.scss"; // REVISAR css del lightbox a traves de Bower
 @import "componentes/botones.scss";
 @import "componentes/elementos.scss";
 @import "componentes/tipografia.scss";
@@ -52,7 +53,7 @@
 // @import "t0t.scss";
 
 // Styleguide
-@import "styleguide.scss";
+// @import "styleguide.scss";
 
 // Debug
 // @import "debug.scss";

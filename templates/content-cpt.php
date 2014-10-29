@@ -330,11 +330,10 @@
 
 
 
-    <?php elseif(get_row_layout() == "gallery"): //Layout Gallery ?>
+    <?php elseif(get_row_layout() == "gallery"): //Galeria ?>
 
-    <div class="row">
-        <h3 class="h1"><?php the_sub_field("title"); ?></h3>
-        <h3><?php the_sub_field("description"); ?></h3>
+    <div class="gallery--wrap">
+        <h3 class="h2"><?php the_sub_field("title"); ?></h3>
     
         <?php
         $images = get_sub_field('gallery');
@@ -343,7 +342,7 @@
     
             <ul>
                 <?php foreach( $images as $image ): ?>
-                    <li class="col__3">
+                    <li class="gallery__item">
                         <figure>
                         <a href="<?php echo $image['url']; ?>" data-lightbox="serie" data-title="<?php echo $image['description']; ?>">
                             <img src="<?php echo $image['sizes']['thumbnail']; ?>" alt="<?php echo $image['alt']; ?>" class="img--circle" />
@@ -355,6 +354,7 @@
             </ul>
     
         <?php endif; ?>
+        <p><?php the_sub_field("description"); ?></p>
     </div>
 
     <?php //elseif(get_row_layout() == "featured_posts"): ?>
@@ -365,5 +365,5 @@
 <?php endif; ?>
 
 
-<!-- Vegas -->
+<!-- Content -->
 <?php the_field("content_editor"); ?>
