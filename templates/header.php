@@ -1,4 +1,4 @@
-<aside>
+<!-- <aside>
     <ul class="idiomas">
         <li class="idiomas__item">
             <a href="#">ES</a>
@@ -7,7 +7,7 @@
             <a href="#">EN</a>
         </li>
     </ul>
-</aside>
+</aside> -->
 
 <header class="banner" role="banner" id="header">
 
