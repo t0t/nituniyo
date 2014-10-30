@@ -4,7 +4,7 @@ body {
 	color: $textcolor;
 	padding-top: $baselineheight*2.4;
 	// @include background-image(bg,cover,jpg);
-	background-color: $color-base;
+	background-color: #f3f3f3;
 	@media screen and (min-width: $bp3) {
 		padding-top: 0;
 	}

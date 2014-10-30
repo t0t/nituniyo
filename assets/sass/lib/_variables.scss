@@ -106,11 +106,11 @@ $bordercolorhover   : $color-base;
 // Web
 $baseheadingfontcolor 		: $white;
 $background			: 	lighten($color-base, 47%);
-$textcolor			: 	$white;
+$textcolor			: 	$black-alpha;
 $textcolor-strong	:	$white;
 
 // Links  //////////////////////
-$linkcolor 			: $white;
+$linkcolor 			: $black-alpha;
 $linkcolorhover 	: lighten($linkcolor, 10%);
 $linkcolorvisited   : $linkcolor;
 $linkcolorfocus 	: $linkcolorvisited;
